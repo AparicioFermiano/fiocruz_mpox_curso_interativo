@@ -22,7 +22,7 @@ p {
 
 #linha_do_tempo {
     width: 20%;
-    height: 10000px;
+    height: 1000px;
     position: fixed;
     right: 0;
     top: 0;
@@ -80,9 +80,9 @@ p {
         margin-right: 0 !important;
     }
 
-    #linha_do_tempo {
+    /* #linha_do_tempo {
         display: none;
-    }
+    } */
 
     .container-absolute p,
     .container-absolute span {
