@@ -204,6 +204,7 @@ body::-webkit-scrollbar-thumb {
     .sidenav {
         margin-right: -350px;
     }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -230,6 +231,7 @@ body::-webkit-scrollbar-thumb {
     #span_titulo_1 {
         max-width: 41vw;
     }
+    
 }
 
 
@@ -273,29 +275,3 @@ body::-webkit-scrollbar-thumb {
         display: none;
     }
 }
-
-[data-md-tooltip] {
-position: relative;
-}
-
-[data-md-tooltip]:before {
-    content: attr(data-md-tooltip);
-    position: absolute;
-    bottom: 2vw;
-    left: 50%;
-    padding: 1vw;
-    transform: translateX(-50%) scale(0);
-    transition: transform 0.3s ease-in-out;
-    transform-origin: top;
-    background: #fc646c;
-    color: white;
-    border-radius: 1vw;
-    font-size: 1vw;
-    font-weight: 400;
-    width: 20vw;
-}
-
-[data-md-tooltip]:hover:before {
-    transform: translateX(-50%) scale(1);
-}
-

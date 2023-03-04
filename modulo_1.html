@@ -17,8 +17,8 @@
 
 <body>
 	<!-- Sidebar -->
-	<nav class="navbar navbar-light justify-content-end sidebar-navbar p-3">
-		<button id="btn-sidebar" class="z-5 btn-sidebar-light" type="button" data-toggle="collapse" aria-expanded="false"
+	<nav class="navbar navbar-light justify-content-end sidebar-btn p-3">
+		<button class="navbar-toggler z-5 btn-sidebar" type="button" data-toggle="collapse" aria-expanded="false"
 			aria-label="Toggle navigation" onclick="Nav()">
 			<i class="bi bi-list"></i>
 		</button>
@@ -30,7 +30,7 @@
 		</div>
 		<ul class="list-group">
 			<li class="list-group-item border-0 py-0">
-				<a href="#sessao_1" class="px-3 py-3 link-capitulo d-flex align-items-center">
+				<a href="/" class="px-3 py-3 link-capitulo d-flex align-items-center">
 					<div>
 						<i class="bi bi-file-earmark mx-2"></i>
 					</div>
@@ -41,7 +41,7 @@
 				</a>
 			</li>
 			<li class="list-group-item border-0 py-0">
-				<a href="#sessao_2" class="px-3 py-3 link-capitulo d-flex align-items-center">
+				<a href="/" class="px-3 py-3 link-capitulo d-flex align-items-center">
 					<div>
 						<i class="bi bi-file-earmark mx-2"></i>
 					</div>
@@ -63,12 +63,6 @@
 				</a>
 			</li>
 		</ul>
-		<div class="mt-auto p-2">
-			<a class="btn btn-home d-flex" href="#corpo">
-				<i class="bi bi-house"></i>
-				<span class="mx-1">Início</span>
-			</a>
-		</div>
 	</div>
 
 	<div id="corpo">
@@ -83,11 +77,10 @@
 				<div class="container-absolute text-light pb-10">
 					<div class="parent m-auto w-75">
 						<span id="span_capitulo_1" class="text-start bold pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Capítulo 1">Capítulo 01</span>
-						<p id="span_titulo_1" class="title pointer "data-bs-toggle="tooltip" data-bs-placement="top" title="Objetivos de aprendizagem">Objetivos de aprendizagem:</p>
+						<p id="span_titulo_1" class="title pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Objetivos de aprendizagem">Objetivos de aprendizagem:</p>
 						<p data-min-font-size="10">Esta Unidade tem como objetivo apresentar um breve histórico e panorama da
-							doença no mundo e no Brasil, descrevendo o agente <span class="pointer" 
-							data-md-tooltip="Etiologia é um ramo de estudo destinado a pesquisar a origem e a causa de um determinado fenômeno.">
-							<u><b>etiológico</b></u></span>, as características
+							doença no mundo e no Brasil, descrevendo o agente <span class="pointer" data-bs-toggle="tooltip" data-bs-placement="top" 
+							title="Etiologia é um ramo de estudo destinado a pesquisar a origem e a causa de um determinado fenômeno."><u><b>etiológico</b></u></span>, as características
 							do vírus e as formas de transmissão.
 						</p>
 					</div>
