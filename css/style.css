@@ -264,8 +264,6 @@ body::-webkit-scrollbar-thumb {
         height: 27vw !important;
     }
 
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -292,9 +290,7 @@ body::-webkit-scrollbar-thumb {
     #span_titulo_1 {
         max-width: 41vw;
     }
-
 }
-
 
 @media screen and (max-width: 600px) {
 
@@ -345,3 +341,4 @@ body::-webkit-scrollbar-thumb {
         height: 17vw !important;
     }
 }
+
