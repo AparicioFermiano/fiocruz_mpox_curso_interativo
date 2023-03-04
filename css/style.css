@@ -3,6 +3,7 @@
     --color-secondary: #8CD8F9;
     --color-aux: #00436F;
     --color-dark: #0D1214;
+    --color-light: #eeeeee;
 }
 
 html {
@@ -17,6 +18,25 @@ p {
     font-size: 1rem;
     padding: auto 0 !important;
     margin: auto 0;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--color-light);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid var(--color-light);
+    /* creates padding around scroll thumb */
 }
 
 #corpo {
@@ -116,7 +136,7 @@ p {
 /* MEDIA */
 
 
-.pt-section-1{
+.pt-section-1 {
     padding-top: 1vw;
 }
 
@@ -154,10 +174,11 @@ p {
 
     #span_titulo_1 {
         max-width: 34vw;
-    }  
+    }
 }
 
 @media screen and (max-width: 768px) {
+
     .container-absolute p,
     .container-absolute span {
         font-size: 2.0vw;
@@ -169,7 +190,7 @@ p {
         text-transform: capitalize;
     }
 
-    .pt-section-1{
+    .pt-section-1 {
         padding-top: 10vw;
     }
 
@@ -179,7 +200,7 @@ p {
 
     #span_titulo_1 {
         max-width: 41vw;
-    }  
+    }
 }
 
 
@@ -203,8 +224,8 @@ p {
 
     #span_titulo_1 {
         max-width: 43vw;
-    }    
-    
+    }
+
 }
 
 @media (min-width: 576px) {}
@@ -217,7 +238,8 @@ p {
     .sidenav {
         width: 20% !important;
         padding-top: 0px !important;
-    } 
+    }
+
     .btn-sidebar {
         display: none;
     }
