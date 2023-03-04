@@ -49,6 +49,7 @@ body::-webkit-scrollbar-thumb {
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: 5;
 }
 
 .container-absolute p,
@@ -67,6 +68,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     height: 100%;
     justify-content: center;
+    z-index: 10;
 }
 
 .btn-home {
@@ -77,13 +79,16 @@ body::-webkit-scrollbar-thumb {
 
 .btn-home:hover {
     background-color: var(--color-aux) !important;
+}
 
+#sessao_2 .altura {
+    height: 32vw;
 }
 
 /* UTILITARIOS */
 
 .bold {
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .pb-10 {
@@ -112,6 +117,7 @@ body::-webkit-scrollbar-thumb {
     padding-top: 60px;
     display: flex;
     flex-direction: column;
+    background-color: var(--color-light);
 }
 
 .sidenav a {
@@ -159,6 +165,50 @@ body::-webkit-scrollbar-thumb {
     transition: 0.5s;
 }
 
+/* ANIMATION CARD */
+
+.card {
+    perspective: 1000px;
+    transition: all 0.5s ease;
+}
+
+.card-back {
+    transform: rotateY(-180deg);
+}
+
+.card-body {
+    opacity: 0;
+    animation-name: aparecer;
+    animation-duration: 0.5s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+    padding: 2% !important;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card-flipped {
+    transform: rotateY(180deg);
+}
+
+.flip-button {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    font-size: 2vw !important;
+}
+
+.flip-button:hover {
+    border: none;
+}
+
 /* MEDIA */
 
 .pt-section-1 {
@@ -204,7 +254,16 @@ body::-webkit-scrollbar-thumb {
     .sidenav {
         margin-right: -350px;
     }
-    
+
+    #sessao_2 .altura {
+        height: 45vw !important;
+    }
+
+    .card {
+        width: 20vw !important;
+        height: 27vw !important;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -231,9 +290,7 @@ body::-webkit-scrollbar-thumb {
     #span_titulo_1 {
         max-width: 41vw;
     }
-    
 }
-
 
 @media screen and (max-width: 600px) {
 
@@ -259,11 +316,15 @@ body::-webkit-scrollbar-thumb {
 
 }
 
+@media (max-width: 1200px) {
+}
+
 @media (min-width: 576px) {}
 
 @media (min-width: 768px) {}
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}
 
 @media (min-width: 992px) {
     .sidenav {
@@ -274,4 +335,10 @@ body::-webkit-scrollbar-thumb {
     #btn-sidebar {
         display: none;
     }
+
+    .card {
+        width: 13vw !important;
+        height: 17vw !important;
+    }
 }
+

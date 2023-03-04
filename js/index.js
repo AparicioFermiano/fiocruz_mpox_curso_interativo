@@ -4,14 +4,29 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 });
 
 function Nav() {
-  var sidenav = document.getElementById("mySidenav");
-  var marginRight = window.getComputedStyle(sidenav).getPropertyValue("margin-right");
-  var btn = document.getElementById('btn-sidebar');
-  if (marginRight === "-350px" || marginRight === "") {
-    sidenav.style.marginRight = "0px";
-    btn.className = btn.className.replace('btn-sidebar-light', 'btn-sidebar-dark');
-  } else {
-    sidenav.style.marginRight = "-350px";
-    btn.className = btn.className.replace('btn-sidebar-dark', 'btn-sidebar-light');
-  }
+	var sidenav = document.getElementById("mySidenav");
+	var marginRight = window.getComputedStyle(sidenav).getPropertyValue("margin-right");
+	var btn = document.getElementById('btn-sidebar');
+	if (marginRight === "-350px" || marginRight === "") {
+		sidenav.style.marginRight = "0px";
+		btn.className = btn.className.replace('btn-sidebar-light', 'btn-sidebar-dark');
+	} else {
+		sidenav.style.marginRight = "-350px";
+		btn.className = btn.className.replace('btn-sidebar-dark', 'btn-sidebar-light');
+	}
 }
+
+function flipCard(button) {
+	var card = button.parentNode.parentNode;
+
+	if (card.classList.contains('card-flipped')) {
+		card.querySelector('#card_frente').classList.remove('d-none');
+		card.querySelector('#card_verso').classList.add('d-none');
+		card.classList.remove('card-flipped');
+	} else {
+		card.querySelector('#card_verso').classList.remove('d-none');
+		card.querySelector('#card_frente').classList.add('d-none');
+		card.classList.add('card-flipped');
+	}
+}
+
