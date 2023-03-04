@@ -204,6 +204,7 @@ body::-webkit-scrollbar-thumb {
     .sidenav {
         margin-right: -350px;
     }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -230,6 +231,7 @@ body::-webkit-scrollbar-thumb {
     #span_titulo_1 {
         max-width: 41vw;
     }
+    
 }
 
 
