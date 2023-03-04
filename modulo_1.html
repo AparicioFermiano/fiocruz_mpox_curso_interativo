@@ -15,17 +15,17 @@
 <body>
 	<div id="corpo">
 		<div id="sessao_1" class="row w-100 m-0">
-			<div class="col-4 p-3 z-1">
-				<img src="image/virus-1.svg" alt="virus-1">
+			<div class="col-3 col-md-4 pt-section-1 z-1">
+				<img src="image/virus-1.svg" class="center-block" alt="virus-1">
 			</div>
-			<div class="position-relative overflow-hidden col-8 p-0 z-2">
+			<div class="position-relative overflow-hidden col-9 col-md-8 p-0 z-2">
 				<figure class="w-100">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 754 500.39"><defs><style>.a{fill:#32378c;}</style></defs><path class="a" d="M1000,259.61c-34,217.55-320.83,234-420.67,240C157.7,516,129.35,36.46,532.63-.39c0,0,467.37,0,467.37,0Z" transform="translate(-246 0.39)"/></svg>
 				</figure>
 				<div class="container-absolute text-light pb-10">
 					<div class="parent m-auto w-75">
-						<span class="text-start bold">Capítulo 01</span>
-						<p class="title">Objetivos de aprendizagem:</p>
+						<span id="span_capitulo_1" class="text-start bold pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Capítulo 1">Capítulo 01</span>
+						<p id="span_titulo_1" class="title pointer "data-bs-toggle="tooltip" data-bs-placement="top" title="Objetivos de aprendizagem">Objetivos de aprendizagem:</p>
 						<p data-min-font-size="10">Esta Unidade tem como objetivo apresentar um breve histórico e panorama da
 							doença no mundo e no Brasil, descrevendo o agente etiológico, as características
 							do vírus e as formas de transmissão.</p>
@@ -37,7 +37,7 @@
 		</div>
 
 		<div id="sessao_2" class="row w-100 m-0">
-			<div class="position-relative overflow-hidden col-8 p-0 z-2" style="height:700px;">
+			<div class="position-relative overflow-hidden col-9 col-md-8 p-0 z-2" style="height:700px;">
 				<figure class="w-100">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 666.2 492.96"><defs><style>.a{fill:#32378c;}</style></defs><path class="a" d="M1,70.46C103.39,40.93,292.84-3.45,398.63,9.28s212.06,72.28,252.14,171c19.45,47.89,21.7,103.87-.11,150.73s-69.39,82.41-121,83.82c-23.18.64-46-5.21-68.62-10.14a889.1,889.1,0,0,0-264-17.05c-30.57,2.61-61.54,7-89.41,19.82C62.45,428.3,30.51,460.68,0,500Z" transform="translate(0 -7.04)"/></svg>
 				</figure>
@@ -55,7 +55,7 @@
 				<img class="w-25 position-absolute z-3 bottom-0 start-0" src="image/virus-2.svg" alt="virus-2">
 				<img class="w-25 position-absolute z-3 bottom-0 end-0 p-4" src="image/virus-3.svg" alt="virus-3">
 			</div>
-			<div class="col-4 z-1 p-0">
+			<div class="col-3 col-md-4 z-1 p-0">
 				<img class="w-100" src="image/menino-tossindo.svg" alt="tossindo">
 			</div>
 		</div>
@@ -77,8 +77,15 @@
 			</a>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<script src="js/sidebar.js"></script> 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl)
+		});
+	</script>
 </body>
 </html>
