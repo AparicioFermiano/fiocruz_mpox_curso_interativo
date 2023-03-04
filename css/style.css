@@ -75,6 +75,7 @@ p {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+
 }
 
 .sidenav a {
@@ -113,6 +114,23 @@ p {
 
 /* MEDIA */
 
+
+.pt-section-1{
+    padding-top: 1vw;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+#span_capitulo_1 {
+    max-width: 5.5vw;
+}
+
+#span_titulo_1 {
+    max-width: 30vw;
+}
+
 @media (max-width: 992px) {
     #corpo {
         margin-right: 0 !important;
@@ -128,13 +146,47 @@ p {
         font-weight: 700;
         text-transform: capitalize;
     }
+
+    #span_capitulo_1 {
+        max-width: 8vw;
+    }
+
+    #span_titulo_1 {
+        max-width: 34vw;
+    }  
 }
+
+@media screen and (max-width: 768px) {
+    .container-absolute p,
+    .container-absolute span {
+        font-size: 2.0vw;
+    }
+
+    .container-absolute .title {
+        font-size: 3vw;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    .pt-section-1{
+        padding-top: 10vw;
+    }
+
+    #span_capitulo_1 {
+        max-width: 11vw;
+    }
+
+    #span_titulo_1 {
+        max-width: 41vw;
+    }  
+}
+
 
 @media screen and (max-width: 600px) {
 
     .container-absolute p,
     .container-absolute span {
-        font-size: 2vw;
+        font-size: 2.4vw;
         margin-bottom: 1%;
     }
 
@@ -143,6 +195,15 @@ p {
         font-weight: 700;
         text-transform: capitalize;
     }
+
+    #span_capitulo_1 {
+        max-width: 14vw;
+    }
+
+    #span_titulo_1 {
+        max-width: 43vw;
+    }    
+    
 }
 
 @media (min-width: 576px) {}
