@@ -1,7 +1,7 @@
 :root {
     --color-primary: #00436F;
     --color-secondary: #8CD8F9;
-    --color-aux: #00436F;
+    --color-aux: #006DAA;
     --color-dark: #0D1214;
     --color-light: #eeeeee;
 }
@@ -40,7 +40,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #corpo {
-    margin-right: 20% !important;
+    margin-right: 350px !important;
 }
 
 .container-absolute {
@@ -69,6 +69,17 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
+.btn-home {
+    background-color: var(--color-primary) !important;
+    color: var(--color-light) !important;
+    font-size: 1rem !important;
+}
+
+.btn-home:hover {
+    background-color: var(--color-aux) !important;
+
+}
+
 /* UTILITARIOS */
 
 .bold {
@@ -83,40 +94,39 @@ body::-webkit-scrollbar-thumb {
     z-index: 5;
 }
 
+.background-light {
+    background-color: var(--color-light) !important;
+}
+
 /* SIDEBAR */
 
 .sidenav {
     height: 100%;
-    width: 0px;
+    width: 350px;
     position: fixed;
     z-index: 4;
     top: 0;
     right: 0;
-    background-color: #f8f9fa !important;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .sidenav a {
     padding: 8px 8px 8px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
     display: block;
     transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
 }
 
 .sidenav::-webkit-scrollbar {
     display: none;
 }
 
-.sidebar-btn {
+.sidebar-navbar {
     color: transparent !important;
     position: fixed !important;
     z-index: 6;
@@ -133,8 +143,23 @@ body::-webkit-scrollbar-thumb {
     border-radius: 15px;
 }
 
-/* MEDIA */
+.btn-sidebar-light {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--color-light);
+    color: var(--color-light);
+    transition: 0.5s;
+}
 
+.btn-sidebar-dark {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--color-dark);
+    color: var(--color-dark);
+    transition: 0.5s;
+}
+
+/* MEDIA */
 
 .pt-section-1 {
     padding-top: 1vw;
@@ -174,6 +199,10 @@ body::-webkit-scrollbar-thumb {
 
     #span_titulo_1 {
         max-width: 34vw;
+    }
+
+    .sidenav {
+        margin-right: -350px;
     }
 }
 
@@ -236,11 +265,11 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 992px) {
     .sidenav {
-        width: 20% !important;
         padding-top: 0px !important;
+        margin-right: 0px;
     }
 
-    .btn-sidebar {
+    #btn-sidebar {
         display: none;
     }
 }
