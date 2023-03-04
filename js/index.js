@@ -1,10 +1,12 @@
 function Nav() {
   var sidenav = document.getElementById("mySidenav");
-  var width = window.getComputedStyle(sidenav).getPropertyValue("width");
-
-  if (width === "0px" || width === "") {
-    sidenav.style.width = "250px";
+  var marginRight = window.getComputedStyle(sidenav).getPropertyValue("margin-right");
+  var btn = document.getElementById('btn-sidebar');
+  if (marginRight === "-350px" || marginRight === "") {
+    sidenav.style.marginRight = "0px";
+    btn.className = btn.className.replace('btn-sidebar-light', 'btn-sidebar-dark');
   } else {
-    sidenav.style.width = "0px";
+    sidenav.style.marginRight = "-350px";
+    btn.className = btn.className.replace('btn-sidebar-dark', 'btn-sidebar-light');
   }
 }
