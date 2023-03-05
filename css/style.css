@@ -200,9 +200,6 @@ body::-webkit-scrollbar-thumb {
 
 .flip-button {
     position: absolute;
-    bottom: 1%;
-    right: 1%;
-    font-size: 2vw !important;
 }
 
 .flip-button:hover {
@@ -261,8 +258,19 @@ body::-webkit-scrollbar-thumb {
     }
 
     .card {
-        width: 20vw !important;
+        width: 17vw !important;
         height: 27vw !important;
+    }
+
+    .flip-button {
+        font-size: 4vw !important;
+        bottom: 0% !important;
+        right: 0% !important;
+        padding: 0rem 0.25rem !important
+    }
+
+    .card-title {
+        font-size: 2vw;
     }
 }
 
@@ -289,6 +297,10 @@ body::-webkit-scrollbar-thumb {
 
     #span_titulo_1 {
         max-width: 41vw;
+    }
+
+    .container-absolute .card p {
+        font-size: 1.5vw;
     }
     
 }
@@ -338,5 +350,11 @@ body::-webkit-scrollbar-thumb {
     .card {
         width: 13vw !important;
         height: 17vw !important;
+    }
+
+    .flip-button {
+        font-size: 2vw !important;
+        bottom: 1% !important;
+        right: 1% !important;
     }
 }
