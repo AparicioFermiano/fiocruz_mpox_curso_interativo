@@ -29,3 +29,12 @@ function flipCard(button) {
 		card.classList.add('card-flipped');
 	}
 }
+
+var progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', function() {
+  	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  	var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+  	var clientHeight = document.documentElement.clientHeight || window.innerHeight;
+  	var percent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+  	progressBar.style.width = percent + '%';
+});
