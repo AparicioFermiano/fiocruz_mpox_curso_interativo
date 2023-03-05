@@ -294,7 +294,6 @@ body::-webkit-scrollbar-thumb {
     .card-title {
         font-size: 2vw;
      }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -334,6 +333,9 @@ body::-webkit-scrollbar-thumb {
         font-size: 1.5vw;
     }
    
+    .container-absolute .card p {
+        font-size: 1.5vw;
+    } 
 }
 
 @media screen and (max-width: 600px) {
