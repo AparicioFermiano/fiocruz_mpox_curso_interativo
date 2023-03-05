@@ -17,8 +17,8 @@
 
 <body>
 	<!-- Sidebar -->
-	<nav class="navbar navbar-light justify-content-end sidebar-btn p-3">
-		<button class="navbar-toggler z-5 btn-sidebar" type="button" data-toggle="collapse" aria-expanded="false"
+	<nav class="navbar navbar-light justify-content-end sidebar-navbar p-3">
+		<button id="btn-sidebar" class="z-5 btn-sidebar-light" type="button" data-toggle="collapse" aria-expanded="false"
 			aria-label="Toggle navigation" onclick="Nav()">
 			<i class="bi bi-list"></i>
 		</button>
@@ -97,14 +97,36 @@
 		</div>
 
 		<div id="sessao_2" class="row w-100 m-0">
-			<div class="position-relative overflow-hidden col-9 col-md-8 p-0 z-2" style="height:700px;">
-				<figure class="w-100">
+			<div class="position-relative altura col-9 col-md-8 p-0 z-2">
+				<figure class="w-100 border border-danger">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 666.2 492.96"><defs><style>.a{fill:#00436F;}</style></defs><path class="a" d="M1,70.46C103.39,40.93,292.84-3.45,398.63,9.28s212.06,72.28,252.14,171c19.45,47.89,21.7,103.87-.11,150.73s-69.39,82.41-121,83.82c-23.18.64-46-5.21-68.62-10.14a889.1,889.1,0,0,0-264-17.05c-30.57,2.61-61.54,7-89.41,19.82C62.45,428.3,30.51,460.68,0,500Z" transform="translate(0 -7.04)"/></svg>
 				</figure>
+				<div class="container-absolute text-light">
+					<div class="parent">
+						<div class="d-flex text-dark mx-auto">
+							<div class="card col-4 mx-1">
+								<div id="card_frente" class="card-body d-flex align-items-center mx-auto">
+									<h3 class="card-title bold">1958</h3>
+									<button class="btn flip-button" onclick="flipCard(this)">
+										<i class="bi bi-arrow-repeat"></i>
+									</button>
+								</div>
+								<div id="card_verso" class="card-body card-back d-none d-flex align-items-center mx-auto">
+									<p class="card-text p-3 text-center">
+										O vírus foi identificado em 1958 em duascolônias de macacos
+										provenientes da África emantidas para pesquisana Dinamarca.</p>
+									<button class="btn flip-button" onclick="flipCard(this)">
+										<i class="bi bi-arrow-repeat"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<img class="w-25 position-absolute z-3 bottom-0 start-0" src="image/virus-2.svg" alt="virus-2">
 				<img class="w-25 position-absolute z-3 bottom-0 end-0 p-4" src="image/virus-3.svg" alt="virus-3">
 			</div>
-			<div class="col-3 col-md-4 z-1 p-0">
+			<div class="col-3 col-md-4 pt-section-1">
 				<img class="w-100" src="image/menino-tossindo.svg" alt="tossindo">
 			</div>
 		</div>
