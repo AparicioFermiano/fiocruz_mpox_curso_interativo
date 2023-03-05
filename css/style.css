@@ -90,6 +90,11 @@ body::-webkit-scrollbar-thumb,
     height: 32vw;
 }
 
+.sessao3-position {
+    top: 5.2vw;
+    height: 34vw;
+}
+
 /* UTILITARIOS */
 
 .bold {
@@ -106,10 +111,6 @@ body::-webkit-scrollbar-thumb,
 
 .background-light {
     background-color: var(--color-light) !important;
-}
-
-.sessao3-position {
-    top:-18vw;
 }
 
 /* SIDEBAR */
@@ -268,8 +269,56 @@ body::-webkit-scrollbar-thumb,
     padding-top: 1vw;
 }
 
-/* MEDIA */
+.div_video{
+    background-color: white;
+    height: 26.5vw;
+    width: 34.5vw;
+    margin-left: 70px;
+    border-radius: 20px;
+    margin-top: 180px;
+}
 
+.title_div{
+    background-color: #9c70cf; 
+    height: 4vw; 
+    width: 34.5vw;
+    border-top-left-radius: 1.5vw; 
+    border-top-right-radius: 1.5vw; 
+}
+
+#camera_img{
+    height: 6vw;
+    margin-top: -1.5vw;
+    margin-left: 2.3vw;
+}
+
+.triangle_down {
+    width: 0;
+    height: 0;
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 1vw solid #9c70cf;
+    font-size: 0;
+    line-height: 0;
+    float: left;
+}
+
+.center_arrow {
+    display: flex;
+    justify-content: center;
+}
+
+#video_monkeypox{
+    padding: 1vw;
+    width: 34.4vw;
+    height: 280px;
+}
+
+.mt-monkey-img{
+    margin-top: 500px;
+}
+
+/* MEDIA */
 @media (max-width: 992px) {
     #corpo {
         margin-right: 0 !important;
@@ -307,10 +356,6 @@ body::-webkit-scrollbar-thumb,
         width: 17vw !important;
         height: 27vw !important;
     }
-
-    .sessao3-position {
-        top:-24vw;
-    }
     
     .flip-button {
         font-size: 4vw !important;
@@ -321,7 +366,12 @@ body::-webkit-scrollbar-thumb,
 
     .card-title {
         font-size: 2vw;
-     }
+    }
+
+    .sessao3-position {
+        height: 49vw;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -350,10 +400,6 @@ body::-webkit-scrollbar-thumb,
         max-width: 41vw;
     }
 
-    .sessao3-position {
-        top:-10vw;
-    }
-
     .pt-section-3 {
         padding-top: 10vw;
     }
@@ -364,7 +410,8 @@ body::-webkit-scrollbar-thumb,
    
     .container-absolute .card p {
         font-size: 1.5vw;
-    } 
+    }
+    
 }
 
 @media screen and (max-width: 600px) {
@@ -393,6 +440,11 @@ body::-webkit-scrollbar-thumb,
     .box-scrool {
         padding: 1rem;
     }
+}
+
+
+@media screen and (max-width: 390px) {
+
 }
 
 @media (max-width: 1200px) {}
