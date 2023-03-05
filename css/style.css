@@ -103,6 +103,10 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--color-light) !important;
 }
 
+.sessao3-position {
+    top:-18vw;
+}
+
 /* SIDEBAR */
 
 .sidenav {
@@ -217,8 +221,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-/* MEDIA */
-
 .pt-section-1 {
     padding-top: 1vw;
 }
@@ -234,6 +236,12 @@ body::-webkit-scrollbar-thumb {
 #span_titulo_1 {
     max-width: 30vw;
 }
+
+.pt-section-3 {
+    padding-top: 1vw;
+}
+
+/* MEDIA */
 
 @media (max-width: 992px) {
     #corpo {
@@ -272,6 +280,10 @@ body::-webkit-scrollbar-thumb {
         height: 27vw !important;
     }
 
+    .sessao3-position {
+        top:-24vw;
+    }
+    
     .flip-button {
         font-size: 4vw !important;
         bottom: 0% !important;
@@ -281,7 +293,7 @@ body::-webkit-scrollbar-thumb {
 
     .card-title {
         font-size: 2vw;
-    }
+     }
 }
 
 @media screen and (max-width: 768px) {
@@ -309,10 +321,21 @@ body::-webkit-scrollbar-thumb {
         max-width: 41vw;
     }
 
+    .sessao3-position {
+        top:-10vw;
+    }
+
+    .pt-section-3 {
+        padding-top: 10vw;
+    }
+
     .container-absolute .card p {
         font-size: 1.5vw;
     }
-    
+   
+    .container-absolute .card p {
+        font-size: 1.5vw;
+    } 
 }
 
 @media screen and (max-width: 600px) {
@@ -336,7 +359,6 @@ body::-webkit-scrollbar-thumb {
     #span_titulo_1 {
         max-width: 43vw;
     }
-
 }
 
 @media (max-width: 1200px) {}
