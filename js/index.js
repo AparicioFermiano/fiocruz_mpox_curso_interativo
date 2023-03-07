@@ -38,3 +38,4 @@ window.addEventListener('scroll', function() {
   	var percent = (scrollTop / (scrollHeight - clientHeight)) * 100;
   	progressBar.style.width = percent + '%';
 });
+
