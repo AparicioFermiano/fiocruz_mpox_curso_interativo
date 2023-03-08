@@ -358,7 +358,21 @@ body::-webkit-scrollbar-thumb,
    text-align: center;
  }
 
+.cards_carousel {
+    margin-right: 5px;
+}
 
+#carouselExampleCaptions{
+    width: 40vw;
+}
+
+#span_titulo_5{
+    text-align: center;
+}
+
+#capitulo5_margin_top{
+    margin-top: 3.5vw;
+}
 /* MEDIA */
 
 @media (max-width: 1200px){
@@ -383,6 +397,10 @@ body::-webkit-scrollbar-thumb,
         padding: 1vw;
         width: 35.4vw;
     }
+
+    #carouselExampleCaptions{
+        width: 37vw;
+    }    
 }
 
 
@@ -483,6 +501,9 @@ body::-webkit-scrollbar-thumb,
         width: 47.4vw;
     }
     
+    #carouselExampleCaptions{
+        width: 55vw;
+    }    
 }
 
 @media screen and (max-width: 768px) {
@@ -607,6 +628,13 @@ body::-webkit-scrollbar-thumb,
 
     #camera_img{
         margin-top: -3.3vw;
+    }
+}
+
+@media (min-width: 200px) {
+    .card-group {
+        display: flex;
+        flex-flow: row wrap;
     }
 }
 
