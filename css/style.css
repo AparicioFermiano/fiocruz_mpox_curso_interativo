@@ -358,7 +358,20 @@ body::-webkit-scrollbar-thumb,
    text-align: center;
  }
 
+.cards_carousel {
+    margin-right: 5px;
+}
 
+#carouselExampleCaptions{
+    width: 40vw;
+}
+
+#span_titulo_5{
+    text-align: center;
+}
+#capitulo5_margin_top{
+    margin-top: 50px;
+}
 /* MEDIA */
 
 @media (max-width: 1200px){
