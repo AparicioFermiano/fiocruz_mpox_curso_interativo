@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aparicio Fermiano dos Santos Junior">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/sidenav.min.css">
+    <!-- https://github.com/AparicioFermiano -->
+    <title>Módulo 01</title>
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <nav class="sidebar-navbar">
+        <button id="btn-sidebar" class="btn-sidebar p-3" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" onclick="nav()">
+            <i class="bi bi-list"></i>
+        </button>
+    </nav>
+    <div id="sidenav">
+        <div>
+            <img src="./image/logo_sidebar_2" alt="Logo Monkeypox" class="d-block mx-auto w-50 mb-3">
+            <!-- SIDEBAR - HOME -->
+            <div class="sidebar-item active">
+                <a href="#" class="d-flex">
+                    <div class="sidebar-item-icon">
+                        <i class="bi bi-house-fill"></i>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Início
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#sobre" class="d-flex">
+                    <div class="sidebar-item-icon">
+                        <i class="bi bi-exclamation-diamond-fill"></i>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Sobre o módulo
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#definicao" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>01</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Definição da doença e formas de transmissão
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- BOTOES CARROSEL -->
+        <div class="d-flex justify-content-around px-4">
+            <button type="button" class="btn-sidebar" onclick="carouselHandler('prev', 'carousel1')">
+                <i class="bi bi-door-open-fill"></i>
+            </button>
+            <button type="button" class="btn-sidebar" onclick="carouselHandler('next', 'carousel1')">
+                <i class="bi bi-person-badge-fill"></i>
+            </button>
+            <button type="button" class="btn-sidebar" onclick="carouselHandler('next', 'carousel1')">
+                <i class="bi bi-exclamation-circle-fill"></i>
+            </button>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row teste">
+            <div class="col-6 bg-black"></div>
+            <div class="col-6 bg-dark"></div>
+        </div>
+        <div id="sobre" class="row teste">
+            <div class="col-6 bg-warning"></div>
+            <div class="col-6 bg-success"></div>
+        </div>
+        <div class="row teste">
+            <div class="col-6 bg-black"></div>
+            <div class="col-6 bg-dark"></div>
+        </div>
+        <div class="row teste">
+            <div class="col-6 bg-warning"></div>
+            <div class="col-6 bg-success"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/index.min.js"></script>
+    <!-- https://github.com/AparicioFermiano -->
+</body>
+
+</html>
