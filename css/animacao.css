@@ -142,3 +142,26 @@
         max-width: 100%;
     }
 }
+
+.onda {
+    background-size: cover;
+    min-height: 250px;
+    background-image: url('../image/onda_branca.svg');
+    background-repeat: repeat-x;
+    animation: move-wave 10s linear infinite;
+    background-color: var(--primary-dark-hover)
+  }
+  
+  @keyframes move-wave {
+    from {
+      background-position-x: 100%; /* posição inicial da imagem de fundo */
+    }
+    to {
+      background-position-x: 0; /* posição final da imagem de fundo */
+    }
+  }
+  
+  
+
+
+  
