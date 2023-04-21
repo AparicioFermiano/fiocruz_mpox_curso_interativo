@@ -35,3 +35,11 @@ function carouselHandler(action, carouselId) {
         }
     }
 }
+
+function inicio(modulo){
+    window.location.href = "/modulo" + modulo + '.html';
+}
+
+function creditos(modulo){
+    window.location.href = "/creditos" + modulo + '.html';
+}

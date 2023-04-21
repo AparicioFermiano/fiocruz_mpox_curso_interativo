@@ -60,13 +60,13 @@
         </div>
         <!-- BOTOES CARROSEL -->
         <div class="d-flex justify-content-around px-4">
-            <button type="button" class="btn-sidebar-icon" onclick="carouselHandler('prev', 'carousel1')">
+            <button type="button" class="btn-sidebar-icon">
                 <i class="bi bi-door-open"></i>
             </button>
-            <button type="button" class="btn-sidebar-icon" onclick="carouselHandler('next', 'carousel1')">
+            <button type="button" class="btn-sidebar-icon">
                 <i class="bi bi-person-badge"></i>
             </button>
-            <button type="button" class="btn-sidebar-icon" onclick="carouselHandler('next', 'carousel1')">
+            <button type="button" class="btn-sidebar-icon">
                 <i class="bi bi-exclamation-circle"></i>
             </button>
         </div>
@@ -89,9 +89,41 @@
                     <div class="col-12 col-md-9 col-lg-6 m-auto w-lg-50">
                         <div class="w-100 d-flex justify-content-between mb-3">
                             <button class="button btn-col-2 btn-secondary">Créditos</button>
-                            <button class="button btn-col-2">Instruções</button>
+                            <button class="button btn-col-2" data-bs-toggle="modal" data-bs-target="#instrucao_navegacao">Instruções</button>
                         </div>
-                        <button class="button w-100 btn-outline">Iniciar</button>
+                        <a class="button w-100 btn-outline" href="#sobre">Iniciar</a>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="instrucao_navegacao" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content modal-conteudo">
+                                <div class="mx-auto border-0">
+                                    <button type="button"
+                                        class="btn-close bg-light border rounded-circle p-3"
+                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="pt-3 text-justify">
+                                    <p class="py-2 bold text-center">Instruções para
+                                        navegação</p>
+                                    <p>Você pode ajustar a visualização do
+                                        material de acordo com o nível de zoom do seu navegador,
+                                        pressione:</p>
+                                    <div class="text-center">
+                                        <p><kbd>CTRL</kbd> + <kbd>+</kbd> : Aumentar
+                                            o zoom</p>
+                                        <p><kbd>CTRL</kbd> + <kbd>-</kbd> : Diminuir
+                                            o zoom</p>
+                                    </div>
+
+                                    <div class="py-2">
+                                        Quando uma palavra do texto estiver <u>destacada</u> com a cor
+                                        principal do módulo e sublinhada, isso indica que há conteúdo
+                                        adicional relacionado ao contexto. Clique na palavra para obter
+                                        mais informações e aprofundar seu estudo;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,6 +143,34 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div id="sobre" class="container-fluid">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/index.min.js"></script>
