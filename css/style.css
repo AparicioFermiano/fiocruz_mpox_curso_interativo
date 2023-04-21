@@ -1,3 +1,5 @@
+/* Criado por Aparicio Fermiano Junior
+https://github.com/AparicioFermiano */
 :root {
     --primary: #4BC2EF;
     --primary-hover: #369FCE;
@@ -7,24 +9,257 @@
     --primary-dark-hover: #263780;
     --secondary: #EB5B59;
     --secondary-hover: #CD3F3F;
-    --secondary-light: #EB5B59;
     --secondary-dark: #B33433;
     --aux: #F1B398;
     --font-dark: #212121;
     --font-light: #f2f2f2fd;
-    --disabled-dark: #8b8b8b59;
+    --disabled-dark: #8b8b8b62;
     --disabled: #B8B8B8;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: 0% !important;
+    color: var(--font-dark);
+    background-color: var(--font-light);
 }
 
+body::-webkit-scrollbar,
+.box-scrool::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track,
+.box-scrool::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb,
+.box-scrool::-webkit-scrollbar-thumb {
+    background-color: var(--primary-dark);
+    border-radius: 20px;
+    border: 3px solid var(--font-light);
+}
+
+p {
+    font-size: 1em;
+}
+
+
+#capa {
+    overflow: hidden;
+}
+
+.offcanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+  
+.offcanvas.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* UTILITARIOS */
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+.padding-container {
+    padding: 4rem;
+}
+
+.padding-x-container {
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+
+/* CORES */
+
+.primary {
+    color: var(--primary) !important;
+}
+
+.primary-dark {
+    color: var(--primary-dark) !important;
+}
+
+.primary-dark-hover {
+    color: var(--primary-dark-hover) !important;
+}
+
+.secondary {
+    color: var(--secondary) !important;
+}
+
+.secondary-hover {
+    color: var(--secondary-hover) !important;
+}
+
+.secondary-dark {
+    color: var(--secondary-dark) !important;
+}
+
+.secondary-light {
+    color: var(--secondary-light) !important;
+}
+
+.aux {
+    color: var(--aux) !important;
+}
+
+/* BACKGROUND */
+
+.bg-secondary {
+    background-color: var(--secondary) !important ;
+}
+
+/* FONTES */
+
+.font-oswald,
 .font-oswald b {
     font-family: 'Oswald', sans-serif;
 }
 
-.teste {
-    height: 300px;
+.capitulo-capa {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 15rem;
+}
+
+.modulo-capa {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 10rem;
+    line-height: 10rem;
+}
+
+.titulo {
+    font-size: 2rem;
+}
+
+b, .bold {
+    font-weight: 900;
+}
+
+/* BOTOES */
+
+.button,
+.button.btn-outline:hover {
+    background-color: var(--primary-dark);
+    border-radius: 0 1rem 0 1rem;
+    padding: 0.3rem;
+    border: 2px solid var(--primary-dark);
+    color: var(--font-light);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.button.btn-col-2 {
+   width: 48%;
+}
+
+.button:hover {
+    border: 2px solid var(--primary-dark-hover);
+    background-color: var(--primary-dark-hover);
+}
+
+.button.btn-outline {
+    background-color: transparent;
+    color: var(--primary-dark-hover);
+    font-weight: 500;
+}
+
+.button.btn-secondary {
+    background-color: var(--secondary);
+    border: 2px var(--secondary);
+}
+
+.button.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+    border: 2px var(--secondary-hover);
+}
+
+/* ESPACAMENTO */
+
+
+@media (min-width: 992px) {
+    .w-lg-75 {
+        width: 75%;
+    }
+
+    .w-lg-50 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .w-md-100 {
+        width: 100%;
+    }
+
+    .titulo {
+        font-size: 1.8rem;
+    }
+    .capitulo-capa {
+        font-size: 10rem;
+        text-align: center;
+    }
+    .modulo-capa {
+        font-size: 8rem;
+        line-height: 8rem;
+        font-weight: 900;
+    }
+    .padding-container {
+        padding: 2rem;
+    }
+    .padding-x-container {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .pt-mobile-5 {
+        padding-top: 5%;
+    }
+    .py-mobile-5 {
+        padding-top: 5%;
+        padding-bottom: 5%; 
+    }
+    .padding-container {
+        padding: 1.2rem;
+    }
+    .padding-x-container {
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+    .titulo {
+        font-size: 1rem;
+    }
+    .capitulo-capa {
+        font-size: 5rem;
+        text-align: center;
+    }
+    .modulo-capa {
+        font-size: 3.5rem;
+        line-height: 3rem;
+        font-weight: 900;
+    }
 }
