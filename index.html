@@ -75,14 +75,11 @@
     <div id="capa" class="container-fluid">
         <div class="row pt-mobile-5">
             <div class="col-12 col-lg-6 padding-x-container pt-5">
-                <div class="d-flex justify-content-center mb-5">
-                    <img src="./image/logo_fiocruz.png" alt="" class="mx-2">
-                    <img src="./image/logo_nova_una_sus.png" alt="" class="mx-2">
-                </div>
+                <img src="./image/logos.png" alt="Logos" class="img-fluid">
                 <div>
-                    <span class="modulo-capa digitando">MONKEYPOX</span><br>
+                    <span class="modulo-capa digitando mt-3">MONKEYPOX</span><br>
                     <span class="titulo-capa bold secondary-dark">MÓDULO 01</span>
-                    <p class="mt-5 mb-2 titulo-capa">Introdução ao MPOX / Monkeypox / Varíola dos macacos / Varíola símia</p>
+                    <p class="mt-5 mb-2 titulo-capa pb-4">Introdução ao MPOX / Monkeypox / Varíola dos macacos / Varíola símia</p>
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-3 col-lg-3 capitulo-capa secondary-dark">01</div>
@@ -147,7 +144,7 @@
     <div id="sobre" class="container-fluid pt-5 bg-primary-dark-hover">
         <p class="titulo text-center secondary">SOBRE O MÓDULO</p>
         <div class="line bg-secondary w-25"></div>
-        <div id="carouselExampleIndicators" class="carousel slide carousel-person">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-person" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active circle" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="circle" aria-label="Slide 2"></button>
@@ -211,12 +208,115 @@
             </button>
         </div>
     </div>
-    <div class="onda"></div>
-    <div id="sobre" class="container-fluid pt-5 bg-light">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore maiores tempora odit doloribus aut, repudiandae vel deleniti soluta quae officia fuga corporis facilis similique labore, delectus eius ut vitae distinctio!</p>
+    <div class="onda onda-light"></div>
+    <div id="definicao" class="container-fluid pt-2 bg-light">
+        <div class="row justify-content-center padding-x-container">
+            <div class="col-12 col-lg-6 order-last order-lg-first d-flex align-items-center">
+                <img src="./image/introducao_detalhes_1.png" alt="Virus" class="d-block mx-auto w-100 w-lg-75 mx-2">
+            </div>
+            <div class="col-12 col-lg-6 px-5 order-first order-lg-last">
+                <p class="titulo font-oswald primary-dark-hover medium text-center">Definição da doença e formas de transmissão</p>
+                <div class="line bg-primary-dark-hover"></div>
+                <div class="text-justify">
+                    <p class="pt-5 py-2">A mpox é uma zoonose viral causada pelo Monkeypox virus (MPXV), da família Poxviridae, capaz de infectar diferentes espécies de mamíferos. É uma doença transmissível, autolimitada e caracterizada pelo surgimento de pústulas na pele dos indivíduos infectados (LUNA et al., 2022).</p>
+                    <p class="py-2">Nas regiões endêmicas, a taxa de letalidade (TL) varia de 3,6% a 10,6% e, em geral, tanto as manifestações da doença quanto a TL são piores nos pacientes imunossuprimidos, como os pacientes que vivem com o vírus da imunodeficiência humana (HIV) (BUNGE et al., 2022).</p>
+                    <p class="py-2">Você já deve ter ouvido comentários associando a mpox à varíola humana. Isso se deve ao fato de o agente etiológico das duas doenças, Monkeypox virus e Variola vírus (VARV – do inglês smallpox), pertencerem à mesma família, Poxviridae, causando doenças que se manifestam de forma semelhante clinicamente, embora a mpox seja menos grave.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row padding-x-container">
+            <div class="col-12 col-lg-6">
+                <img src="./image/introducao_detalhes_2.svg" alt="Virus" class="d-block mx-auto w-25 mx-2">
+                <div class="padding-desk-5 padding-y-mobile-5">
+                    <div class="py-4">
+                        <span class="bold">O vírus pode ser transmitido por:</span><br>
+                        <small class="desativado">Clique nos itens abaixo para interagir:</small>
+                    </div>
+                    <div class="accordion" id="accordion_transmissao">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#accordion_transmissao_1"
+                                    aria-expanded="false" aria-controls="accordion_transmissao">
+                                    Seres Humanos
+                                </button>
+                            </h2>
+                            <div id="accordion_transmissao_1" class="accordion-collapse collapse"
+                                data-bs-parent="#accordion_transmissao">
+                                <div class="accordion-body">
+                                    <ul class="p-4 small">
+                                        <li class="py-1">Contato próximo com lesões cutâneas, secreções respiratórias ou objetos recentemente contaminados;</li>
+                                        <li class="py-1">Contato prolongado, face a face, com secreções respiratórias;</li>
+                                        <li class="py-1">Via vertical (transplacentária ou contato próximo entre a mãe e o bebê durante e após o parto);</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#accordion_transmissao_2"
+                                    aria-expanded="false" aria-controls="accordion_transmissao">
+                                    Animais
+                                </button>
+                            </h2>
+                            <div id="accordion_transmissao_2" class="accordion-collapse collapse"
+                                data-bs-parent="#accordion_transmissao">
+                                <div class="accordion-body">
+                                    <ul class="p-4 small">
+                                        <li class="py-1">De animais infectados para outras espécies, incluindo humanos (contato direto com sangue, outros fluidos corporais e/ou lesões do animal infectado), e de humanos para animais. </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <img src="./image/introducao_detalhes_3.svg" alt="Virus" class="d-block mx-auto w-100 mx-2">
+            </div>
+        </div>
+        <div class="container text-justify p-3">
+            <p class="py-2">Outras formas de transmissão entre seres humanos, incluindo por contato sexual, estão sendo estudadas.</p>
+            <p class="py-2">O MPXV foi identificado na década de 50, entretanto o primeiro caso em seres humanos foi observado em 1970. Vale ressaltar que embora a descoberta do vírus tenha ocorrido em macacos em um laboratório dinamarquês em 1958, a Organização Mundial da Saúde (OMS) considera inadequada a nomeação dada à doença, esclarecendo que a maioria dos animais suscetíveis a esse tipo de varíola são roedores, como ratos e cães-da-pradaria </p>
+        </div>
+    </div>
+    <div class="onda onda-secondary bg-light"></div>
+    <div id="tempo" class="container-fluid pt-2 bg-secondary">
+        <p class="titulo font-oswald text-light medium text-center">LINHA DO TEMPO</p>
+        <div class="line bg-light"></div>
+        <div class="row justify-content-center padding-x-container">
+            <div class="col-12 col-lg-6">
+                <img src="./image/tempo_1958.png" alt="1958" class="d-block mx-auto w-50 mx-2 p-5">
+            </div>
+            <div class="col-12 col-lg-6 p-5 text-light">
+                <p class="titulo font-oswald medium text-center">1958</p>
+                <p class="py-2 text-justify">O vírus foi identificado em 1958 em duas colônias de macacos provenientes da África e mantidas para pesquisa na Dinamarca.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center padding-x-container">
+            <div class="col-12 col-lg-6 p-5 text-light">
+                <p class="titulo font-oswald medium text-center">1970 A 1979</p>
+                <p class="py-2 text-justify">O primeiro caso humano foi identificado em 1970 na República Democrática do Congo, na África. Desde então, apresenta-se como doença endêmica no continente africano, com poucos casos e baixa letalidade.
+                    - Entre 1970 e 1979, foram descritos casos humanos nas regiões Central e Ocidental da África.</p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <img src="./image/tempo_1970.png" alt="1970 A 1979" class="d-block mx-auto w-50 mx-2 p-5">
+            </div>
+        </div>
+        <div class="row justify-content-center padding-x-container">
+            <div class="col-12 col-lg-6">
+                <img src="./image/tempo_2003.png" alt="2003" class="d-block mx-auto w-50 mx-2 p-5">
+            </div>
+            <div class="col-12 col-lg-6 p-5 text-light">
+                <p class="titulo font-oswald medium text-center">2003</p>
+                <p class="py-2 text-justify"> Em 2003, ocorreu um surto nos EUA. Foram registrados cerca de 47 casos humanos devido à importação de roedores infectados capturados nas florestas de Gana.</p>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/index.min.js"></script>
+    <script src="./js/animacao.min.js"></script>
     <!-- https://github.com/AparicioFermiano -->
 </body>
 

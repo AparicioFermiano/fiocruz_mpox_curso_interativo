@@ -12,7 +12,7 @@ https://github.com/AparicioFermiano */
     --secondary-dark: #B33433;
     --aux: #F1B398;
     --font-dark: #212121;
-    --font-light: #f2f2f2fd;
+    --font-light: #f2f2f2;
     --disabled-dark: #8b8b8b62;
     --disabled: #B8B8B8;
 }
@@ -46,7 +46,6 @@ body::-webkit-scrollbar-thumb,
 p {
     font-size: 1em;
 }
-
 
 #capa {
     overflow: hidden;
@@ -146,6 +145,10 @@ p {
     color: var(--aux) !important;
 }
 
+.desativado {
+    color: gray !important;
+}
+
 /* BACKGROUND */
 
 .bg-secondary {
@@ -188,6 +191,14 @@ p {
 
 b, .bold {
     font-weight: 900;
+}
+
+.medium {
+    font-weight: 700;
+}
+
+small {
+    font-size: 0.8rem;
 }
 
 /* BOTOES */
@@ -249,19 +260,34 @@ a.button {
     margin: 1.4rem !important;
 }
 
+/* Accordion - Animacao */
+
+.accordion-button {
+    color: var(--primary-dark) !important;
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--aux);
+}
+
 @media (min-width: 992px) {
     .w-lg-75 {
-        width: 75%;
+        width: 75% !important;
     }
 
     .w-lg-50 {
-        width: 50%;
+        width: 50% !important;
+    }
+
+    .padding-desk-5 {
+        padding: 5% !important;
     }
 }
 
 @media (max-width: 992px) {
     .w-md-100 {
-        width: 100%;
+        width: 100% !important;
     }
 
     .titulo-capa {
@@ -277,7 +303,7 @@ a.button {
         font-weight: 900;
     }
     .padding-container {
-        padding: 2rem;
+        padding: 2rem !;
     }
     .padding-x-container {
         padding-right: 2rem;
@@ -316,5 +342,13 @@ a.button {
         font-size: 3.5rem;
         line-height: 3rem;
         font-weight: 900;
+    }
+    .padding-y-mobile-5 {
+        padding-top: 5% !important;
+        padding-bottom: 5% !important;
+    }
+
+    .capitulo-capa {
+        display: none;
     }
 }
