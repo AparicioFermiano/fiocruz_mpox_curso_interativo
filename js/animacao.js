@@ -18,6 +18,34 @@ function shake() {
 
 setInterval(shake, 5000);
 
+// seleciona todos os elementos com o atributo data-animation
+const elements = document.querySelectorAll('[data-animation]');
+
+// configura as opções do Intersection Observer
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+};
+
+// cria o Intersection Observer
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      // quando o elemento está visível, adiciona a classe de animação
+      entry.target.classList.add(entry.target.dataset.animation);
+    } else {
+      // quando o elemento não está mais visível, remove a classe de animação
+      entry.target.classList.remove(entry.target.dataset.animation);
+    }
+  });
+}, options);
+
+// adiciona cada elemento ao Intersection Observer
+elements.forEach(function(element) {
+  observer.observe(element);
+});
+
 // var animatedImg = document.querySelector('.animated-img');
 // var container = document.querySelector('.container');
 
