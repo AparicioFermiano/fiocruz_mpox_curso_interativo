@@ -1,5 +1,6 @@
 /* Criado por Aparicio Fermiano Junior
 https://github.com/AparicioFermiano */
+
 :root {
     --primary: #4BC2EF;
     --primary-hover: #369FCE;
@@ -18,7 +19,6 @@ https://github.com/AparicioFermiano */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
-
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -70,6 +70,7 @@ p {
     visibility: visible;
 }
 
+
 /* UTILITARIOS */
 
 .mr-auto {
@@ -112,6 +113,18 @@ p {
     height: 600px;
 }
 
+.link {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: var(--primary-hover);
+}
+
+
 /* CORES */
 
 .primary {
@@ -150,6 +163,7 @@ p {
     color: gray !important;
 }
 
+
 /* BACKGROUND */
 
 .bg-secondary {
@@ -159,6 +173,7 @@ p {
 .bg-primary-dark-hover {
     background-color: var(--primary-dark-hover) !important;
 }
+
 
 /* FONTES */
 
@@ -176,8 +191,8 @@ p {
 .modulo-capa {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
-    font-size: 10rem;
-    line-height: 10rem;
+    font-size: 6vw;
+    line-height: normal;
 }
 
 .titulo-capa {
@@ -190,7 +205,8 @@ p {
     font-weight: 400;
 }
 
-b, .bold {
+b,
+.bold {
     font-weight: 900;
 }
 
@@ -201,6 +217,7 @@ b, .bold {
 small {
     font-size: 0.8rem;
 }
+
 
 /* BOTOES */
 
@@ -251,6 +268,7 @@ a.button {
     height: 15px !important;
 }
 
+
 /* MODAL  */
 
 .modal-conteudo {
@@ -260,6 +278,7 @@ a.button {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     margin: 1.4rem !important;
 }
+
 
 /* Accordion - Animacao */
 
@@ -271,6 +290,7 @@ a.button {
 .accordion-button:not(.collapsed) {
     background-color: var(--aux);
 }
+
 
 /* OTHERS */
 
@@ -305,11 +325,9 @@ a.button {
     .w-lg-75 {
         width: 75% !important;
     }
-
     .w-lg-50 {
         width: 50% !important;
     }
-
     .padding-desk-5 {
         padding: 5% !important;
     }
@@ -319,93 +337,78 @@ a.button {
     .w-md-100 {
         width: 100% !important;
     }
-
     .w-md-75 {
         width: 75% !important;
     }
-
     .titulo-capa {
         font-size: 1.8rem;
     }
-
     .capitulo-capa {
         font-size: 10rem;
         text-align: center;
     }
-
     .modulo-capa {
         font-size: 8rem;
         line-height: 8rem;
         font-weight: 900;
     }
-
     .padding-container {
         padding: 2rem !;
     }
-
     .padding-x-container {
         padding-right: 2rem;
         padding-left: 2rem;
     }
-
     .titulo {
         font-size: 2rem;
         font-weight: 600;
     }
-
 }
 
 @media (max-width: 767px) {
     .pt-mobile-5 {
         padding-top: 5%;
     }
-
     .py-mobile-5 {
         padding-top: 5%;
         padding-bottom: 5%;
     }
-
     .padding-container {
         padding: 1.2rem;
     }
-
     .padding-x-container {
         padding-right: 1.2rem;
         padding-left: 1.2rem;
     }
-
     .titulo-capa {
         font-size: 1rem;
     }
-
     .capitulo-capa {
         font-size: 5rem;
         text-align: center;
     }
-
     .modulo-capa {
         font-size: 3.5rem;
         line-height: 3rem;
         font-weight: 900;
     }
-
     .padding-y-mobile-5 {
         padding-top: 5% !important;
         padding-bottom: 5% !important;
     }
-
+    .padding-x-mobile-3 {
+        padding-left: 3% !important;
+        padding-right: 3% !important;
+    }
     .capitulo-capa {
         display: none;
     }
-
     .pt-md-0 {
         padding-top: 0% !important;
     }
-
     .pt-md-5 {
         padding-top: 3rem !important;
     }
-
 }
 
 @media (min-width: 767px) and (max-width: 992px) {
