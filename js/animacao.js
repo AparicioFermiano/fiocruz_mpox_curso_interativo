@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function shake() {
   var animatedElements = document.querySelectorAll("[data-animation]");
 
@@ -164,71 +163,3 @@ function sair(){
   }
 }
 
-=======
-function shake() {
-    var animatedElements = document.querySelectorAll('[data-animation]');
-
-    animatedElements.forEach(function (element) {
-        var animationType = element.dataset.animation;
-        var boundingRect = element.getBoundingClientRect();
-
-        if (boundingRect.bottom > 0 && boundingRect.top < window.innerHeight) {
-            if (animationType === 'saiba-mais-animation') {
-                element.classList.add('saiba-mais-animation');
-                setTimeout(function () {
-                    element.classList.remove('saiba-mais-animation');
-                }, 2000);
-            }
-        }
-    })
-}
-
-setInterval(shake, 5000);
-
-// seleciona todos os elementos com o atributo data-animation
-const elements = document.querySelectorAll('[data-animation]');
-
-// configura as opções do Intersection Observer
-const options = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5
-};
-
-// cria o Intersection Observer
-const observer = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isIntersecting) {
-      // quando o elemento está visível, adiciona a classe de animação
-      entry.target.classList.add(entry.target.dataset.animation);
-    } else {
-      // quando o elemento não está mais visível, remove a classe de animação
-      entry.target.classList.remove(entry.target.dataset.animation);
-    }
-  });
-}, options);
-
-// adiciona cada elemento ao Intersection Observer
-elements.forEach(function(element) {
-  observer.observe(element);
-});
-
-// var animatedImg = document.querySelector('.animated-img');
-// var container = document.querySelector('.container');
-
-// function checkSlide() {
-//   var containerTop = container.getBoundingClientRect().top;
-//   var containerBottom = container.getBoundingClientRect().bottom;
-//   var windowHeight = window.innerHeight;
-
-//   if (containerTop < windowHeight && containerBottom > 0) {
-//     animatedImg.style.opacity = 1;
-//   } else {
-//     animatedImg.style.opacity = 0;
-//   }
-// }
-
-// window.addEventListener('scroll', function() {
-//   checkSlide();
-// });
->>>>>>> 5344f6730cc1f2cdea9ce3427c9927bd91f47f34
