@@ -143,38 +143,6 @@
     }
 }
 
-@keyframes circle_saiba_mais {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes shake {
-    0% {
-        transform: translate(0, 0) rotate(0);
-    }
-
-    10%, 30%, 50%, 70%, 90% {
-        transform: translate(-5px, 0) rotate(-5deg);
-    }
-
-    20%, 40%, 60%, 80% {
-        transform: translate(5px, 0) rotate(5deg);
-    }
-
-    100% {
-        transform: translate(0, 0) rotate(0);
-    }
-}
-
 .onda {
     background-size: cover;
     min-height: 250px;
@@ -304,3 +272,87 @@
 .card .card-scroll {
     overflow-y: scroll;
 }
+
+[data-animation="left-to-right"] {
+    transform: translateX(-200%);
+    transition: transform 1s ease-in-out;
+}
+
+[data-animation="right-to-left"] {
+    transform: translateX(200%);
+    transition: transform 1s ease-in-out;
+}
+
+[data-animation="right-to-left"].active,
+[data-animation="left-to-right"].active {
+    transform: translateX(0%);
+    transition: transform 1s ease-in-out;
+}
+
+/* Animacao de mexer */
+
+[data-animation="shake"].active {
+    animation-name: shake;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate(-5px, 0) rotate(-5deg);
+    }
+
+    20%, 40%, 60%, 80% {
+        transform: translate(5px, 0) rotate(5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+/* Animacao para piscar bolinha no destaque */
+
+[data-animation="circle-saiba-mais"] {
+    width: 15px;
+    background-color: var(--secondary-dark);
+    height: 15px;
+    border-radius: 100%;
+    display: flex;
+    margin-right: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+[data-animation="circle-saiba-mais"].active {
+    animation-name: circle_saiba_mais;
+    animation-duration: 4s;
+    animation-timing-function: normal;
+}
+
+@keyframes circle_saiba_mais {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+

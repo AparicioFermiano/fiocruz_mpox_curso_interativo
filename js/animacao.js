@@ -1,76 +1,15 @@
-function shake() {
-  var animatedElements = document.querySelectorAll("[data-animation]");
-
-  animatedElements.forEach(function (element) {
-    var animationType = element.dataset.animation;
-    var boundingRect = element.getBoundingClientRect();
-
-    if (boundingRect.bottom > 0 && boundingRect.top < window.innerHeight) {
-      if (animationType === "saiba-mais-animation") {
-        element.classList.add("saiba-mais-animation");
-        setTimeout(function () {
-          element.classList.remove("saiba-mais-animation");
-        }, 2000);
-      }
-    }
-  });
-}
-
-setInterval(shake, 5000);
-
-// seleciona todos os elementos com o atributo data-animation
-const elements = document.querySelectorAll("[data-animation]");
-
-// configura as opções do Intersection Observer
-const options = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.5,
-};
-
-// cria o Intersection Observer
-const observer = new IntersectionObserver(function (entries) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      // quando o elemento está visível, adiciona a classe de animação
-      entry.target.classList.add(entry.target.dataset.animation);
-    } else {
-      // quando o elemento não está mais visível, remove a classe de animação
-      entry.target.classList.remove(entry.target.dataset.animation);
-    }
-  });
-}, options);
-
-// adiciona cada elemento ao Intersection Observer
-elements.forEach(function (element) {
-  observer.observe(element);
-});
-
-// var animatedImg = document.querySelector('.animated-img');
-// var container = document.querySelector('.container');
-
-// function checkSlide() {
-//   var containerTop = container.getBoundingClientRect().top;
-//   var containerBottom = container.getBoundingClientRect().bottom;
-//   var windowHeight = window.innerHeight;
-
-//   if (containerTop < windowHeight && containerBottom > 0) {
-//     animatedImg.style.opacity = 1;
-//   } else {
-//     animatedImg.style.opacity = 0;
-//   }
-// }
-
-// window.addEventListener('scroll', function() {
-//   checkSlide();
-// });
-
+// Adiciona o tooltips do bootstrap
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+// Animacao para virar o card
 function virar_card(card) {
   console.log(card);
   card.classList.toggle("is-flipped");
   card.classList.toggle("not-flipped");
 }
-
+// Alteracao de dados por click no botao
 const dados = {
   1: {
     titulo_imagem: "Figura 1 - Mapa global com a localização dos casos de mpox até 28 de dezembro de 2022. \
@@ -146,6 +85,7 @@ function alterar_dados(botao, parametro) {
   botao.classList.add('active');
 };
 
+// Mostrar resposta ao clicar no botao
 function alterar_resposta(btn, id) {
   resposta = document.getElementById(id);
   if(resposta.classList.contains('d-none')) {
@@ -156,10 +96,39 @@ function alterar_resposta(btn, id) {
     btn.innerText = 'Ver resposta'
   }
 }
-
+// Fechar o modulo ao clicar no botao de sair
 function sair(){
   if(confirm('Deseja mesmo sair desse módulo?')) {
     window.close()
   }
 }
+ // Mostra a legenda na estrutura MPOX
+function mostrar_legenda(id){
+  legenda = document.getElementById(id);
+  legenda.classList.toggle('d-none');
+  legenda.classList.toggle('d-block');
+}
+
+const elements = document.querySelectorAll('[data-animation]');
+
+function handleScroll() {
+  const screenPosition = window.innerHeight / 1.5;
+
+  elements.forEach(element => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const elementBottom = element.getBoundingClientRect().bottom;
+
+    if (elementPosition < screenPosition && elementBottom > 0) {
+      element.classList.add('active');
+    } else {
+      element.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScroll);
+
+
+
+
 
