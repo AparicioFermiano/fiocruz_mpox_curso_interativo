@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aparicio Fermiano dos Santos Junior">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/animacao.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/sidenav.min.css">
+    <!-- https://github.com/AparicioFermiano -->
+    <title>Monkeypox: Aspectos diagnósticos da doença</title>
+</head>
+
+<body>
+    <div class="offcanvas"></div>
+    <!-- SIDEBAR -->
+    <button type="button" class="btn-sidebar" aria-expanded="false" aria-label="Botão - Menu lateral" onclick="nav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="sidebar">
+        <div>
+            <img src="./image/logo_sidebar.png" alt="Logo Monkeypox" class="d-block mx-auto w-50 w-md-75 mb-3">
+            <!-- SIDEBAR - HOME -->
+            <div class="sidebar-item">
+                <a href="#" class="d-flex">
+                    <div class="sidebar-item-icon">
+                        <i class="bi bi-house"></i>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Início
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#sobre" class="d-flex">
+                    <div class="sidebar-item-icon">
+                        <i class="bi bi-exclamation-diamond"></i>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Sobre o material
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#importancia" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>01</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                       Importância do diagnóstico específico para assistência e vigilância em saúde
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#amostras" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>02</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Amostras para dignóstico laboratorial de MPOX
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#metodos" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>03</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Métodos para diagnóstico laboratorial
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#referencias" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>07</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Referências
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- BOTOES CARROSEL -->
+        <div class="d-flex justify-content-around px-4">
+            <button type="button" class="btn-sidebar-icon" onclick="window.open('creditos.html', '_self')">
+                <i class="bi bi-person-badge"></i>
+            </button>
+            <button type="button" class="btn-sidebar-icon" data-bs-toggle="modal" data-bs-target="#instrucao_navegacao">
+                <i class="bi bi-exclamation-circle"></i>
+            </button>
+        </div>
+    </div>
+    <div id="capa" class="container-fluid padding-container">
+        <div class="row pt-mobile-5">
+            <div class="col-12 col-lg-6 padding-container">
+                <img src="./image/logos.png" alt="Logos" class="img-fluid">
+                <span class="titulo bold mt-3 mx-auto d-block">ASPECTOS DIAGNÓSTICOS DA DOENÇA</span><br>
+                <div class="d-flex justify-content-between mb-3">
+                    <button class="button btn-col-2 btn-secondary"
+                        onclick="window.open('creditos.html', '_self')">Créditos</button>
+                    <button class="button btn-col-2" data-bs-toggle="modal"
+                        data-bs-target="#instrucao_navegacao">Instruções</button>
+                </div>
+                <a class="button btn-outline" href="#sobre">Iniciar</a>
+                <!-- Modal -->
+                <div class="modal fade" id="instrucao_navegacao" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content modal-conteudo">
+                            <div class="mx-auto border-0">
+                                <button type="button" class="btn-close bg-light rounded-circle p-3"
+                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="pt-3 text-justify">
+                                <p class="py-2 bold text-center">Instruções para navegação
+                                </p>
+                                <p>Você pode ajustar a visualização do material de acordo com o nível de zoom do seu
+                                    navegador, pressione:
+                                </p>
+                                <div class="text-center">
+                                    <p><kbd>CTRL</kbd> + <kbd>+</kbd> : Aumentar o zoom</p>
+                                    <p><kbd>CTRL</kbd> + <kbd>-</kbd> : Diminuir o zoom</p>
+                                </div>
+                                <p>Você também pode acessar o ícone no canto superior direito do material para navegar
+                                    de forma livre através do menu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="position-relative w-100">
+                    <img src="./image/logo_mpox_capa.svg" alt="Logo MPOX" class="mx-auto w-100">
+                    <div class="position-absolute detalhe-1">
+                        <img src="./image/capa_detalhes_1.svg" alt="Detalhes" class="img-animacao move-up-down">
+                    </div>
+                    <div class="position-absolute detalhe-2">
+                        <img src="./image/capa_detalhes_2.svg" alt="Detalhes" class="img-animacao move-x">
+                    </div>
+                    <div class="position-absolute detalhe-3">
+                        <img src="./image/capa_detalhes_3.svg" alt="Detalhes" class="img-animacao move-zoom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sobre" class="container-fluid pt-5 bg-primary-dark-hover">
+        <p class="titulo text-center secondary">SOBRE O MATERIAL</p>
+        <div class="line bg-secondary w-25"></div>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-person" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active circle" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="circle"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="circle"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row justify-content-center text-justify">
+                            <div class="col-12 col-md-6 py-5 text-light">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./image/objetivo_geral.svg" alt="Objetivo Geral" class="mx-2" width="50">
+                                    <span class="titulo-capa font-oswald my-auto mx-2">Objetivo Geral</span>
+                                </div>
+                                <p class="py-5 d-flex align-items-center">Esee material tem como objetivo apresentar os
+                                    aspectos diagnósticos da doença e sua importância para assistência e vigilância em
+                                    saúde. Descreve as coletas de amostras e testes laboratoriais e os métodos adotados
+                                    para o diagnóstico laboratorial, ressaltando os laboratórios de referência no Brasil
+                                    e os fluxos adotados. Especifica ainda os kits e insumos laboratoriais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row justify-content-center text-justify">
+                            <div class="col-12 col-md-6 py-5 text-light">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./image/objetivo_aprendizado.svg" alt="Objetivo de aprendizado"
+                                        class="mx-2" width="50">
+                                    <span class="titulo-capa font-oswald my-auto mx-2">Objetivo de Aprendizagem</span>
+                                </div>
+                                <ul class="py-5">
+                                    <li>Reconhecer a importância do diagnóstico específico para assistência e vigilância
+                                        em saúde;</li>
+                                    <li>Descrever amostras e testes laboratoriais;</li>
+                                    <li>Realizar coleta de amostras;</li>
+                                    <li>Identificar os Métodos para Diagnóstico laboratorial;</li>
+                                    <li>Conhecer os laboratórios de referência no Brasil;</li>
+                                    <li>Compreender o fluxo para o diagnóstico laboratorial;</li>
+                                    <li>Especificar os kits e insumos laboratoriais.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 py-5 text-light">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./image/carga_horaria.svg" alt="Carga horaria" class="mx-2" width="50">
+                                    <span class="titulo-capa font-oswald my-auto mx-2">Carga horária</span>
+                                </div>
+                                <p class="py-5 text-center">10 horas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="onda onda-light"></div>
+    <div id="importancia" class="container-fluid px-0 py-3">
+        <div class="container">
+            <p class="titulo font-oswald medium padding-x-container text-center primary-dark-hover">
+                IMPORTÂNCIA DO DIAGNÓSTICO ESPECÍFICO PARA ASSISTÊNCIA E VIGILÂNCIA EM SAÚDE
+            </p>
+            <div class="line bg-primary-dark-hover"></div>
+        </div>
+        <div class="container-fluid">
+            <div class="row overflow-hidden">
+                <div class="col-12 col-lg-6 text-justify padding-container">
+                    <div class="padding-x-container">
+                        <p class="pb-2">Do ponto de vista assistencial, pacientes com diagnóstico confirmado ou sob
+                            suspeita devem ser isolados e receber orientações sobre medidas de prevenção para evitar a
+                            transmissão do vírus. No ambiente domiciliar, as medidas recomendadas são: utilizar máscaras
+                            e higienizar frequentemente as mãos; não compartilhar objetos de uso pessoal e utensílios de
+                            alimentação; usar banheiro separado, se houver pelo menos dois na residência; e desinfetar
+                            as superfícies. Já todos os membros da equipe envolvida na assistência devem usar
+                            equipamentos de proteção individual e, se possível, ser vacinados.</p>
+                        <p class="py-2">Muitas outras ações de vigilância em saúde são demandadas quando há um caso
+                            suspeito. Veremos essas ações mais detalhadamente na próxima unidade. De qualquer modo,
+                            todas elas se iniciam com a suspeita de um caso de mpox, que deve ser notificado. Esse caso
+                            suspeito será confirmado ou não por meio de um exame diagnóstico laboratorial específico.
+                            <br>Dessa forma, o diagnóstico rápido e preciso desempenha um papel fundamental dentro das
+                            ações de vigilância em saúde e no controle de surtos.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="padding-container pb-2">
+                        <img src="./image/cientistas_analisando.png" alt="Cientistas analisando" class="img-fluid py-3"
+                            data-animation="right-to-left">
+                    </div>
+                    <div class="box-saiba-mais bg-primary-dark-hover padding-container">
+                        <div class="row mx-0">
+                            <div class="col-12 col-md-4 d-flex align-items-center">
+                                <img src="./image/interrogacao.png" alt="Saiba mais"
+                                    class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                            </div>
+                            <div class="col-12 col-md-8 padding-x-container text-light text-justify">
+                                <div class="d-flex">
+                                    <span data-animation="circle-saiba-mais"></span>
+                                    <small class="medium">Conhecimento</small>
+                                </div>
+                                <p class="titulo bold primary-light">Saiba mais!</p>
+                                <p>
+                                    Fique atento!!! Vários fatores podem interferir no resultado de um exame. Para que o
+                                    exame tenha resultado confiável, além do teste laboratorial ser o mais adequado, a
+                                    amostra deve ser coletada da maneira correta, armazenada e transportada até o
+                                    laboratório que a irá processar, de acordo com as normas técnicas vigentes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="onda onda-secondary bg-light"></div>
+    <div id="amostras" class="container-fluid bg-secondary px-0 py-3 text-light">
+        <p class="titulo font-oswald medium text-center padding-x-container text-light">AMOSTRAS PARA DIAGNÓSTICO
+            LABORATORIAL DE MPOX</p>
+        <div class="line bg-light"></div>
+        <div class="padding-container">
+            <div class="row">
+                <div class="col-12 col-lg-6 padding-x-container">
+                    <img src="./image/cientista.png" alt="Cientista" class="mx-auto d-block w-75 py-3"
+                        data-animation="left-to-right">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="accordion" id="accordion_amostras">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#accordion_amostras_1" aria-expanded="true"
+                                    aria-controls="accordion_amostras">
+                                    Você sabe quais são as amostras e como elas devem ser coletadas para um diagnóstico
+                                    preciso e confiável?
+                                </button>
+                            </h2>
+                            <div id="accordion_amostras_1" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordion_amostras">
+                                <div class="accordion-body padding-x-container">
+                                    <p class="text-justify">
+                                        As amostras mais adequadas para diagnóstico da mpox são secreções vesiculares
+                                        seguidas das crostas das lesões de pele ou mucosas (Figura 1). Como critério de
+                                        seleção, devemos fazer a coleta das lesões que forem maiores e estiverem com
+                                        maior quantidade de secreção (BRASIL, 2022a).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#accordion_amostras_2" aria-expanded="false"
+                                    aria-controls="accordion_amostras">
+                                    Coleta de amostras
+                                </button>
+                            </h2>
+                            <div id="accordion_amostras_2" class="accordion-collapse collapse"
+                                data-bs-parent="#accordion_amostras">
+                                <div class="accordion-body padding-x-container">
+                                    <p class="text-justify">
+                                        A coleta das secreções das vesículas deve ser realizada por meio de swabs
+                                        estéreis de nylon, poliéster, Dacron ou Rayon. Deve-se realizar esfregaço forte
+                                        e intenso sobre a lesão. É recomendado fazer a coleta de pelo menos duas lesões
+                                        por paciente utilizando swabs diferentes para cada amostra e armazenar todos os
+                                        swabs do paciente num mesmo tubo seco. Os poxvirus mantêm-se estáveis na
+                                        ausência de qualquer meio preservante, por isso utilize tubos secos (BRASIL,
+                                        2022b).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="padding-container">
+                <div class="row mx-0">
+                    <div class="col-12 col-md-4 d-flex align-items-center">
+                        <img src="./image/interrogacao.png" alt="Saiba mais" class="d-block mx-auto py-3 w-50 w-lg-75"
+                            data-animation="shake">
+                    </div>
+                    <div class="col-12 col-md-8 padding-x-container text-light text-justify">
+                        <div class="d-flex">
+                            <span data-animation="circle-saiba-mais"></span>
+                            <small class="medium">Conhecimento</small>
+                        </div>
+                        <p class="titulo bold primary-light">Saiba mais!</p>
+                        <p>
+                            Fique atento! De acordo com a Organização Mundial da Saúde (OMS) não é recomendado
+                            romper as lesões com instrumentos perfurocortantes devido ao risco de acidentes com as
+                            secreções infectantes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="pt-2 titulo-capa text-center">Figura 01 - Lesão cutânea de mpox em seus vários estágios:</p>
+            <small class="d-block text-center">Clique na imagem para interagir.</small>
+            <div class="row justify-content-center padding-container w-100 w-lg-75 mx-auto">
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/vesicula-precoce.png" alt="Vesicula Precoce" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Vesícula precoce (diâmetro de 3 mm)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/pustula-pequena.png" alt="Pustula pequena" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Pequena pústula (2mm)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/pustula-umbelicada.png" alt="pustula umbelicada" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Pústula umbilicada (3-4 mm)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/lesao-ulcerada.png" alt="lesao ulcerada" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Lesão ulcerada (5 mm)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/crosta-lesao-madura.png" alt="crosta lesao madura" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Crosta de uma lesão</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/crosta-parcial-removida.png" alt="crosta parcial removida" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Crosta parcialmente removida</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-12 col-lg-6 padding-container text-justify">
+                <div class="padding-x-container">
+                    <p class="pb-2">
+                        Quando a amostra for proveniente de crostas das lesões, recomenda-se coletar no mínimo quatro
+                        amostras por paciente (quando possível) e armazenar todas em um mesmo tubo seco.
+                    </p>
+                    <p class="py-2">
+                        Se o paciente relatar sintomas de incômodo na região anal como dor local contínua ou para
+                        evacuar (tenesmo), e/ou uretral, como dor ou ardor para urinar, deve-se coletar swab anal e/ou
+                        uretral. Para essas coletas, um swab estéril de nylon, poliéster ou Dacron deve ser
+                        delicadamente introduzido no ânus ou na uretra e girado 360 graus para um lado e depois para o
+                        outro. Após a coleta, os mesmos procedimentos descritos anteriormente, para colocação em tubo
+                        seco, devem ser seguidos.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="box-saiba-mais bg-secondary-dark padding-container">
+                    <div class="row mx-0">
+                        <div class="col-12 col-lg-4 d-flex align-items-center">
+                            <img src="./image/orientacao.png" alt="Saiba mais" class="d-block mx-auto py-3 w-50 w-lg-75"
+                                data-animation="shake">
+                        </div>
+                        <div class="col-12 col-lg-8 padding-x-container text-light text-justify">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-primary"></span>
+                                <small class="medium">Instrução</small>
+                            </div>
+                            <p class="titulo bold primary-light">Orientação</p>
+                            <p>
+                                Se o paciente apresentar os dois tipos de lesão, vesícula com secreção e vesícula com
+                                crosta, devem-se coletar amostras de ambas em tubos secos separados devidamente
+                                identificados seguindo-se as orientações anteriores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-12 col-lg-6">
+                <div class="box-saiba-mais bg-secondary-dark padding-container">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <img src="./image/interrogacao.png" alt="Saiba mais"
+                                class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                        </div>
+                        <div class="col-12 col-md-8 padding-x-container text-light text-justify">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-primary"></span>
+                                <small class="medium">Conhecimento</small>
+                            </div>
+                            <p class="titulo bold primary-light">Saiba mais!</p>
+                            <p>
+                                Fique atento! Durante a coleta de amostras para exames, é imprescindível que os
+                                profissionais de saúde usem os Equipamentos de Proteção Individual (EPI). Recomenda-se o
+                                uso de calçado fechado, avental descartável, máscara cirúrgica ou superior, óculos ou
+                                protetor facial e luvas de procedimento.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 padding-container text-justify">
+                <div class="padding-x-container">
+                    <p>Na situação de suspeita decorrente de contato com caso confirmado, se a pessoa apresentar quadro
+                        febril e adenomegalia, ainda que não manifeste erupções cutâneas ou lesões nas mucosas, deve-se
+                        coletar swab de orofaringe/nasofaringe, perianal e genital seguindo-se as mesmas orientações
+                        para coleta de material vesicular (BRASIL, 2022a).</p>
+                </div>
+            </div>
+        </div>
+        <button class="card bg-secondary w-100 w-lg-50 mx-auto not-flipped my-5" onclick="virar_card(this)">
+            <div class="row card-front padding-x-container pt-3 bg-light w-100 h-100">
+                <div class="col-12 col-md-4 d-flex align-items-center">
+                    <img src="./image/megafone.png" alt="Megafone" class="d-block mx-auto py-3 w-50 w-lg-75"
+                        data-animation="shake">
+                </div>
+                <div class="col-12 col-md-8 my-auto padding-x-container">
+                    <div class="d-flex">
+                        <span class="bg-secondary" data-animation="circle-saiba-mais"></span>
+                        <small class="medium">Video aprendizado</small>
+                    </div>
+                    <p class="titulo bold text-start primary-dark-hover">Assista e aprenda</p>
+                    <p class="py-2 text-justify">
+                        Assista ao vídeo sobre boas práticas para a coleta de amostras para o diagnóstico de mpox do
+                        Ministério da Saúde.
+                    </p>
+                </div>
+                <div class="d-flex">
+                    <small class="text-center my-auto">Clique nesta caixa para interagir!</small>
+                    <i class="bi bi-arrow-repeat titulo d-block my-auto ml-auto"></i>
+                </div>
+            </div>
+            <div class="card-back d-flex flex-column padding-x-container py-3 bg-light w-100">
+                <div class="my-auto">
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="./video/video1-un3_720p.mp4" type="video/mp4">
+                            Seu navegador não suporta a tag de vídeo.
+                        </video>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <small class="text-center my-auto">Clique nesta caixa para interagir!</small>
+                    <i class="bi bi-arrow-repeat titulo d-block my-auto ml-auto"></i>
+                </div>
+            </div>
+        </button>
+        <div class="row mx-0">
+            <div class="col-12 col-lg-6 padding-x-container">
+                <div class="accordion mb-4" id="accordion_armazenamento">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_armazenamento_1" aria-expanded="true"
+                                aria-controls="accordion_armazenamento">
+                                Armazenamento de amostras
+                            </button>
+                        </h2>
+                        <div id="accordion_armazenamento_1" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordion_armazenamento">
+                            <div class="accordion-body padding-x-container">
+                                <p class="text-justify">
+                                    As amostras podem ser armazenadas congeladas a 20oC negativos (ou temperaturas
+                                    inferiores) por um mês ou, na ausência de freezers, por até 7 dias em geladeiras
+                                    (BRASIL, 2022a).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_armazenamento_2" aria-expanded="false"
+                                aria-controls="accordion_armazenamento">
+                                Coleta de Embalagem, acondicionamento e transporte de amostras
+                            </button>
+                        </h2>
+                        <div id="accordion_armazenamento_2" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_armazenamento">
+                            <div class="accordion-body padding-x-container">
+                                <p class="pb-2 text-justify">
+                                    A embalagem, o acondicionamento e o transporte das amostras devem seguir a Resolução
+                                    de Diretoria Colegiada no 504, de 27 de maio de 2021, que dispõe sobre as boas
+                                    práticas para o transporte de material biológico humano (BRASIL, 2021).
+                                </p>
+                                <p class="py-2">
+                                    O material biológico para diagnóstico de mpox deverá ser classificado como
+                                    “Categoria B UN 3373”, salvo casos especificados na RDC nº 504 (BRASIL 2022a) .
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="box-saiba-mais bg-secondary-dark padding-container">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <img src="./image/orientacao.png" alt="Saiba mais" class="d-block mx-auto py-3 w-50 w-lg-75"
+                                data-animation="shake">
+                        </div>
+                        <div class="col-12 col-md-8 padding-x-container text-light text-justify">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-primary-dark-hover"></span>
+                                <small class="medium">Conhecimento</small>
+                            </div>
+                            <p class="titulo bold primary-light">Saiba mais!</p>
+                            <p class="pb-2">
+                                Acessando o Protocolo Laboratorial de Orientações de coleta, armazenamento, conservação
+                                e transporte para o diagnóstico de mpox no sítio eletrônico:
+                            </p>
+                            <a href="./documentos/protocolo_laboratorial.pdf" class="text-light" download>Baixe
+                                aqui!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="onda onda-primary bg-secondary"></div>
+    <div id="metodos" class="container-fluid bg-primary px-0 py-3">
+        <p class="titulo font-oswald medium text-center padding-x-container">MÉTODOS PARA DIAGNÓSTICO LABORATORIAL</p>
+        <div class="line bg-dark"></div>
+        <div class="row mx-0 padding-container">
+            <div class="col-12 col-lg-6 d-flex align-items-center">
+                <img src="./image/vacina.png" alt="Vacina" class="mx-auto d-block w-75 py-3" data-animation="left-to-right">
+            </div>
+            <div class="col-12 col-lg-6 padding-x-container">
+                <div class="accordion" id="accordion_metodos">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_metodos_1" aria-expanded="true"
+                                aria-controls="accordion_metodos">
+                                Métodos utilizados para diagnóstico específico
+                            </button>
+                        </h2>
+                        <div id="accordion_metodos_1" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordion_metodos">
+                            <div class="accordion-body padding-x-container text-justify">
+                                <p class="pb-2">
+                                    O método utilizado para diagnóstico específico é o exame da reação em cadeia da
+                                    polimerase em tempo-real (qPCR), precedida pela etapa de extração do DNA viral
+                                    exclusivamente de amostras de lesões de pele e de mucosas, conforme previamente
+                                    apresentado. O resultado de qPCR em amostras de sangue geralmente é inconclusivo
+                                    devido à curta duração da viremia, por isso não deve ser realizado rotineiramente
+                                    (BRASIL, et al., 2022; WHO, 2022).
+                                </p>
+                                <p class="py-2">Os métodos de detecção de antígenos e anticorpos não fornecem
+                                    confirmação específica para MPXV, já que os ortopoxvírus são sorologicamente
+                                    reativos. Portanto, os métodos sorológicos e a detecção de antígenos não devem ser
+                                    utilizados isoladamente para o diagnóstico dos casos, apenas para fins de
+                                    investigação epidemiológica (WHO, 2022)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_metodos_2" aria-expanded="false"
+                                aria-controls="accordion_metodos">
+                                Fluxo para diagnóstico laboratorial e laboratórios de referência no Brasil
+                            </button>
+                        </h2>
+                        <div id="accordion_metodos_2" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_metodos">
+                            <div class="accordion-body padding-x-container text-justify">
+                                <p class="pb-2">
+                                    As amostras clínicas coletadas nos serviços de saúde devem ser encaminhadas para os
+                                    Laboratórios Centrais de Saúde Pública (Lacen) de cada estado, onde será realizada a
+                                    detecção molecular do vírus por qPCR ou enviarão essas amostras para que o teste
+                                    seja feito por Laboratórios de Referência (LR) (BRASIL, 2022b).
+                                </p>
+                                <p class="py-2">
+                                    Atualmente, existem oito LR realizando os exames que oferecem suporte de cobertura
+                                    para todo o Brasil (Figura 2).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="pt-2 titulo-capa text-center px-3">Figura 2 - Distribuição e cobertura dos laboratórios para análise do
+            MPXV no Brasil</p>
+        <div class="row mx-0 padding-container">
+            <div class="col-12 col-lg-6 padding-x-container d-flex align-items-center">
+                <img id="img_mapa" src="./image/mapa_vermelho.png" alt="Mapa" class="w-75 d-block mx-auto">
+            </div>
+            <div class="col-12 col-lg-6 padding-x-container text-justify">
+                <small>Clique na legenda para interagir</small>
+                <div class="d-flex">
+                    <button class="legenda-circle m-2 bg-secondary-dark active"
+                        onclick="alterar_dados(this, 1)"></button>
+                    <button class="legenda-circle m-2 bg-secondary" onclick="alterar_dados(this, 2)"></button>
+                    <button class="legenda-circle m-2 bg-aux" onclick="alterar_dados(this, 3)"></button>
+                    <button class="legenda-circle m-2 bg-primary-light" onclick="alterar_dados(this, 4)"></button>
+                    <button class="legenda-circle m-2 bg-primary" onclick="alterar_dados(this, 5)"></button>
+                    <button class="legenda-circle m-2 bg-primary-hover" onclick="alterar_dados(this, 6)"></button>
+                    <button class="legenda-circle m-2 bg-primary-dark" onclick="alterar_dados(this, 7)"></button>
+                    <button class="legenda-circle m-2 bg-primary-dark-hover" onclick="alterar_dados(this, 8)"></button>
+                </div>
+                <div class="bg-light p-5 rounded-3 my-3">
+                    <span id="titulo_mapa" class="primary-dark-hover bold">Fiocruz-AM</span>
+                    <p id="texto_mapa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eos,
+                        harum quibusdam enim cupiditate amet, possimus tenetur temporibus commodi p</p>
+                </div>
+                <p class="py-2">A Rede Nacional de Laboratórios de Saúde Pública (RNLSP), coordenada pela Coordenação
+                    Geral de Laboratórios de Saúde Pública (CGLAB), da SVS/MS, vem implementando ações específicas para
+                    fortalecer e ampliar a capacidade de resposta laboratorial para o processo de investigação dos casos
+                    suspeitos de mpox, incluindo o diagnóstico laboratorial de MPXV nos 27 Lacen utilizando o protocolo
+                    validado pelo Centro de Controle de Doenças dos Estados Unidos da América (CDC) e pela OMS.</p>
+                <p class="py-2">Você pode conhecer um pouco mais sobre o protocolo <a
+                        href="./documentos/PCR_Diagnostic_Protocol.pdf" download>clicando aqui!</a></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="padding-container">
+                <div class="row mx-0">
+                    <div class="col-12 col-lg-4 d-flex align-items-center">
+                        <img src="./image/interrogacao.png" alt="Saiba mais" class="d-block mx-auto py-3 w-50 w-lg-75"
+                            data-animation="shake">
+                    </div>
+                    <div class="col-12 col-lg-8 padding-x-container text-justify">
+                        <div class="d-flex">
+                            <span data-animation="circle-saiba-mais"></span>
+                            <small class="medium">Conhecimento</small>
+                        </div>
+                        <p class="titulo bold primary-dark-hover">Saiba mais!</p>
+                        <p>
+                            A Portaria GM/MS nº 3.328/2022
+                            (https://www.in.gov.br/en/web/dou/-/portaria-gm/ms-n-3.328-de-22-de-agosto-de-2022-425012964)
+                            estabelece a obrigatoriedade de notificação ao MS de todos os resultados de testes de
+                            diagnóstico para detecção do MPXV realizados por laboratórios da rede pública, rede privada,
+                            universitários e quaisquer outros, em todo o território nacional. Dessa forma, todos os
+                            laboratórios devem comunicar, em até 24 horas, os resultados dos testes de diagnóstico de
+                            MPXV, independentemente do resultado - detectado/positivo ou não detectado/negativo, além de
+                            informar a técnica diagnóstica utilizada (BRASIL, 2022c).
+                        </p>
+                    </div>
+                </div>
+                <p class="pt-5 pb-2 titulo-capa text-center">Kits e insumos laboratoriais</p>
+            <p class="padding-container text-justify">Em maio de 2022, quando os casos de mpox do surto atual começaram a ser
+                descritos em diversos países do mundo, não haviam kits comerciais para o diagnóstico molecular do vírus.
+                Logo em seguida, algumas indústrias no mundo desenvolveram e disponibilizaram esses kits, inclusive
+                BioManguinhos, unidade da Fiocruz localizada no Rio de Janeiro.</p>
+            </div>
+            
+        </div>
+        <button class="card bg-primary w-100 w-lg-50 mx-auto not-flipped my-5" onclick="virar_card(this)">
+            <div class="row card-front padding-x-container pt-3 bg-light w-100 h-100">
+                <div class="col-12 col-md-4 d-flex align-items-center">
+                    <img src="./image/megafone.png" alt="Megafone" class="d-block mx-auto py-3 w-50 w-lg-75"
+                        data-animation="shake">
+                </div>
+                <div class="col-12 col-md-8 my-auto padding-x-container">
+                    <div class="d-flex">
+                        <span class="bg-secondary" data-animation="circle-saiba-mais"></span>
+                        <small class="medium">Video aprendizado</small>
+                    </div>
+                    <p class="titulo bold text-start primary-dark-hover">Assista e aprenda</p>
+                    <p class="py-2 text-justify">
+                        Veja a seguir, na videoaula da Dra Patrícia Alvarez Baptista, chefe do Laboratório de Tecnologia
+                        Diagnóstica de Bio-Manguinhos/Fiocruz, como esse processo aconteceu.
+                    </p>
+                </div>
+                <div class="d-flex">
+                    <small class="text-center my-auto">Clique nesta caixa para interagir!</small>
+                    <i class="bi bi-arrow-repeat titulo d-block my-auto ml-auto"></i>
+                </div>
+            </div>
+            <div class="card-back d-flex flex-column padding-x-container py-3 bg-light w-100">
+                <div class="my-auto">
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="./video/video2-un3_720p.mp4" type="video/mp4">
+                            Seu navegador não suporta a tag de vídeo.
+                        </video>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <small class="text-center my-auto">Clique nesta caixa para interagir!</small>
+                    <i class="bi bi-arrow-repeat titulo d-block my-auto ml-auto"></i>
+                </div>
+            </div>
+        </button>
+    </div>
+
+    <div class="onda onda-primary-dark bg-primary"></div>
+    <div id="referencias" class="container-fluid px-0 pt-2 bg-primary-dark-hover text-light">
+        <p class="titulo font-oswald medium text-center padding-x-container">REFERÊNCIAS</p>
+        <div class="line bg-light"></div>
+        <div class="container-fluid pt-5">
+            <div class="row mx-0 text-justify">
+                <div class="col-12 col-lg-6 padding-x-container">
+                    <p class="py-2">
+                        ALI, S. N. et al. Monkeypox Skin Lesion Detection Using Deep Learning Models: A Feasibility
+                        Study. arXiv, 2207.03342v1, 6 jul. 2022. Disponível em: https://arxiv.org/pdf/2207.03342.pdf .
+                        Acesso em: 30 dez. 2022. <br><br>
+                        BRASIL. Ministério da Saúde. Protocolo Laboratorial de Orientações de coleta, armazenamento,
+                        conservação e transporte para o diagnóstico de Monkeypox. 2022. 2022a. Disponível em:
+                        https://www.gov.br/saude/pt-br/assuntos/variola-dos-macacos/publicacoes/protocolos-1/rotocolo-laboratorial-de-orientacoes-de-coleta-armazenamento-conservacao-e-transporte-de-amostras-para-o-diagnostico-de-monkeypox.
+                        Acesso em: 14 nov. 2022.<br><br>
+                        BRASIL. Ministério da Saúde. Plano de Contingência Nacional para Monkeypox. Centro de Operações
+                        de Emergência em Saúde Pública: COE Monkeypox. Versão 2, 2022. Brasília, 2022b.
+                    </p>
+                </div>
+                <div class="col-12 col-lg-6 padding-x-container">
+                    <p class="py-2">
+                        BRASIL. Ministério da Saúde. Portaria GM/MS no 3328, de 22 de agosto de 2022. Dispõe sobre a
+                        obrigatoriedade de notificação ao Ministério da Saúde de todos os resultados de teste de
+                        diagnóstico de Monkeypox vírus. Diário Oficial da União, Brasília, DF, 2022. 2022c. Disponível
+                        em:
+                        https://www.gov.br/saude/pt-br/assuntos/variola-dos-macacos/publicacoes/portarias/portaria-gm_ms-no-3-328-de-22-de-agosto-de-2022-portaria-gm_ms-no-3-328-de-22-de-agosto-de-2022-dou-imprensa-nacional.pdf/view.
+                        Acesso em 25 dez. 2022. <br><br>
+
+                        BRASIL. Ministério da Saúde. Resolução RDC n. 504, de 27 de maio de 2021. Dispõe sobre as Boas
+                        Práticas para o transporte de material biológico humano. Diário Oficial da União, Brasília, DF,
+                        2021. Disponível em:
+                        https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2020/rdc0508_27_05_2021.pdf. Acesso em: 14 nov.
+                        2022. <br><br>
+
+                        BRASIL, P. et.al. O que precisamos saber sobre a infecção humana pelo vírus monkeypox? Cad.
+                        Saúde Pública. v. 9. 2022. DOI: 10.1590/0102-311XPT129222
+                        WORLD HEALTH ORGANIZATION. Monkeypox. Disponível em: https://bit.ly/3sPybyO. Acesso em 22 dez.
+                        2022.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.min.js"></script>
+    <script src="./js/animacao.min.js"></script>
+    <script src="./se_unasus_pack.js"></script>
+    <script>
+        let lib = unasus.pack;
+        lib.initialize();
+    </script>
+</body>
+
+</html>

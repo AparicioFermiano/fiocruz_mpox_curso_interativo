@@ -98,8 +98,8 @@ function alterar_resposta(btn, id) {
 }
 // Fechar o modulo ao clicar no botao de sair
 function sair(){
-  if(confirm('Deseja mesmo sair desse módulo?')) {
-    window.close()
+  if(confirm('Deseja mesmo sair?')) {
+    window.close();
   }
 }
  // Mostra a legenda na estrutura MPOX

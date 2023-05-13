@@ -16,7 +16,3 @@ function nav() {
     });
 }
 
-function creditos(modulo){
-    window.location.href = "/creditos" + modulo + '.html';
-}
-

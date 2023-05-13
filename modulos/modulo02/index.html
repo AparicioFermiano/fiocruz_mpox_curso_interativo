@@ -43,7 +43,7 @@
                         <i class="bi bi-exclamation-diamond"></i>
                     </div>
                     <div class="sidebar-item-title">
-                        Sobre o módulo
+                        Sobre o material
                     </div>
                 </a>
             </div>
@@ -120,10 +120,7 @@
         </div>
         <!-- BOTOES CARROSEL -->
         <div class="d-flex justify-content-around px-4">
-            <button type="button" class="btn-sidebar-icon" onclick="sair()">
-                <i class="bi bi-door-open"></i>
-            </button>
-            <button type="button" class="btn-sidebar-icon">
+            <button type="button" class="btn-sidebar-icon" onclick="window.open('creditos.html', '_self')">
                 <i class="bi bi-person-badge"></i>
             </button>
             <button type="button" class="btn-sidebar-icon" data-bs-toggle="modal" data-bs-target="#instrucao_navegacao">
@@ -137,7 +134,7 @@
                 <img src="./image/logos.png" alt="Logos" class="img-fluid">
                 <span class="titulo bold mt-3 mx-auto d-block">ASPECTOS CLÍNICOS DA DOENÇA</span><br>
                 <div class="d-flex justify-content-between mb-3">
-                    <button class="button btn-col-2 btn-secondary">Créditos</button>
+                    <button class="button btn-col-2 btn-secondary" onclick="window.open('creditos.html', '_self')">Créditos</button>
                     <button class="button btn-col-2" data-bs-toggle="modal"
                         data-bs-target="#instrucao_navegacao">Instruções</button>
                 </div>
@@ -160,6 +157,7 @@
                                     <p><kbd>CTRL</kbd> + <kbd>+</kbd> : Aumentar o zoom</p>
                                     <p><kbd>CTRL</kbd> + <kbd>-</kbd> : Diminuir o zoom</p>
                                 </div>
+                                <p>Você também pode acessar o ícone no canto superior direito do material para navegar de forma livre através do menu.</p>
                             </div>
                         </div>
                     </div>
@@ -183,7 +181,7 @@
     </div>
 
     <div id="sobre" class="container-fluid pt-5 bg-primary-dark-hover">
-        <p class="titulo text-center secondary">SOBRE O MÓDULO</p>
+        <p class="titulo text-center secondary">SOBRE O MATERIAL</p>
         <div class="line bg-secondary w-25"></div>
         <div id="carouselExampleIndicators" class="carousel slide carousel-person" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -203,7 +201,7 @@
                                     <img src="./image/objetivo_geral.svg" alt="Objetivo Geral" class="mx-2" width="50">
                                     <span class="titulo-capa font-oswald my-auto mx-2">Objetivo Geral</span>
                                 </div>
-                                <p class="py-5 d-flex align-items-center">Esta Unidade tem como objetivo apresentar os
+                                <p class="py-5 d-flex align-items-center">Este material tem como objetivo apresentar os
                                     aspectos clínicos da doença, sinais e sintomas, além dos fatores de risco,
                                     assegurando a diferenciação clínica da mpox/varíola dos macacos de outros quadros
                                     que causam lesões cutâneas. Busca ainda discutir a abordagem terapêutica e os
@@ -556,7 +554,7 @@
                 <p class="py-3 text-center medium">Figura 5 - Complicações da mpox. A: Infecção secundária de lesões
                     faciais. B: Aparência da infecção mostrada na Figura A 5 dias depois</p>
                 <img id="url_imagem" src="./image/figura_05.png" alt="Lesões cutâneas cicatrizadas"
-                    class="img-fluid pb-2">
+                    class="w-100 pb-2">
                 <div class="d-block text-start">
                     <small>Fonte: Torres et al. (2022).</small>
                     <div class="d-flex pt-2">
@@ -575,7 +573,7 @@
                         </div>
                         <div class="modal-body">
                             <img id="url_imagem_modal" src="./image/figura_05.png" alt="Imagem"
-                                class="img-fluid d-block mx-auto">
+                                class="d-block mx-auto w-100">
                         </div>
                     </div>
                 </div>
@@ -630,7 +628,7 @@
                         </div>
                         <div class="modal-body">
                             <img id="url_imagem_modal" src="./image/figura_06.png" alt="Imagem"
-                                class="img-fluid d-block mx-auto">
+                                class="w-100 d-block mx-auto">
                         </div>
                     </div>
                 </div>
@@ -740,7 +738,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <img id="url_imagem_modal" src="./image/herpes-zoster.png"
-                                            alt="VARICELA / HERPES ZOSTER" class="img-fluid d-block mx-auto">
+                                            alt="VARICELA / HERPES ZOSTER" class="w-100 d-block mx-auto">
                                     </div>
                                 </div>
                             </div>
@@ -771,7 +769,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <img id="url_imagem_modal" src="./image/varicela.png" alt="VARICELA"
-                                            class="img-fluid d-block mx-auto">
+                                            class="w-100 d-block mx-auto">
                                     </div>
                                 </div>
                             </div>
@@ -803,7 +801,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <img id="url_imagem_modal" src="./image/herpes-simples.png" alt="Imagem"
-                                            class="img-fluid d-block mx-auto">
+                                            class="w-100 d-block mx-auto">
                                     </div>
                                 </div>
                             </div>
@@ -834,7 +832,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <img id="url_imagem_modal" src="./image/Impetigo.png" alt="IMPETIGO"
-                                            class="img-fluid d-block mx-auto">
+                                            class="w-100 d-block mx-auto">
                                     </div>
                                 </div>
                             </div>
@@ -865,7 +863,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <img id="url_imagem_modal" src="./image/sifilis.png" alt="SÍFILIS"
-                                            class="img-fluid d-block mx-auto">
+                                            class="w-100 d-block mx-auto">
                                     </div>
                                 </div>
                             </div>
@@ -897,7 +895,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <img id="url_imagem_modal" src="./image/molusco-contagioso.png"
-                                            alt="MOLUSCO CONTAGIOSO" class="img-fluid d-block mx-auto">
+                                            alt="MOLUSCO CONTAGIOSO" class="w-100 d-block mx-auto">
                                     </div>
                                 </div>
                             </div>
@@ -1404,7 +1402,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6 d-flex align-items-center">
-                <div class="box-saiba-mais bg-primary-dark padding-container mt-4">
+                <div class="box-saiba-mais bg-secondary padding-container mt-4">
                     <div class="row mx-0">
                         <div class="col-12 col-md-4 d-flex align-items-center">
                             <img src="./image/interrogacao.png" alt="Saiba mais"
@@ -1415,7 +1413,7 @@
                                 <span data-animation="circle-saiba-mais"></span>
                                 <small class="medium">Conhecimento</small>
                             </div>
-                            <p class="titulo bold primary-light">Saiba mais!</p>
+                            <p class="titulo bold primary-dark-hover">Saiba mais!</p>
                             <p>
                                 Fique atento! Cabe destacar que os programas de vacinação devem ser acompanhados por uma
                                 forte campanha de informação, farmacovigilância robusta e realização de estudos de
@@ -1556,7 +1554,10 @@
     <script src="./js/index.min.js"></script>
     <script src="./js/animacao.min.js"></script>
     <script src="./se_unasus_pack.js"></script>
-    <!-- https://github.com/AparicioFermiano -->
+    <script>
+        let lib = unasus.pack;
+        lib.initialize();
+    </script>
 </body>
 
 </html>

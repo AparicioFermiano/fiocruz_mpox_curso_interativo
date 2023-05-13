@@ -43,7 +43,7 @@
                         <i class="bi bi-exclamation-diamond"></i>
                     </div>
                     <div class="sidebar-item-title">
-                        Sobre o módulo
+                        Sobre o material
                     </div>
                 </a>
             </div>
@@ -120,10 +120,7 @@
         </div>
         <!-- BOTOES CARROSEL -->
         <div class="d-flex justify-content-around px-4">
-            <button type="button" class="btn-sidebar-icon" onclick="sair()">
-                <i class="bi bi-door-open"></i>
-            </button>
-            <button type="button" class="btn-sidebar-icon">
+            <button type="button" class="btn-sidebar-icon" onclick="window.open('creditos.html','_self')">
                 <i class="bi bi-person-badge"></i>
             </button>
             <button type="button" class="btn-sidebar-icon" data-bs-toggle="modal"
@@ -139,7 +136,7 @@
                 <img src="./image/logos.png" alt="Logos" class="img-fluid">
                 <span class="titulo bold mt-3 mx-auto d-block">INTRODUÇÃO AO MPOX / MONKEYPOX / VARÍOLA DOS MACACOS VARÍOLA SÍMIA</span><br>
                 <div class="d-flex justify-content-between mb-3">
-                    <button class="button btn-col-2 btn-secondary">Créditos</button>
+                    <button class="button btn-col-2 btn-secondary" onclick="window.open('creditos.html', '_self')">Créditos</button>
                     <button class="button btn-col-2" data-bs-toggle="modal"
                         data-bs-target="#instrucao_navegacao">Instruções</button>
                 </div>
@@ -162,6 +159,7 @@
                                     <p><kbd>CTRL</kbd> + <kbd>+</kbd> : Aumentar o zoom</p>
                                     <p><kbd>CTRL</kbd> + <kbd>-</kbd> : Diminuir o zoom</p>
                                 </div>
+                                <p>Você também pode acessar o ícone no canto superior direito do material para navegar de forma livre através do menu.</p>
                             </div>
                         </div>
                     </div>
@@ -184,7 +182,7 @@
         </div>
     </div>
     <div id="sobre" class="container-fluid pt-5 bg-primary-dark-hover">
-        <p class="titulo text-center secondary">SOBRE O MÓDULO</p>
+        <p class="titulo text-center secondary">SOBRE O MATERIAL</p>
         <div class="line bg-secondary w-25"></div>
         <div id="carouselExampleIndicators" class="carousel slide carousel-person" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -204,7 +202,7 @@
                                     <img src="./image/objetivo_geral.svg" alt="Objetivo Geral" class="mx-2" width="50">
                                     <span class="titulo-capa font-oswald my-auto mx-2">Objetivo Geral</span>
                                 </div>
-                                <p class="py-5 d-flex align-items-center">Esta Unidade tem como objetivo apresentar um
+                                <p class="py-5 d-flex align-items-center">Este material tem como objetivo apresentar um
                                     breve histórico e panorama da doença no mundo e no Brasil, descrevendo o agente
                                     etiológico, as características do vírus e as formas de transmissão. Ressalta a
                                     importância da utilização de dados epidemiológicos para as ações de assistência e
@@ -1114,7 +1112,7 @@
             <div class="container padding-container">
                 <p class="text-dark text-center">Figura 9 - Típica floresta tropical na região do Zaire, atual República
                     Democrática do Congo (África Ocidental), onde casos de mpox ocorreram entre 1970-1984.</p>
-                <img src="./image/floresta_tropical.png" alt="Floresta tropical" class="d-block mx-auto w-100" data-animation="left-to-right">
+                <img src="./image/floresta_tropical.png" alt="Floresta tropical" class="d-block mx-auto w-100">
             </div>
         </div>
     </div>
@@ -1349,7 +1347,10 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/index.min.js"></script>
     <script src="./js/animacao.min.js"></script>
-    <!-- https://github.com/AparicioFermiano -->
+    <script>
+        let lib = unasus.pack;
+        lib.initialize();
+    </script>
 </body>
 
 </html>
