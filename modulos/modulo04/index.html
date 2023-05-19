@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aparicio Fermiano dos Santos Junior">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/animacao.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/sidenav.min.css">
+    <!-- https://github.com/AparicioFermiano -->
+    <title>Monkeypox: Vigilância epidemiológica dos casos</title>
+</head>
+
+<body>
+    <div class="offcanvas"></div>
+    <!-- SIDEBAR -->
+    <button type="button" class="btn-sidebar" aria-expanded="false" aria-label="Botão - Menu lateral" onclick="nav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="sidebar">
+        <div>
+            <img src="./image/logo_sidebar.png" alt="Logo Monkeypox" class="d-block mx-auto w-50 w-md-75 mb-3">
+            <!-- SIDEBAR - HOME -->
+            <div class="sidebar-item">
+                <a href="#" class="d-flex">
+                    <div class="sidebar-item-icon">
+                        <i class="bi bi-house"></i>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Início
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#sobre" class="d-flex">
+                    <div class="sidebar-item-icon">
+                        <i class="bi bi-exclamation-diamond"></i>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Sobre o material
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#notificacao" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>01</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Notificação dos casos de MPOX
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#algoritmo" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>02</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Algoritmo de classificação e orientações para preenchimento da ficha de notificação
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#rastreamento" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>03</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Rastreamento de contatos
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#monitoramento" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>04</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Monitoramento de casos e contatos
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#bloqueio" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>05</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Bloqueio na cadeia de transmissão
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#vacinacao" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>06</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Vacinação e prioridades: Evidências no mundo
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#referencias" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>07</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Referências
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- BOTOES CARROSEL -->
+        <div class="d-flex justify-content-around px-4">
+            <button type="button" class="btn-sidebar-icon" onclick="window.open('creditos.html', '_self')">
+                <i class="bi bi-person-badge"></i>
+            </button>
+            <button type="button" class="btn-sidebar-icon" data-bs-toggle="modal" data-bs-target="#instrucao_navegacao">
+                <i class="bi bi-exclamation-circle"></i>
+            </button>
+        </div>
+    </div>
+    <div id="capa" class="container-fluid padding-container">
+        <div class="row pt-mobile-5">
+            <div class="col-12 col-lg-6 padding-container">
+                <img src="./image/logos.png" alt="Logos" class="img-fluid">
+                <span class="titulo bold mt-3 mx-auto d-block">VIGILÂNCIA EPIDEMIOLÓGICA DOS CASOS</span><br>
+                <div class="d-flex justify-content-between mb-3">
+                    <button class="button btn-col-2 btn-secondary"
+                        onclick="window.open('creditos.html', '_self')">Créditos</button>
+                    <button class="button btn-col-2" data-bs-toggle="modal"
+                        data-bs-target="#instrucao_navegacao">Instruções</button>
+                </div>
+                <a class="button btn-outline" href="#sobre">Iniciar</a>
+                <!-- Modal -->
+                <div class="modal fade" id="instrucao_navegacao" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content modal-conteudo">
+                            <div class="mx-auto border-0">
+                                <button type="button" class="btn-close bg-light rounded-circle p-3"
+                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="pt-3 text-justify">
+                                <p class="py-2 bold text-center">Instruções para navegação
+                                </p>
+                                <p>Você pode ajustar a visualização do material de acordo com o nível de zoom do seu
+                                    navegador, pressione:
+                                </p>
+                                <div class="text-center">
+                                    <p><kbd>CTRL</kbd> + <kbd>+</kbd> : Aumentar o zoom</p>
+                                    <p><kbd>CTRL</kbd> + <kbd>-</kbd> : Diminuir o zoom</p>
+                                </div>
+                                <p>Você também pode acessar o ícone no canto superior direito do material para navegar
+                                    de forma livre através do menu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="position-relative w-100">
+                    <img src="./image/logo_mpox_capa.svg" alt="Logo MPOX" class="mx-auto w-100">
+                    <div class="position-absolute detalhe-1">
+                        <img src="./image/capa_detalhes_1.svg" alt="Detalhes" class="img-animacao move-up-down">
+                    </div>
+                    <div class="position-absolute detalhe-2">
+                        <img src="./image/capa_detalhes_2.svg" alt="Detalhes" class="img-animacao move-x">
+                    </div>
+                    <div class="position-absolute detalhe-3">
+                        <img src="./image/capa_detalhes_3.svg" alt="Detalhes" class="img-animacao move-zoom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sobre" class="container-fluid pt-5 bg-primary-dark-hover">
+        <p class="titulo text-center secondary">SOBRE O MATERIAL</p>
+        <div class="line bg-secondary w-25"></div>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-person" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active circle" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="circle"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="circle"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row justify-content-center text-justify">
+                            <div class="col-12 col-md-6 py-5 text-light">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./image/objetivo_geral.svg" alt="Objetivo Geral" class="mx-2" width="50">
+                                    <span class="titulo-capa font-oswald my-auto mx-2">Objetivo Geral</span>
+                                </div>
+                                <p class="py-5 d-flex align-items-center">Este material tem como objetivo apresentar a
+                                    importância da notificação para a vigilância epidemiológica dos casos, o
+                                    preenchimento correto da ficha de notificação e o rastreamento e monitoramento de
+                                    contatos. Discute ainda o bloqueio na cadeia de transmissão, a definição de
+                                    prioridades e o uso de evidências nas imunizações com vacinas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row justify-content-center text-justify">
+                            <div class="col-12 col-md-6 py-5 text-light">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./image/objetivo_aprendizado.svg" alt="Objetivo de aprendizado"
+                                        class="mx-2" width="50">
+                                    <span class="titulo-capa font-oswald my-auto mx-2">Objetivo de Aprendizagem</span>
+                                </div>
+                                <ul class="py-5">
+                                    <li>Notificar os casos suspeitos e confirmados;</li>
+                                    <li>Preencher corretamente a ficha de notificação;</li>
+                                    <li>Realizar o rastreamento e monitoramento de contatos;</li>
+                                    <li>Estabelecer bloqueio na cadeia de transmissão;</li>
+                                    <li>Discutir a vacinação e o uso de evidências, bem como a definição de prioridades
+                                        nas imunizações com vacinas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 py-5 text-light">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./image/carga_horaria.svg" alt="Carga horaria" class="mx-2" width="50">
+                                    <span class="titulo-capa font-oswald my-auto mx-2">Carga horária</span>
+                                </div>
+                                <p class="py-5 text-center">10 horas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="onda onda-light"></div>
+    <div id="notificacao" class="container-fluid px-0 py-3">
+        <div class="container padding-container text-justify">
+            <div class="padding-x-container">
+                <p>As ações de vigilância são fundamentais tanto para o enfrentamento quanto para a contenção da
+                    disseminação da mpox. Se pensarmos nos objetivos e nas ações da vigilância, lembraremos dos seguintes
+                    fatores: identificação rápida de casos para o isolamento e tratamento adequado do paciente; rastreamento
+                    de contatos com a finalidade de quebrar a cadeia de transmissão; proteção dos profissionais de saúde
+                    expostos; identificação de possíveis grupos de riscos; e implementação de medidas de controle eficientes
+                    e seguras.
+                    Vamos abordar agora, com mais detalhes, a vigilância epidemiológica nos casos da mpox.</p>
+            </div>
+        </div>
+        <div class="container-fluid text-justify">
+            <p class="titulo font-oswald medium text-center padding-x-container primary-dark-hover">NOTIFICAÇÃO DOS
+                CASOS DE MPOX</p>
+            <div class="line bg-primary-dark-hover"></div>
+            <div class="row padding-container">
+                <div class="col-12 col-lg-6 padding-x-container">
+                    <p class="pb-2">Para falar sobre a notificação dos casos de mpox, vamos relembrar um conceito
+                        primordial, o de vigilância em saúde, definido na Política Nacional de Vigilância em Saúde
+                        (PNVS) como:</p>
+                    <div class="citacao w-75 py-2">
+                        [...] o processo contínuo e sistemático de coleta, consolidação, análise de dados e disseminação
+                        de informações sobre eventos relacionados à saúde, visando o planejamento e a implementação de
+                        medidas de saúde pública, incluindo a regulação, intervenção e atuação em condicionantes e
+                        determinantes da saúde, para a proteção e promoção da saúde da população, prevenção e controle
+                        de riscos, agravos e doenças (BRASIL, 2018, p. 1).
+                    </div>
+                    <p class="pt-2">É importante que você conheça essa definição para que tenha sempre em mente o que
+                        norteia o processo de notificação dos casos de mpox (assim como de outras doenças) nos serviços
+                        de saúde. Quando pensamos na coleta de dados relacionados a alguma doença de notificação
+                        compulsória, precisamos lembrar que a finalidade das notificações é coletar sistemática e
+                        continuamente dados sobre as pessoas que estão adoecendo para produzir informações sobre os
+                        casos suspeitos e/ou confirmados. Essas informações podem ser úteis para conhecer o perfil da
+                        doença no território, compreender o cenário atual de casos e subsidiar tomadas de decisão da
+                        gestão.</p>
+                </div>
+                <div class="col-12 col-lg-6 padding-x-container">
+                    <p class="pb-2">Dessa forma, o Ministério da Saúde (MS) estabeleceu, em 2014, a Lista Nacional de
+                        Notificação Compulsória de Doenças, Agravos e Eventos de Saúde Pública, publicada por meio de
+                        ato normativo que passa por atualização sempre que necessário. A Portaria GM/MS nº 3.418/2022,
+                        inclui a mpox na lista.</p>
+                    <p class="py-2">Inicialmente, a notificação dos casos suspeitos, confirmados e prováveis de mpox
+                        ocorriam via ficha específica disponibilizada na plataforma REDCap. Atualmente, a notificação
+                        dos casos é realizada pelo sistema e-SUS Sinan (http://plataforma.saude.gov.br/esussinan/), de
+                        acesso exclusivo a profissionais da vigilância devidamente cadastrados.</p>
+                </div>
+            </div>
+            <p class="pt-2 titulo-capa text-center px-3">Definições de caso</p>
+            <div class="row text-justify">
+                <div class="col-12 col-lg-6 padding-x-container d-flex align-items-center">
+                    <div class="padding-container">
+                        <p>O MS preconiza que devem ser notificados e investigados os indivíduos que atendam à definição
+                            de caso suspeito, caso confirmado ou caso provável:</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="box-saiba-mais bg-primary padding-container">
+                        <div class="row mx-0">
+                            <div class="col-12 col-md-4 d-flex align-items-center">
+                                <img src="./image/interrogacao.png" alt="Saiba mais"
+                                    class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                            </div>
+                            <div class="col-12 col-md-8 padding-x-container text-justify">
+                                <div class="d-flex">
+                                    <span data-animation="circle-saiba-mais" class="bg-secondary"></span>
+                                    <small class="medium">Conhecimento</small>
+                                </div>
+                                <p class="titulo bold primary-dark-hover">Saiba mais!</p>
+                                <p>
+                                    Mas você sabe como os casos de mpox são definidos para poder realizar a notificação
+                                    e investigação adequada?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-container">
+                <div class="box-saiba-mais bg-box-light padding-container">
+                    <b>Definições de caso (BRASIL, 2022a):</b>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <img src="./image/lupa.png" alt="Lupa" class="padding-container d-block mx-auto w-100 w-lg-75" data-animation="left-to-right">
+                        </div>
+                        <div class="col-12 col-lg-6 padding-container text-justify">
+                            <p class="pb-2 bold">Caso suspeito:</p>
+                            <p class="py-2">
+                                Indivíduo de qualquer idade que apresente início súbito de lesão em mucosas E/OU erupção
+                                cutânea aguda
+                                <button type="button" class="tooltip-p" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="* lesões profundas e bem circunscritas, muitas vezes com umbilicação central; e progressão da lesão através de estágios sequenciais específicos - máculas, pápulas, vesículas, pústulas e crostas.">
+                                    sugestiva*</button>
+                                de mpox, única ou múltipla, em qualquer parte do corpo (incluindo região
+                                genital/perianal, oral) E/OU proctite (por exemplo, dor ou sangramento anorretal) E/OU
+                                edema peniano, podendo estar associada a outros sinais e sintomas.</p>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <img src="./image/prancheta.png" alt="Prancheta" class="padding-container d-block mx-auto w-100 w-lg-75" data-animation="left-to-right">
+                        </div>
+                        <div class="col-12 col-lg-6 padding-container text-justify">
+                            <p class="pb-2 bold">Caso confirmado:</p>
+                            <p class="py-2">Caso suspeito com resultado laboratorial "Positivo/Detectável" para MPXV por
+                                diagnóstico molecular (PCR em Tempo Real e/ou Sequenciamento).</p>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <img src="./image/caso_provavel.png" alt="Caso provável"
+                                class="padding-container d-block mx-auto w-100 w-lg-75" data-animation="left-to-right">
+                        </div>
+                        <div class="col-12 col-lg-6 padding-container text-justify">
+                            <p class="pb-2 bold">Caso provável:</p>
+                            <p class="py-2">Caso que atende à definição de caso suspeito, que apresenta um OU mais dos
+                                seguintes critérios listados abaixo, com investigação laboratorial de mpox não realizada
+                                ou inconclusiva e cujo diagnóstico da doença não pode ser descartado apenas pela
+                                confirmação clínico-laboratorial de outro diagnóstico.</p>
+                            <small class="d-block my-3">Clique nas abas para interagir</small>
+                            <div class="d-flex" role="tablist">
+                                <div class="w-100 d-flex align-items-bottom" role="presentation">
+                                    <button class="btn-panel w-100 active" data-bs-toggle="tab"
+                                        data-bs-target="#caso_01" type="button" role="tab"
+                                        aria-selected="true">A)</button>
+                                </div>
+                                <div class="w-100 d-flex align-items-bottom" role="presentation">
+                                    <button class="btn-panel w-100" data-bs-toggle="tab" data-bs-target="#caso_02"
+                                        type="button" role="tab" aria-selected="false">B)</button>
+                                </div>
+                                <div class="w-100 d-flex align-items-bottom" role="presentation">
+                                    <button class="btn-panel w-100" data-bs-toggle="tab" data-bs-target="#caso_03"
+                                        type="button" role="tab" aria-selected="false">C)</button>
+                                </div>
+                                <div class="w-100 d-flex align-items-bottom" role="presentation">
+                                    <button class="btn-panel w-100" data-bs-toggle="tab" data-bs-target="#caso_04"
+                                        type="button" role="tab" aria-selected="false">D)</button>
+                                </div>
+                            </div>
+                            <div class="tab-content padding-container">
+                                <div class="tab-pane fade show active" id="caso_01" role="tabpanel" tabindex="0">
+                                    <p>Exposição próxima e prolongada, sem proteção respiratória, OU contato físico
+                                        direto, incluindo contato sexual, com parcerias múltiplas e/ou desconhecidas nos
+                                        21 dias anteriores ao início dos sinais e sintomas; E/OU</p>
+                                </div>
+                                <div class="tab-pane fade" id="caso_02" role="tabpanel" tabindex="0">
+                                    <p>Exposição próxima e prolongada, sem proteção respiratória, OU história de contato
+                                        íntimo, incluindo sexual, com caso provável ou confirmado de mpox nos 21 dias
+                                        anteriores ao início dos sinais e sintomas; E/OU A</p>
+                                </div>
+                                <div class="tab-pane fade" id="caso_03" role="tabpanel" tabindex="0">
+                                    <p>Contato com materiais contaminados, como roupas de cama e banho ou utensílios de
+                                        uso comum, pertencentes a um caso provável ou confirmado de mpox nos 21 dias
+                                        anteriores ao início dos sinais e sintomas; E/OU</p>
+                                </div>
+                                <div class="tab-pane fade" id="caso_04" role="tabpanel" tabindex="0">
+                                    <p>Trabalhadores de saúde sem uso adequado de equipamentos de proteção individual
+                                        <button type="button" class="tooltip-p" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="* óculos de proteção ou protetor facial, avental, máscara cirúrgica, luvas de procedimentos.">
+                                            (EPI)**</button> com história de contato ou acidente profissional com
+                                        material biológico para investigação de um caso provável ou confirmado de mpox
+                                        nos 21 dias anteriores ao início dos sinais e sintomas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container padding-container text-justify">
+                <p class="py-2">Para fins de vigilância e encerramento dos casos, a partir da investigação, a
+                    classificação do caso pode atender a outras definições preconizadas pelo MS:</p>
+                <small class="d-block my-3">Clique nos itens para interagir</small>
+                <div class="accordion" id="accordion_casos">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_casos_1" aria-expanded="true"
+                                aria-controls="accordion_casos">
+                                Caso descartado
+                            </button>
+                        </h2>
+                        <div id="accordion_casos_1" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordion_casos">
+                            <div class="accordion-body">
+                                <p>Caso suspeito com resultado laboratorial “Negativo/Não Detectável” para MPXV por
+                                    diagnóstico molecular (PCR em Tempo Real e/ou Sequenciamento) OU sem resultado
+                                    laboratorial para MPXV E realizado diagnóstico complementar que descarta MPXV como a
+                                    principal hipótese de diagnóstico.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_casos_2" aria-expanded="false"
+                                aria-controls="accordion_casos">
+                                Exclusão
+                            </button>
+                        </h2>
+                        <div id="accordion_casos_2" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_casos">
+                            <div class="accordion-body">
+                                <p>Notificação que não atende às definições de caso suspeito.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_casos_3" aria-expanded="false"
+                                aria-controls="accordion_casos">
+                                Perda de seguimento
+                            </button>
+                        </h2>
+                        <div id="accordion_casos_3" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_casos">
+                            <div class="accordion-body">
+                                <p class="pb-2">Caso que <b>atenda à definição de caso suspeito e que atenda aos
+                                        critérios listados abaixo:</b></p>
+                                <ul>
+                                    <li>a) Não tenha registro de vínculo epidemiológico*; E</li>
+                                    <li>b) Não realizou coleta de exame laboratorial OU realizou coleta de exame
+                                        laboratorial, mas a amostra foi inviável OU teve resultado inconclusivo; E</li>
+                                    <li>c) Não tem oportunidade de nova coleta de amostra laboratorial (30 dias após o
+                                        início da apresentação de sinais e sintomas).</li>
+                                </ul>
+                                <p class="py-2">Cabe ressaltar que as definições de Exclusão e de Perda de seguimento
+                                    têm o objetivo de aprimorar o processo de análise dos dados e o encerramento dos
+                                    casos já notificados, não sendo recomendado notificar um caso que atenda a uma
+                                    dessas definições.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="onda onda-secondary bg-light"></div>
+    <div id="algoritmo" class="container-fluid px-0 pt-2 bg-secondary text-light">
+        <p class="titulo font-oswald medium text-center padding-x-container">ALGORITMO DE CLASSIFICAÇÃO E ORIENTAÇÕES
+            PARA PREENCHIMENTO DA FICHA DE NOTIFICAÇÃO</p>
+        <div class="line bg-light"></div>
+        <div class="row padding-container mx-0 overflow-hidden">
+            <div class="col-12 col-lg-6 text-justify padding-x-container d-block my-auto">
+                <span class="titulo-capa">Algoritmo de classificação</span>
+                <p class="pt-4">É importante que você conheça essa definição para que tenha sempre em mente o que
+                    norteia o processo de notificação dos casos de mpox (assim como de outras doenças) nos serviços de
+                    saúde. Quando pensamos na coleta de dados relacionados a alguma doença de notificação compulsória,
+                    precisamos lembrar que a finalidade das notificações é coletar sistemática e continuamente dados
+                    sobre as pessoas que estão adoecendo para produzir informações sobre os casos suspeitos e/ou
+                    confirmados. Essas informações podem ser úteis para conhecer o perfil da doença no território,
+                    compreender o cenário atual de casos e subsidiar tomadas de decisão da gestão.</p>
+            </div>
+            <div class="col-12 col-lg-6 padding-container">
+                <img src="./image/prancheta.png" alt="Prancheta" class="d-block mx-auto w-75" data-animation="right-to-left">
+            </div>
+        </div>
+        <span class="titulo-capa padding-x-container d-block text-center">Figura 1 - Algoritmo de classificação e
+            registro de caso de mpox</span>
+        <img src="./image/algoritmo-notificacao-com-letras.png" alt="algoritmo-notificacao-com-letras"
+            class="padding-x-container pt-5 w-100 w-lg-75 d-block mx-auto">
+        <small class="d-block text-center mt-2">Fonte: adaptado do Plano de Contingência Nacional para Monkeypox
+            (BRASIL, 2022).</small>
+        <span class="titulo-capa padding-container d-block text-center">Ficha de notificação</span>
+        <div class="container padding-x-container text-justify">
+            <div class="padding-x-container">
+                <p class="pb-2">Desde 19 de setembro de 2022, as notificações dos Agravos de Notificação Compulsória são
+                    realizadas pela Plataforma Integrada de Vigilância em Saúde do MS. Essa plataforma apresenta uma nova
+                    versão do Sistema de Informação de Agravos de Notificação, denominada e-SUS Sinan, que contempla a
+                    notificação e investigação de casos de doenças e agravos que constam na Lista Nacional de Notificação
+                    Compulsória de doenças, agravos e eventos de saúde pública. É uma importante ferramenta que auxilia o
+                    planejamento da saúde e define prioridades de intervenção, além de permitir que seja avaliado o impacto
+                    das ações realizadas pelos gestores (BRASIL, 2022b).</p>
+                <p class="py-2">Ao iniciar o preenchimento da ficha, os primeiros dados solicitados são as informações
+                    gerais sobre a notificação, como Unidade da Federação de notificação, data e nome da Unidade de Saúde
+                    notificadora. Esses campos são obrigatórios, pois permitem a comunicação com os notificantes e ajudam a
+                    atualizar as informações relacionadas ao caso, sempre que necessário.</p>
+                <p class="py-2">Em seguida, são solicitados os dados sociodemográficos do paciente, como nome completo, data
+                    de nascimento, idade, sexo de nascimento, identidade de gênero, orientação sexual e outras informações
+                    específicas. A maior parte dessas informações é de preenchimento obrigatório, pois a ausência delas pode
+                    inviabilizar a comunicação sobre o caso. Portanto, é importante coletá-las antes de iniciar o processo
+                    de notificação.</p>
+                <p class="py-2">O próximo bloco da ficha coleta dados clínicos, laboratoriais e de exposição. Para
+                    preenchimento desses campos, tenha em mãos informações sobre: a presença de sinais e sintomas da doença,
+                    o histórico de vacinação contra varíola, a coleta de amostra laboratorial, hospitalização e evolução do
+                    caso. É essencial ter em mãos também dados de possíveis exposições do caso: se houve exposição próxima e
+                    prolongada, sem proteção respiratória, com caso provável ou confirmado de mpox; se houve contato físico
+                    direto, incluindo sexual, com desconhecido/a(s) e ou parcerias múltiplas, nos 21 dias anteriores ao
+                    início dos sinais e sintomas; se houve história de contato íntimo, incluindo sexual, com algum caso
+                    provável ou confirmado de mpox nos 21 dias anteriores ao início dos sinais e sintomas; se houve contato
+                    com materiais contaminados, como roupas de cama e banho ou utensílios de uso comum, pertencentes a caso
+                    provável ou confirmado de mpox nos 21 dias anteriores ao início dos sinais e sintomas; se o paciente é
+                    trabalhador de saúde que não fez uso adequado de EPI com história de contato com caso provável ou
+                    confirmado de mpox nos 21 dias anteriores ao início dos sinais e sintomas.</p>
+                <p class="py-2">Além disso, a ficha também possibilita que o notificador informe a forma provável de
+                    transmissão. A ficha disponibiliza uma lista de possibilidades, mas apenas uma pode ser selecionada: do
+                    animal para o homem; associado ao cuidado de saúde; transmissão em laboratório; contato com material
+                    contaminado; pessoa a pessoa; transmissão via uso de drogas intravenosas e transfusão; transmissão
+                    vertical; transmissão sexual; outra transmissão; ou, ainda, transmissão desconhecida.</p>
+                <p class="py-2">Por fim, de forma não obrigatória, é possível informar se o caso tem vínculo epidemiológico
+                    com um caso confirmado ou provável de mpox.</p>
+            </div>
+        </div>
+        <div class="row mx-0 pt-5">
+            <div class="col-12 col-lg-6 padding-x-container text-justify">
+                <div class="padding-x-container">
+                    <p class="pb-2">Todos esses dados auxiliam na elaboração de hipóteses e na busca de cadeias de
+                        transmissão no processo de rastreamento de contatos.</p>
+                    <p class="py-2">Ao final da ficha, deve-se atribuir uma classificação final ao caso, considerando as
+                        informações ali inseridas, bem como a evolução do caso (óbito; cura; óbito por outra causa;
+                        ignorado).</p>
+                    <p class="py-2">É importante que você saiba que, se na notificação inicial forem fornecidas apenas
+                        informações prévias sobre o caso e, após investigação epidemiológica, forem obtidas novas
+                        informações (como exposição, hospitalização ou óbito), deve-se atualizar a ficha de notificação
+                        para atualização dos dados.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="box-saiba-mais bg-secondary-dark padding-container">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <img src="./image/interrogacao.png" alt="Saiba mais"
+                                class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                        </div>
+                        <div class="col-12 col-md-8 padding-x-container text-justify">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-primary"></span>
+                                <small class="medium">Conhecimento</small>
+                            </div>
+                            <p class="titulo bold primary">Saiba mais!</p>
+                            <p>
+                                Fique atento! A atualização das fichas de notificação só poderá ocorrer enquanto elas
+                                estiverem no status "Investigação em andamento". Uma vez concluída a investigação, o
+                                status passa a "Encerrado".
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="padding-container">
+                <div class="row mx-0">
+                    <div class="col-12 col-md-4 d-flex align-items-center">
+                        <img src="./image/interrogacao.png" alt="Saiba mais" class="d-block mx-auto py-3 w-50 w-lg-75"
+                            data-animation="shake">
+                    </div>
+                    <div class="col-12 col-md-8 padding-x-container text-justify">
+                        <div class="d-flex">
+                            <span data-animation="circle-saiba-mais" class="bg-primary-light"></span>
+                            <small class="medium">Conhecimento</small>
+                        </div>
+                        <p class="titulo bold primary">Saiba mais!</p>
+                        <p>
+                            Para conhecer as fichas de notificações de mpox, bem como manter-se atualizado sobre o
+                            sistema e-SUS Sinan, acesse o endereço eletrônico <a
+                                href="http://plataforma.saude.gov.br/esussinan/"
+                                target="_blank">http://plataforma.saude.gov.br/esussinan/</a>. Nesse endereço eletrônico
+                            você encontrará também o dicionário de dados da notificação de mpox, o manual com as
+                            instruções do sistema, as legislações vigentes e o link de acesso para realizar a
+                            notificação <a href="https://esussinan.saude.gov.br"
+                                target="_blank">https://esussinan.saude.gov.br</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="titulo-capa padding-x-container d-block text-center">Classificação dos casos e orientação da
+                vigilância</span>
+        </div>
+        <div class="row mx-auto padding-container overflow-hidden">
+            <div class="col-12 col-lg-6 padding-x-container text-justify">
+                <p class="pb-2">Agora que você acessou a ficha de notificação de mpox e conhece os dados que precisam
+                    ser fornecidos, precisamos voltar ao algoritmo criado e oferecido pelo MS para classificação dos
+                    casos e orientação da vigilância.</p>
+                <p class="pb-2">Se o caso a ser notificado já tem coleta de amostra laboratorial (quadro azul com o
+                    número 2 no algoritmo), a classificação dependerá do resultado: se pendente, segue como caso
+                    suspeito; se detectável, é considerado caso confirmado; se não detectável, o caso é descartado.
+                    Casos confirmados devem seguir as orientações do quadro identificado com a letra C (Figura 1):
+                    reforçar isolamento por 21 dias ou até o desaparecimento das crostas; atualizar notificação do caso
+                    (se ele tiver sido notificado com classificação diferente); monitoramento dos sinais e sintomas;
+                    rastreamento de contatos; e reavaliação clínica.</p>
+            </div>
+            <div class="col-12 col-lg-6 padding-x-container">
+                <img src="./image/lupa_orientacao.png" alt="Lupa de orientação" class="d-block mx-auto w-75" data-animation="right-to-left">
+            </div>
+        </div>
+        <div class="container padding-x-container text-justify pb-3">
+            <div class="padding-x-container">
+                <p class="pb-2">Se o caso for descartado, deve-se continuar a investigação do quadro clínico para
+                    esclarecimento a respeito de diagnósticos complementares e, persistindo a suspeita de mpox, o caso é
+                    considerado provável. Em caso de não existência de coleta de amostras, é importante considerar se o caso
+                    tem alguma das exposições previstas na definição de caso provável. Se a resposta for sim para uma ou
+                    mais, esse caso é provável e permanecem as orientações do quadro C citadas acima.</p>
+                <p class="pb-2">Lembre-se de que todos os casos de mpox, confirmados ou não, devem ter investigação clínica
+                    e epidemiológica adequada para que as informações a serem produzidas com base nos dados disponibilizados
+                    na notificação sejam fidedignas e subsidiem a gestão da melhor maneira possível. Dessa forma,
+                    recomenda-se que todas as notificações incompletas sejam atualizadas a partir da disponibilização de
+                    novas informações dos casos.</p>
+            </div>
+        </div>
+    </div>
+    <div class="onda onda-primary bg-secondary"></div>
+    <div id="rastreamento" class="container-fluid px-0 pt-2 bg-primary">
+        <p class="titulo font-oswald medium text-center padding-x-container">RASTREAMENTO DE CONTATOS</p>
+        <div class="line bg-dark"></div>
+        <div class="row padding-container mx-0">
+            <div class="col-12 col-lg-6 padding-x-container text-justify">
+                <p class="pb-2">O rastreamento de contatos consiste na identificação imediata dos contatos próximos de
+                    casos definidos como suspeitos, prováveis e confirmados para mpox.</p>
+                <img src="./image/cartoes.png" alt="Cartões" class="d-block mx-auto py-3 w-100 w-lg-75" data-animation="left-to-right">
+            </div>
+            <div class="col-12 col-lg-6">
+                <small class="d-block my-3">Clique nos itens para interagir</small>
+                <div class="accordion" id="accordion_questoes">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_questoes_1" aria-expanded="true"
+                                aria-controls="accordion_questoes">
+                                E você sabe por que é importante realizá-lo?
+                            </button>
+                        </h2>
+                        <div id="accordion_questoes_1" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordion_questoes">
+                            <div class="accordion-body">
+                                <p>O rastreamento de contatos é importante para fins de contenção da disseminação da
+                                    doença, uma vez que pessoas que tiveram contato próximo com pessoas que se enquadram
+                                    em casos suspeitos, confirmados e prováveis correm o risco de desenvolver a doença.
+                                    Por isso o rastreamento de contatos deve ser sempre realizado.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_questoes_2" aria-expanded="false"
+                                aria-controls="accordion_questoes">
+                                Mas quem pode ser considerado contato?
+                            </button>
+                        </h2>
+                        <div id="accordion_questoes_2" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_questoes">
+                            <div class="accordion-body">
+                                <p class="pb-2">A OMS considera contato de caso a pessoa que teve uma ou mais das
+                                    interações, nos últimos 21 dias, descritas abaixo (WHO, 2022a):</p>
+                                <ul>
+                                    <li>Contato físico direto, incluindo contato sexual, com parcerias múltiplas e/ou
+                                        desconhecidas com caso provável ou confirmado de mpox; E/OU</li>
+                                    <li>Exposição próxima e prolongada, sem proteção respiratória, OU histórico de
+                                        contato íntimo, incluindo sexual, com caso provável ou confirmado de mpox ; E/OU
+                                    </li>
+                                    <li>Contato com materiais contaminados, como roupas de cama e banho ou utensílios de
+                                        uso comum, pertencentes a um caso provável ou confirmado de mpox; E/OU</li>
+                                    <li>Trabalhadores de saúde sem uso adequado de EPI com histórico de contato com caso
+                                        provável ou confirmado de mpox.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row padding-x-container mx-0 overflow-hidden">
+            <div class="col-12 col-lg-6">
+                <p class="pb-2">São exemplos de contatos próximos para mpox (BRASIL, 2022a):</p>
+                <small class="d-block my-3">Clique nos itens para interagir</small>
+                <div class="accordion" id="accordion_exemplos">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_exemplos_1" aria-expanded="true"
+                                aria-controls="accordion_exemplos">
+                                Parceiros sexuais
+                            </button>
+                        </h2>
+                        <div id="accordion_exemplos_1" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordion_exemplos">
+                            <div class="accordion-body">
+                                <p>Pessoas que tenham qualquer tipo de contato sexual com o caso de mpox desde o início
+                                    dos sintomas, inclusive da fase prodrômica;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_exemplos_2" aria-expanded="false"
+                                aria-controls="accordion_exemplos">
+                                Pessoas com contato domiciliar com caso confirmado de mpox
+                            </button>
+                        </h2>
+                        <div id="accordion_exemplos_2" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_exemplos">
+                            <div class="accordion-body">
+                                <p>Pessoa(s) morando no mesmo domicílio ou ambiente semelhante (dormitório, alojamento
+                                    etc.); pessoa(s) compartilhando roupas, roupas de cama, utensílios etc. com o caso
+                                    mpox; cuidadores do caso mpox, desde o início de sua erupção (sinais e/ou sintomas).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_exemplos_3" aria-expanded="false"
+                                aria-controls="accordion_exemplos">
+                                Profissionais de saúde
+                            </button>
+                        </h2>
+                        <div id="accordion_exemplos_3" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_exemplos">
+                            <div class="accordion-body">
+                                <p>Os profissionais de saúde que entraram em contato com o caso mpox (lesões ou contato
+                                    cara a cara prolongado (> 3 horas e < 2 m distância) sem EPI adequado; Profissionais
+                                        de saúde que sofreram ferimentos com objetos perfurocortantes ou foram expostos
+                                        a fluidos corporais ou procedimento gerador de aerossol sem EPI; pessoal de
+                                        laboratório que sofreu acidente de trabalho com amostra contendo vírus
+                                        (respingo, ferimento por material perfurocortante, exposição a aerossóis
+                                        etc.).</p> </div> </div> </div> <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#accordion_exemplos_4"
+                                                aria-expanded="false" aria-controls="accordion_exemplos">
+                                                Pessoas com contatos físicos prolongados ou contato de alto risco
+                                            </button>
+                                        </h2>
+                                        <div id="accordion_exemplos_4" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordion_exemplos">
+                                            <div class="accordion-body">
+                                                <p>A ser avaliado caso a caso, mas pode incluir, entre outros, ter
+                                                    sentado ao lado de um caso confirmado durante viagens prolongadas
+                                                    (contato físico direto), compartilhando utensílios ou outro
+                                                    equipamento ou ferimentos por objetos cortantes ligados ao caso
+                                                    mpox.</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#accordion_exemplos_5" aria-expanded="false"
+                                        aria-controls="accordion_exemplos">
+                                        Outras categorias de contatos de um caso mpox
+                                    </button>
+                                </h2>
+                                <div id="accordion_exemplos_5" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordion_exemplos">
+                                    <div class="accordion-body">
+                                        <p>Pessoas que estiveram presentes em encontros sociais com um caso, trabalhar
+                                            na mesma empresa ou compartilhar o mesmo espaço que casos confirmados,
+                                            suspeitos ou prováveis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 padding-x-container text-justify pt-mobile-5">
+                        <p class="titulo-capa pb-2 px-3 text-center medium">Após definirmos o caso e rastrearmos os
+                            contatos, qual o próximo passo?</p>
+                        <img src="./image/cientista_pensativo.png" alt="Cientista pensando"
+                            class="d-block mx-auto py-3 w-75" data-animation="right-to-left">
+                    </div>
+                </div>
+            </div>
+            <div class="onda onda-primary-dark bg-primary"></div>
+            <div id="monitoramento" class="container-fluid px-0 pt-2 bg-primary-dark-hover text-light">
+                <p class="titulo font-oswald medium text-center padding-x-container">MONITORAMENTO DE CASOS E CONTATOS
+                </p>
+                <div class="line bg-light"></div>
+                <div class="row padding-container text-justify mx-0 overflow-hidden">
+                    <div class="col-12 col-lg-6 padding-x-container">
+                        <p class="pb-2">
+                            Após a identificação de um caso (suspeito, provável ou confirmado) e rastreamento dos
+                            contatos devemos monitorá-los. Você sabe o por quê?
+                        </p>
+                        <p class="py-2">
+                            O monitoramento de casos e contatos tem como objetivo verificar a evolução clínica e
+                            epidemiológica apoiando no direcionamento de manejo, tratamento e outras medidas, como
+                            definição de caso e suspensão de isolamento.
+                        </p>
+                        <p class="py-2">
+                            O monitoramento de casos suspeitos e de contatos deverá ser iniciado a partir da
+                            identificação desses casos. O monitoramento deve ser realizado até o resultado laboratorial
+                            do caso suspeito estar disponível. No caso de resultado não detectável o monitoramento deve
+                            ser suspenso. Quando o caso suspeito apresenta resultado laboratorial detectável, o(s)
+                            contatante(s) de caso deve(m) seguir em monitoramento de 21 dias, avaliando o aparecimento
+                            de quaisquer sinais ou sintomas sugestivos de mpox.
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6 padding-x-container">
+                        <img src="./image/calendario.png" alt="Calendário" class="d-block mx-auto py-3 w-75" data-animation="right-to-left">
+                        <p class="pt-3">Os <b>contatos de casos suspeitos que estejam assintomáticos</b> podem continuar
+                            com suas atividades rotineiras e devem ser orientados a realizar o automonitoramento pelo
+                            período de 21 dias, avaliando o aparecimento de quaisquer sinais ou sintomas sugestivos de
+                            mpox (BRASIL, 2022a).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="onda onda-aux bg-primary-dark-hover"></div>
+            <div id="bloqueio" class="container-fluid px-0 pt-2 bg-aux">
+                <p class="titulo font-oswald medium text-center padding-x-container">BLOQUEIO NA CADEIA DE TRANSMISSÃO
+                </p>
+                <div class="line bg-dark"></div>
+                <div class="row padding-container mx-0 overflow-hidden">
+                    <div class="col-12 col-lg-6 padding-x-container">
+                        <img src="./image/prevencao.png" alt="Prevenção" class="d-block mx-auto py-3 w-75" data-animation="left-to-right">
+                    </div>
+                    <div class="col-12 col-lg-6 padding-x-container text-justify d-flex align-items-center">
+                        <p>A maneira mais segura de se prevenir contra a mpox é evitar o contato direto com pessoas
+                            contaminadas. Diante da suspeita da doença, medidas imediatas de investigação
+                            epidemiológica, incluindo rastreamento e investigação de contactantes, são necessárias para
+                            que a doença seja controlada. A identificação precoce e o isolamento de pacientes com lesões
+                            ativas são a principal conduta disponível para interromper a transmissão da doença de pessoa
+                            para pessoa, com foco prioritário em grupos com alto risco de exposição.</p>
+                    </div>
+                </div>
+                <p class="titulo-capa text-center padding-x-container">Após definirmos o caso e rastrearmos os contatos,
+                    qual o próximo passo?</p>
+                <div class="row mx-0 text-justify">
+                    <div class="col-12 col-lg-6 padding-container">
+                        <div class="padding-x-container">
+                            <p class="pb-2">Indivíduos com mpox são considerados infecciosos (transmissores da doença)
+                                enquanto apresentarem crostas nas lesões. Quando as crostas das lesões caem e a
+                                reepitelização (etapa de cicatrização de um ferimento que se caracteriza pelo
+                                crescimento do epitélio ao redor da ferida - reparo no tecido da pele) acontece, o que
+                                normalmente dura em média 21 dias, indica-se a liberação do isolamento. Contudo, o uso
+                                de preservativo em qualquer atividade sexual é sugerido pela OMS por 12 semanas após a
+                                recuperação, uma vez que o vírus já foi encontrado no sêmen e em fluidos vaginais e não
+                                se sabe ainda a sua implicação na transmissão do vírus (CDC, 2022b).</p>
+                            <p class="py-2">Atenção! As decisões relativas à descontinuação das precauções de isolamento
+                                tanto na unidade de saúde quanto na comunidade devem ser tomadas em consulta com o
+                                departamento de saúde local ou estadual.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-5">
+                        <div class="box-saiba-mais bg-light padding-container">
+                            <div class="row mx-0">
+                                <div class="col-12 col-md-4 d-flex align-items-center">
+                                    <img src="./image/interrogacao.png" alt="Saiba mais"
+                                        class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                                </div>
+                                <div class="col-12 col-md-8 padding-x-container text-justify">
+                                    <div class="d-flex">
+                                        <span data-animation="circle-saiba-mais" class="bg-secondary"></span>
+                                        <small class="medium">Conhecimento</small>
+                                    </div>
+                                    <p class="titulo bold primary-dark-hover">Saiba mais!</p>
+                                    <p>
+                                        A vacinação, quando disponível, pode dar suporte às estratégias de quebra da
+                                        cadeia de transmissão do MPXV.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padding-container">
+                            <p class="padding-x-container">Na próxima unidade, iremos abordar algumas medidas de
+                                prevenção e passar orientações de cuidado, para você, profissional da saúde, e para os
+                                profissionais do sexo, como também para a população geral, usuários de transporte
+                                público e frequentadores de festas e eventos de massa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="onda onda-secondary-dark bg-aux"></div>
+            <div id="vacinacao" class="container-fluid px-0 pt-2 bg-secondary-dark text-light">
+                <p class="titulo font-oswald medium text-center padding-x-container">VACINAÇÃO E PRIORIDADES: EVIDÊNCIAS NO MUNDO</p>
+                <div class="line bg-light"></div>
+                <div class="row mx-0 padding-container overflow-hidden">
+                    <div class="col-12 col-lg-6 padding-x-container text-justify">
+                        <p class="pb-2">Nesse material iremos discutir as prioridades de sua aplicação, principalmente
+                            pelo número limitado de doses disponível no mundo.</p>
+                        <p class="py-2">Cabe lembrar que, devido à escassez de estudos específicos sobre as vacinas
+                            disponíveis, todos os esforços possíveis devem ser empregados para administrar as vacinas
+                            dentro de um esquema de pesquisa colaborativa e de protocolos de ensaios clínicos
+                            randomizados com ferramentas padronizadas de coleta de dados para dados clínicos e
+                            desfechos.</p>
+                        <p class="py-2">De acordo com os Centros de Controle de Prevenção de Doenças (CDC), à medida que
+                            aumentar a disponibilidade de vacinas, as orientações provisórias sobre a introdução de
+                            estratégias de profilaxia pré-exposição (PrEP) podem ser atualizadas. Segue, no Quadro 1, a
+                            estratégia de vacinação contra a mpox adotada pelos EUA.</p>
+                    </div>
+                    <div class="col-12 col-lg-6 padding-x-container">
+                        <img src="./image/remedios.png" alt="Remédios" class="d-block mx-auto py-3 w-75" data-animation="right-to-left">
+                    </div>
+                </div>
+                <p class="titulo-capa px-3 text-center">Estratégias de vacinação usadas no surto de mpox nos EUA em 2022
+                </p>
+                <div class="container padding-container">
+                    <small class="d-block mb-3 text-center">Clique nas abas para interagir</small>
+                    <div class="d-flex" role="tablist">
+                        <div class="w-100 d-flex align-items-bottom" role="presentation">
+                            <button class="btn-panel w-100 active" data-bs-toggle="tab" data-bs-target="#estrategia_01"
+                                type="button" role="tab" aria-selected="true">PEP</button>
+                        </div>
+                        <div class="w-100 d-flex align-items-bottom" role="presentation">
+                            <button class="btn-panel w-100" data-bs-toggle="tab" data-bs-target="#estrategia_02"
+                                type="button" role="tab" aria-selected="false">PEP++</button>
+                        </div>
+                        <div class="w-100 d-flex align-items-bottom" role="presentation">
+                            <button class="btn-panel w-100" data-bs-toggle="tab" data-bs-target="#estrategia_03"
+                                type="button" role="tab" aria-selected="false">PrEP</button>
+                        </div>
+                    </div>
+                    <div class="tab-content padding-container">
+                        <div class="tab-pane fade show active" id="estrategia_01" role="tabpanel" tabindex="0">
+                            <p class="titulo-capa bold text-center">Profilaxia Pós-Exposição (PEP)</p>
+                            <p class="titulo-capa">- Definição</p>
+                            <p>Vacinação após exposição conhecida à mpox</p>
+                            <p class="titulo-capa">- Critério</p>
+                            <p>Pessoas que são contatos conhecidos de alguém com mpox identificados pelas autoridades de
+                                saúde pública, por exemplo, por meio de investigação de casos, rastreamento de contatos
+                                ou avaliação de exposição ao risco</p>
+                            <p class="titulo-capa">- Tempo de profilaxia</p>
+                            <ul>
+                                <li>Iniciar a vacinação dentro de 4 dias após a data de exposição;</li>
+                                <li>Entre 4 e 14 dias após a data de exposição, a vacinação pode ser menos eficaz.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="estrategia_02" role="tabpanel" tabindex="0">
+                            <p class="titulo-capa bold text-center">Profilaxia Pós-Exposição Expandida(PEP++)</p>
+                            <p class="titulo-capa">- Definição</p>
+                            <p>Vacinação após exposição conhecida ou presumida à mpox</p>
+                            <p class="titulo-capa">- Critério</p>
+                            <ul>
+                                <li>Pessoas que são contatos conhecidos de alguém com mpox que são identificados pelas
+                                    autoridades de saúde pública, por exemplo, por meio de investigação de casos,
+                                    rastreamento de contatos ou avaliação de exposição ao risco;</li>
+                                <li>Pessoas que estão cientes de que um parceiro sexual recente nos últimos 14 dias foi
+                                    diagnosticado com mpox;</li>
+                                <li>Homens que fazem sexo com homens, ou pessoas transgênero e de gênero diverso que
+                                    fazem sexo com homens, que tiveram exposição a algumas das seguintes situações nos
+                                    últimos 14 dias: sexo com múltiplos parceiros (ou sexo em grupo); sexo em um local
+                                    de sexo comercial; ou sexo em associação com um evento, local ou área geográfica
+                                    definida onde a transmissão da mpox está ocorrendo.</li>
+                            </ul>
+                            <p class="titulo-capa">- Tempo de profilaxia</p>
+                            <ul>
+                                <li>Iniciar a vacinação dentro de 4 dias após a data de exposição;</li>
+                                <li>Entre 4 e 14 dias após a data de exposição, a vacinação pode ser menos eficaz.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="estrategia_03" role="tabpanel" tabindex="0">
+                            <p class="titulo-capa bold text-center">Profilaxia Pré-Exposição (PrEP)</p>
+                            <p class="titulo-capa">- Definição</p>
+                            <p>Vacinação antes da exposição à mpox</p>
+                            <p class="titulo-capa">- Critério</p>
+                            <p>Pessoas em determinados grupos de risco ocupacional*</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="padding-x-container text-justify">
+                        As pessoas em risco de exposição ocupacional a ortopoxvirus incluem trabalhadores de
+                        laboratórios de pesquisa que realizam testes de diagnóstico para o MPXV e membros de equipes de
+                        resposta de profissionais de saúde designados pelas autoridades apropriadas de saúde pública e
+                        antiterror (consulte as recomendações do ACIP no link: <a
+                            href="https://www.cdc.gov/vaccines/hcp/acip-recs/vacc-specific/smallpox.html#print"
+                            target="_blank">
+                            https://www.cdc.gov/vaccines/hcp/acip-recs/vacc-specific/smallpox.html#print</a>).
+                    </p>
+                    <small>Fonte: adaptado de Centers for Disease Control and Prevention (2022a).</small>
+                </div>
+                <div class="row mx-0 padding-container text-justify">
+                    <div class="col-12 col-lg-6 padding-x-container d-flex align-items-center">
+                        <p>No Brasil, a Agência Nacional de Vigilância Sanitária (ANVISA) aprovou, em 25 de agosto de
+                            2022, a dispensa de registro para que o MS importasse e utilizasse a vacina Jynneos (MVA-BN)
+                            para imunização contra a mpox, em virtude da doença ter sido declarada uma emergência de
+                            saúde pública de importância internacional (ANVISA, 2022). Para fins de dispensa do registro
+                            sanitário, em caráter excepcional e temporário, a Anvisa considera a aprovação de uso do
+                            medicamento ou vacina por, pelo menos, uma das seguintes autoridades:</p>
+                    </div>
+                    <div class="col-12 col-lg-6 padding-x-container">
+                        <div class="box-saiba-mais bg-box-light padding-container text-dark">
+                            <ul class="small">
+                                <li>Organização Mundial da Saúde (OMS);</li>
+                                <li>Agência Europeia de Medicamentos (EMA)</li>
+                                <li>Administração de Alimentos e Medicamentos dos Estados Unidos (FDA/EUA);</li>
+                                <li>Agência Reguladora de Medicamentos e Produtos de Saúde do Reino Unido (MHRA/UK);
+                                </li>
+                                <li>Agência de Produtos Farmacêuticos e Equipamentos Médicos/Ministério da Saúde,
+                                    Trabalho e Bem-estar do Japão (PMDA/MHLW/JP); ou</li>
+                                <li>Agência Reguladora do Canadá (Health Canada).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container padding-x-container pb-5">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <img src="./image/megafone.png" alt="Saiba mais" class="d-block mx-auto py-3 w-50 w-lg-75"
+                                data-animation="shake">
+                        </div>
+                        <div class="col-12 col-md-8 padding-x-container text-justify">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-primary-light"></span>
+                                <small class="medium">Entendendo</small>
+                            </div>
+                            <p class="titulo bold primary-light">Curiosidade</p>
+                            <p>
+                                Vamos relembrar!!! Uma emergência em saúde pública caracteriza-se como uma situação
+                                epidemiológica (surtos e epidemias), de desastre ou de desassistência à população que
+                                demande o emprego urgente de medidas de prevenção, de controle e de contenção de riscos,
+                                de danos e de agravos à saúde pública.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box-saiba-mais bg-secondary padding-container mt-5">
+                        <div class="row mx-0">
+                            <div class="col-12 col-md-4 d-flex align-items-center">
+                                <img src="./image/interrogacao.png" alt="Saiba mais"
+                                    class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                            </div>
+                            <div class="col-12 col-md-8 padding-x-container text-justify">
+                                <div class="d-flex">
+                                    <span data-animation="circle-saiba-mais" class="bg-primary-dark-hover"></span>
+                                    <small class="medium">Conhecimento</small>
+                                </div>
+                                <p class="titulo bold primary-dark-hover">Saiba mais!</p>
+                                <p class="pb-2">
+                                    Você pode acessar as especificações da vacina Jynneos clicando aqui.
+                                </p>
+                                <p class="py-2">E também saiba mais sobre a aprovação e liberação da vacina Jynneos pela
+                                    Anvisa no endereço eletrônico:
+                                    https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2022/anvisa-aprova-liberacao-de-vacina-para-monkeypox-para-uso-pelo-ministerio-da-saude.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-0 padding-container text-justify">
+                    <div class="col-12 col-lg-6 padding-x-container">
+                        <p class="pb-2">O Brasil adquiriu cerca de 50.000 doses dos imunobiológicos em 2022. Entretanto,
+                            seguindo a orientação da OMS, uma vez que a vacinação em massa não é recomendada, a melhor
+                            opção é adotar estratégias robustas de vigilância (WHO, 2022b) dessa forma, a identificação
+                            dos grupos de maior risco de infecção poderá ser feita e é fundamental para tornar esses
+                            grupos prioritários para a vacinação.</p>
+                        <p class="py-2">Assim, não será iniciada a vacinação em larga escala no Brasil e as estratégias
+                            de vacinação têm como objetivo principal a proteção dos indivíduos com maior risco de
+                            evolução para as formas graves da doença, dentro do atual cenário da transmissão do vírus
+                            observadas no país (BRASIL, 2023).</p>
+                    </div>
+                    <div class="col-12 col-lg-6 padding-x-container">
+                        <p class="pb-2">De acordo com o Informe Técnico Operacional de Vacinação Contra a Mpox (BRASIL,
+                            2023), poderão receber vacinação pré-exposição: pessoas vivendo com HIV/Aids, com idade
+                            igual ou superior a 18 anos e com contagem de linfócitos TCD4 inferior a 200 células nos
+                            últimos seis meses; e profissionais de laboratório que trabalham diretamente com
+                            Orthopoxvirus em laboratórios de segurança nível 3 com idade entre 18 a 49 anos. Poderão
+                            receber vacinação pós exposição pessoas que tiveram exposição de alto ou médio risco com
+                            secreções e/ou fluidos corporais de indivíduos suspeitos, prováveis ou confirmados para
+                            mpox.</p>
+                        <p class="py-2">Fiquem atentos aos critérios de inclusão e exclusão para a vacinação nas
+                            diferentes situações de exposição, bem como as descrições de risco acessando o Informe
+                            Técnico Operacional de Vacinação Contra a Mpox e suas atualizações no endereço eletrônico:
+                            Baixando aqui</p>
+                    </div>
+                </div>
+                <div class="container padding-x-container text-justify pb-5">
+                    <p class="padding-x-container">Assim, considerando o cenário atual da mpox no país e o constante processo de atualização diante
+                        das ações de prevenção e vigilância dos casos, é muito importante que os profissionais da saúde
+                        se mantenham atualizados sobre as ações a serem desenvolvidas durante o surto da doença no país.
+                        Nesse sentido, o MS disponibiliza, em suas plataformas de comunicação, diversos documentos que
+                        subsidiam o aprimoramento do conhecimento necessário para a tomada de decisão do profissional.
+                    </p>
+                </div>
+            </div>
+            <div class="onda onda-primary-dark bg-secondary-dark"></div>
+            <div id="referencias" class="container-fluid px-0 pt-2 bg-primary-dark-hover text-light">
+                <p class="titulo font-oswald medium text-center padding-x-container">REFERÊNCIAS</p>
+                <div class="line bg-light"></div>
+                <div class="container-fluid pt-5">
+                    <div class="row mx-0 text-justify">
+                        <div class="col-12 col-lg-6 padding-x-container">
+                            <p class="py-2">
+                                AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA. Extrato de Liberação da DICOL. Dispensa, em
+                                caráter excepcional e temporário, do registro da vacina Jynneos / Imvanex, fabricada
+                                pela empresa Bavarian Nordic A/S. 25/08/2022. 2022c. Disponível
+                                em:https://www.gov.br/anvisa/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria/extratos-dos-circuitos-deliberativos-1/2022/extrato-cd-863-2022-dispensa-de-registro-nos-termos-da-rdc-747_2022200b-sei_25351_9228002022_48.pdf/.
+                                Acesso em 25 dez. 2022. <br><br>
+
+                                BRASIL. Ministério da Saúde. Informe Técnico Operacional de Vacinação Contra a Mpox.
+                                2023. Disponível em:
+                                https://www.gov.br/saude/pt-br/assuntos/variola-dos-macacos/publicacoes/informativos/informe-tecnico-operacional-de-vacinacao-contra-a-mpox/view
+                                Acesso em: 20 mar. 2023. <br><br>
+
+                                BRASIL. Ministério da Saúde. Plano de Contingência Nacional para Monkeypox. Centro de
+                                Operações de Emergência em Saúde Pública: COE Monkeypox. 2022a. Versão 2.
+                                BRASIL. Ministério da Saúde. E-SUS SINAN - Plataforma Integrada de Vigilância em Saúde -
+                                Ministério da Saúde. 2022b. Disponível em: http://plataforma.saude.gov.br/esussinan/.
+                                Acesso em: 31 dez. 2022. <br><br>
+
+                                BRASIL. Ministério da Saúde. Resolução nº 588, de 12 de julho de 2018. Diário Oficial da
+                                União, Brasília, DF, 13 ago. 2018. Disponível em:
+                                https://www.in.gov.br/materia/-/asset_publisher/Kujrw0TZC2Mb/content/id/36469447/do1-2018-08-13-resolucao-n-588-de-12-de-julho-de-2018-36469431.
+                                Acesso em: 13 nov. 2022. <br><br>
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-6 padding-x-container">
+                            <p class="py-2">
+                                BRASIL. Ministério da Saúde. Portaria nº 1.271, de 6 de junho de 2014. Define a Lista
+                                Nacional de Notificação Compulsória de doenças, agravos e eventos de saúde pública nos
+                                serviços de saúde públicos e privados em todo o território nacional, nos termos do
+                                anexo, e dá outras providências. Diário Oficial da União, Brasília, DF, 2014. Disponível
+                                em: https://bvsms.saude.gov.br/bvs/saudelegis/gm/2014/prt1271_06_06_2014.html. Acesso
+                                em: 13 nov. 2022. <br><br>
+
+                                CENTERS FOR DISEASE CONTROL AND PREVENTION. Monkeypox Vaccination Basics. 2022. 2022a
+                                Disponível em: https://www.cdc.gov/poxvirus/monkeypox/vaccines/vaccine-basics.html.
+                                Acesso em: 13 nov. 2022. <br><br>
+
+                                CENTERS FOR DISEASE CONTROL AND PREVENTION. Isolation and prevention practices for
+                                people with monkeypox. 2022. 2022b Disponível em:
+                                https://www.cdc.gov/poxvirus/monkeypox/clinicians/isolation-procedures.html. Acesso em:
+                                19 nov. 2022.<br><br>
+
+                                WORLD HEALTH ORGANIZATION. Surveillance, case investigation and contact tracing for mpox
+                                (monkeypox). 22 dez. 2022. 2022a Disponível em:
+                                https://www.who.int/publications/i/item/WHO-MPX-Surveillance-2022.4. Acesso em: 25 dez.
+                                2022.<br><br>
+
+                                WORLD HEALTH ORGANIZATION. Vaccines and immunization for monkeypox. 16 vov. 2022.
+                                Disponível em: https://www.who.int/publications/i/item/WHO-MPX-Immunization. Acesso em
+                                30 dez. 2022.<br><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="./se_unasus_pack.js"></script>
+            <script src="./js/bootstrap.bundle.min.js"></script>
+            <script src="./js/animacao.min.js"></script>
+            <script src="./js/index.min.js"></script>
+            <!-- <script>
+        let lib = unasus.pack;
+        lib.initialize();
+    </script> -->
+</body>
+
+</html>
