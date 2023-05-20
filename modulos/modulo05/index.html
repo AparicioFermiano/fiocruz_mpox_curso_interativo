@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aparicio Fermiano dos Santos Junior">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/animacao.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/sidenav.min.css">
+    <!-- https://github.com/AparicioFermiano -->
+    <title>Monkeypox: Uma Abordagem Geral para Profissionais de Saúde</title>
+</head>
+
+<body>
+    <div class="offcanvas"></div>
+    <!-- SIDEBAR -->
+    <button type="button" class="btn-sidebar" aria-expanded="false" aria-label="Botão - Menu lateral" onclick="nav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="sidebar">
+        <div>
+            <img src="./image/logo_sidebar.png" alt="Logo Monkeypox" class="d-block mx-auto w-50 w-md-75 mb-3">
+            <!-- SIDEBAR - HOME -->
+            <div class="sidebar-item">
+                <a href="#" class="d-flex">
+                    <div class="sidebar-item-icon">
+                        <i class="bi bi-house"></i>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Início
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#sobre" class="d-flex">
+                    <div class="sidebar-item-icon">
+                        <i class="bi bi-exclamation-diamond"></i>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Sobre o material
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#medidas" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>01</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Medidas de prevenção e cuidado contra a MPOX para a população geral
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#orientacoes" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>02</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Orientações para pessoas com suspeita da doença
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#contencao" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>03</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Contenção da doença em serviços de saúde e orientações e cuidado para a saúde do trabalhador da
+                        saúde
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#profissionais" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>04</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Orientações para profissionais do sexo
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#eventos" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>05</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Orientações para eventos de massa
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#transporte" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>06</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Orientações para transporte público
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#referencias" class="d-flex">
+                    <div class="sidebar-item-icon font-oswald text-center">
+                        <b>07</b>
+                    </div>
+                    <div class="sidebar-item-title">
+                        Referências
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- BOTOES CARROSEL -->
+        <div class="d-flex justify-content-around px-4">
+            <button type="button" class="btn-sidebar-icon" onclick="window.open('creditos.html', '_self')">
+                <i class="bi bi-person-badge"></i>
+            </button>
+            <button type="button" class="btn-sidebar-icon" data-bs-toggle="modal" data-bs-target="#instrucao_navegacao">
+                <i class="bi bi-exclamation-circle"></i>
+            </button>
+        </div>
+    </div>
+    <div id="capa" class="container-fluid padding-container">
+        <div class="row pt-mobile-5">
+            <div class="col-12 col-lg-6 padding-container">
+                <img src="./image/logos.png" alt="Logos" class="img-fluid">
+                <span class="titulo bold mt-3 mx-auto d-block">ORIENTAÇÕES PARA A POPULAÇÃO E GRUPOS
+                    ESPECÍFICOS</span><br>
+                <div class="d-flex justify-content-between mb-3">
+                    <button class="button btn-col-2 btn-secondary"
+                        onclick="window.open('creditos.html', '_self')">Créditos</button>
+                    <button class="button btn-col-2" data-bs-toggle="modal"
+                        data-bs-target="#instrucao_navegacao">Instruções</button>
+                </div>
+                <a class="button btn-outline" href="#sobre">Iniciar</a>
+                <!-- Modal -->
+                <div class="modal fade" id="instrucao_navegacao" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content modal-conteudo">
+                            <div class="mx-auto border-0">
+                                <button type="button" class="btn-close bg-light rounded-circle p-3"
+                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="pt-3 text-justify">
+                                <p class="py-2 bold text-center">Instruções para navegação
+                                </p>
+                                <p>Você pode ajustar a visualização do material de acordo com o nível de zoom do seu
+                                    navegador, pressione:
+                                </p>
+                                <div class="text-center">
+                                    <p><kbd>CTRL</kbd> + <kbd>+</kbd> : Aumentar o zoom</p>
+                                    <p><kbd>CTRL</kbd> + <kbd>-</kbd> : Diminuir o zoom</p>
+                                </div>
+                                <p>Você também pode acessar o ícone no canto superior direito do material para navegar
+                                    de forma livre através do menu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="position-relative w-100">
+                    <img src="./image/logo_mpox_capa.svg" alt="Logo MPOX" class="mx-auto w-100">
+                    <div class="position-absolute detalhe-1">
+                        <img src="./image/capa_detalhes_1.svg" alt="Detalhes" class="img-animacao move-up-down">
+                    </div>
+                    <div class="position-absolute detalhe-2">
+                        <img src="./image/capa_detalhes_2.svg" alt="Detalhes" class="img-animacao move-x">
+                    </div>
+                    <div class="position-absolute detalhe-3">
+                        <img src="./image/capa_detalhes_3.svg" alt="Detalhes" class="img-animacao move-zoom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sobre" class="container-fluid pt-5 bg-primary-dark-hover">
+        <p class="titulo text-center secondary">SOBRE O MATERIAL</p>
+        <div class="line bg-secondary w-25"></div>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-person" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active circle" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="circle"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="circle"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row justify-content-center text-justify">
+                            <div class="col-12 col-md-6 py-5 text-light">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./image/objetivo_geral.svg" alt="Objetivo Geral" class="mx-2" width="50">
+                                    <span class="titulo-capa font-oswald my-auto mx-2">Objetivo Geral</span>
+                                </div>
+                                <p class="py-5 d-flex align-items-center">Este material tem como objetivo apresentar a
+                                    importância de se realizar orientações para a população e grupos específicos,
+                                    ressaltando o planejamento e execução de estratégias de prevenção e cuidado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row justify-content-center text-justify">
+                            <div class="col-12 col-md-6 py-5 text-light">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./image/objetivo_aprendizado.svg" alt="Objetivo de aprendizado"
+                                        class="mx-2" width="50">
+                                    <span class="titulo-capa font-oswald my-auto mx-2">Objetivo de Aprendizagem</span>
+                                </div>
+                                <ul class="py-5">
+                                    <li>Planejar estratégias de prevenção e cuidado para a população em geral;</li>
+                                    <li>Executar ações de prevenção e cuidado para a população em geral;</li>
+                                    <li>Realizar orientações e cuidado para diversos públicos e locais: profissionais do
+                                        sexo, trabalhador da saúde, eventos de massa e transporte público.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 py-5 text-light">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./image/carga_horaria.svg" alt="Carga horaria" class="mx-2" width="50">
+                                    <span class="titulo-capa font-oswald my-auto mx-2">Carga horária</span>
+                                </div>
+                                <p class="py-5 text-center">05 horas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="onda onda-light"></div>
+    <div id="medidas" class="container-fluid px-0 py-3">
+        <p class="titulo font-oswald medium text-center padding-x-container">MEDIDAS DE PREVENÇÃO E CUIDADO CONTRA A
+            MPOX PARA A POPULAÇÃO GERAL</p>
+        <div class="line bg-dark"></div>
+        <div class="row mx-0 padding-container">
+            <div class="col-12 col-lg-6 padding-x-container text-justify">
+                <p>Bom, agora que você já entendeu mais sobre a doença, como orientar as pessoas a se protegerem da
+                    mpox? Essa unidade contém informações que podem ser usadas para orientar diferentes grupos
+                    populacionais, escritas de forma a poderem ser usadas diretamente na orientação de prevenção.</p>
+                <img src="./image/TRECHO 5.1.png" alt="Palestrante" class="d-block mx-auto w-100 padding-container">
+            </div>
+            <div class="col-12 col-lg-6 padding-x-container">
+                <p class="pb-2">Existem algumas medidas essenciais que podem ser adotadas para prevenir a infecção pelo
+                    MPXV (CDC, 2022):</p>
+                <small class="d-block my-3">Clique nos itens para interagir</small>
+                <div class="accordion" id="accordion_exemplos">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_exemplos_1" aria-expanded="true"
+                                aria-controls="accordion_exemplos">
+                                Evite contato próximo
+                            </button>
+                        </h2>
+                        <div id="accordion_exemplos_1" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordion_exemplos">
+                            <div class="accordion-body">
+                                <p class="pb-2">Evite contato próximo, ou seja, contato pele com pele com pessoas que
+                                    tenham lesão de pele suspeita ou confirmada de mpox:</p>
+                                <ul>
+                                    <li>Não encoste em erupção cutânea ou crostas;</li>
+                                    <li>Não beije, abrace ou tenha contato sexual com pessoas que tenham lesão de pele
+                                        suspeita ou confirmada de mpox:.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_exemplos_2" aria-expanded="false"
+                                aria-controls="accordion_exemplos">
+                                Reduza o número de parceiros sexuais
+                            </button>
+                        </h2>
+                        <div id="accordion_exemplos_2" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_exemplos">
+                            <div class="accordion-body">
+                                <p class="pb-2">Reduza o número de parceiros sexuais enquanto o surto atual estiver
+                                    ativo e a imunização não estiver amplamente disponível, sabendo que:
+                                </p>
+                                <ul>
+                                    <li>A maior parte das infecções por MPXV foi transmitida por contato sexual;</li>
+                                    <li>Os preservativos protegem de infecções sexualmente transmissíveis como HIV e
+                                        sífilis, porém, quando utilizados de forma isolada, não impedem o contágio da
+                                        mpox;</li>
+                                    <li>As lesões anais ou genitais são muito mais contagiosas que as secreções
+                                        respiratórias.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_exemplos_3" aria-expanded="false"
+                                aria-controls="accordion_exemplos">
+                                Evite contato com objetos e superfícies que pessoas com mpox utilizaram
+                            </button>
+                        </h2>
+                        <div id="accordion_exemplos_3" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_exemplos">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Não compartilhe talheres, pratos ou copos;</li>
+                                    <li>Evite contato com roupa de cama, toalha ou vestimentas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_exemplos_4" aria-expanded="false"
+                                aria-controls="accordion_exemplos">
+                                Lave frequentemente as mãos
+                            </button>
+                        </h2>
+                        <div id="accordion_exemplos_4" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_exemplos">
+                            <div class="accordion-body">
+                                <p>É fundamental higienizar as mãos com água e sabão ou álcool em gel 70%,
+                                    principalmente antes de se alimentar e/ou tocar a face e depois de utilizar o
+                                    sanitário.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#accordion_exemplos_5" aria-expanded="false"
+                                aria-controls="accordion_exemplos">
+                                Tenha cuidado!
+                            </button>
+                        </h2>
+                        <div id="accordion_exemplos_5" class="accordion-collapse collapse"
+                            data-bs-parent="#accordion_exemplos">
+                            <div class="accordion-body">
+                                <p>Tenha cuidado! Ser vacinado contra varíola no passado não necessariamente garante
+                                    imunidade contra a mpox. Não confie na eventual imunização passada - mantenha os
+                                    cuidados hoje!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-12 col-lg-6">
+                <div class="box-saiba-mais bg-primary padding-container">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <img src="./image/interrogacao.png" alt="Saiba mais"
+                                class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                        </div>
+                        <div class="col-12 col-md-8 padding-x-container text-justify">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-secondary"></span>
+                                <small class="medium">Entendendo melhor</small>
+                            </div>
+                            <p class="titulo bold primary-dark-hover">Curiosidade</p>
+                            <p>
+                                Pessoas que estão planejando ir a eventos sociais devem se preocupar com a mpox?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 padding-container">
+                <p class="padding-x-container text-justify">
+                    Caso esteja planejando ir a algum evento social, como festas/eventos (raves, casas noturnas ou
+                    festivais, por exemplo), é importante considerar o risco a que estará exposto durante o evento. A
+                    avaliação do risco deve levar em consideração desde o número de pessoas até a distância e contato
+                    entre elas.
+                </p>
+            </div>
+        </div>
+        <div class="container text-justify padding-x-container">
+            <span class="titulo-capa padding-container d-block text-center">Atente-se às orientações abaixo:</span>
+            <ul>
+                <li class="py-2">
+                    Festivais e concertos oferecem menos risco, pois os frequentadores estão com roupas que cobrem o
+                    corpo e no ambiente há espaço suficiente para que o contato pele com pele seja improvável. Lembre-se
+                    de que superfícies contaminadas também são potenciais fontes de transmissão do vírus da mpox. Lavar
+                    as mãos frequentemente e ter álcool em gel 70% ao alcance são formas de diminuir o risco;
+                </li>
+                <li class="py-2">
+                    Raves, casas noturnas e outras festas em que os frequentadores geralmente usam menos roupas e o
+                    espaço permite um contato pele com pele direto e recorrente oferecem mais risco. Esse tipo de evento
+                    exige atenção maior! Apesar de encostar ou esbarrar em alguém ter baixo risco de transmissão, fique
+                    atento e evite tocar em alguém que apresente lesão suspeita de mpox;
+                </li>
+                <li class="py-2">
+                    Espaços fechados como saunas, clubes e festas privadas em que ocorrem relações sexuais com múltiplos
+                    parceiros oferecem mais risco de transmissão do MPXV. Vale lembrar que preservativos protegem contra
+                    o vírus do HIV e outras infecções sexualmente transmissíveis, porém sua utilização de forma isolada
+                    NÃO PROTEGE da mpox, uma vez que há o risco de transmissão pelo contato direto com secreções e
+                    lesões em outras partes do corpo, não protegidas pelo preservativo.
+                </li>
+            </ul>
+            <p class="py-2">Mais adiante conheceremos os cuidados necessários para a organização e participação de
+                eventos de massa e uso de transportes coletivos.</p>
+        </div>
+    </div>
+    <div class="onda onda-secondary bg-light"></div>
+    <div id="orientacoes" class="container-fluid px-0 pt-2 bg-secondary text-light">
+        <p class="titulo font-oswald medium text-center padding-x-container">ORIENTAÇÕES PARA PESSOAS COM SUSPEITA DA
+            DOENÇA - DIRECIONAMENTO PARA PROCURA DOS SERVIÇOS DE SAÚDE</p>
+        <div class="line bg-light"></div>
+        <button class="card bg-secondary w-100 w-lg-50 mx-auto not-flipped mt-5" onclick="virar_card(this)">
+            <div
+                class="card-front d-flex flex-column justify-content-between padding-x-container bg-secondary-dark h-100 text-light">
+                <div class="titulo-capa d-block pt-5">
+                    Você sabe o que fazer caso perceba algum sinal ou apresente algum sintoma suspeito de MPOX?
+                </div>
+                <div>
+                    <p class="text-justify">Caso perceba sinais e sintomas suspeitos de mpox, como lesão de início
+                        súbito em mucosas ou erupção cutânea aguda sugestiva da doença (Figura 1) em qualquer parte do
+                        corpo, incluindo região genital, perianal e oral, e/ou sinais de proctite (dor anorretal,
+                        sangramento pelo ânus etc.) e/ou edema no pênis (TARíN-VICENTE et al., 2022):</p>
+                </div>
+                <div class="d-flex">
+                    <small class="text-center my-auto">Clique nesta caixa para interagir!</small>
+                    <i class="bi bi-arrow-repeat titulo d-block my-auto ml-auto"></i>
+                </div>
+
+            </div>
+            <div class="card-back d-flex flex-column padding-x-container bg-secondary-dark text-light">
+                <div class="my-auto">
+                    <p>PROCURE A UNIDADE DE SAÚDE MAIS PRÓXIMA DA SUA CASA PARA AVALIAÇÃO COM PROFISSIONAL DE SAÚDE! AO
+                        SE DESLOCAR, PROCURE SE PROTEGER E PROTEGER O PRÓXIMO: CUBRA AS LESÕES APARENTES E UTILIZE
+                        MÁSCARA SOBRE A BOCA E O NARIZ.</p>
+                </div>
+                <div class="d-flex">
+                    <small class="text-center my-auto">Clique nesta caixa para interagir!</small>
+                    <i class="bi bi-arrow-repeat titulo d-block my-auto ml-auto"></i>
+                </div>
+            </div>
+        </button>
+        <div class="row padding-container mx-0">
+            <div class="col-12 col-lg-6 padding-x-container text-justify d-flex align-items-center">
+                <p>Vale destacar que a mpox também pode provocar sintomas como febre, calafrios, linfonodos inchados
+                    (ínguas), cansaço, dor muscular, dor nas costas, dor de cabeça, dor de garganta, congestão nasal e
+                    tosse. Esses sinais e sintomas podem variar. Alguns deles podem estar ou não presentes e aparecer
+                    antes ou depois das lesões na pele (WHO, 2022a). Fique atento: o aspecto das lesões também pode
+                    variar, conforme a cor da pele (Figura 2).</p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <img src="./image/TRECHO 5.2.png" alt="" class="d-block mx-auto padding-x-container w-75">
+            </div>
+        </div>
+        <div class="container">
+            <p class="pt-2 titulo-capa text-center">Figura 01 - Lesão cutânea de mpox em seus vários estágios:</p>
+            <small class="d-block text-center">Clique na imagem para interagir.</small>
+            <div class="row justify-content-center padding-container w-100 w-lg-75 mx-auto">
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/vesicula-precoce.png" alt="Vesicula Precoce" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Vesícula precoce (diâmetro de 3 mm)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/pustula-pequena.png" alt="Pustula pequena" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Pequena pústula (2mm)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/pustula-umbelicada.png" alt="pustula umbelicada" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Pústula umbilicada (3-4 mm)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/lesao-ulcerada.png" alt="lesao ulcerada" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Lesão ulcerada (5 mm)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/crosta-lesao-madura.png" alt="crosta lesao madura" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Crosta de uma lesão</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/crosta-parcial-removida.png" alt="crosta parcial removida" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Crosta parcialmente removida</small>
+                    </div>
+                </div>
+                <small class="text-center pt-2">Fonte: Ali et al. (2022).</small>
+            </div>
+            <p class="pt-2 titulo-capa text-center">Figura 2 - Lesões de mpox em diferentes cores de pele</p>
+            <small class="d-block text-center">Clique na imagem para interagir.</small>
+            <div class="row justify-content-center padding-container w-100 w-lg-75 mx-auto">
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/machucado_costas.png" alt="Machucado - Costas" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Vesícula precoce (diâmetro de 3 mm)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/machucado_mao.png" alt="Machucado - Mão" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Pequena pústula (2mm)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 imagem-com-degrade px-0">
+                    <img src="./image/machucado_dedo.png" alt="Machucado - Dedo" class="w-100">
+                    <div class="texto-sobre-imagem">
+                        <small class="medium">Pústula umbilicada (3-4 mm)</small>
+                    </div>
+                </div>
+                <small class="text-center pt-2">Fonte: Adler et al. (2022).</small>
+            </div>
+            <div class="padding-container">
+                <div class="row mx-0">
+                    <div class="col-12 col-md-4 d-flex align-items-center">
+                        <img src="./image/interrogacao.png" alt="Saiba mais" class="d-block mx-auto py-3 w-50 w-lg-75"
+                            data-animation="shake">
+                    </div>
+                    <div class="col-12 col-md-8 padding-x-container text-justify">
+                        <div class="d-flex">
+                            <span data-animation="circle-saiba-mais" class="bg-primary-light"></span>
+                            <small class="medium">Conhecimento</small>
+                        </div>
+                        <p class="titulo bold primary">Saiba mais!</p>
+                        <p>
+                            <b>AS LESÕES PODEM COÇAR E/OU SER DOLOROSAS. FIQUE ATENTO ÀS SUAS VARIAÇÕES.</b>
+                        </p>
+                        <p>
+                            <b>Importante:</b> Enquanto os sinais e sintomas que a pessoa está manifestando não forem
+                            descartados para mpox , lembre-se de que é importante manter o isolamento domiciliar!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-12 col-lg-6 padding-container text-justify">
+                <p class="pb-2">Vale ressaltar que, além do isolamento, algumas medidas simples podem evitar transmissão
+                    para outras pessoas e/ou complicações:</p>
+                <div class="box-saiba-mais bg-box-light padding-container text-dark">
+                    <small>
+                        <ul>
+                            <li>Evite sair de casa. Agora é hora de se cuidar e evitar situações que possam aumentar o
+                                risco de transmissão;</li>
+                            <li>Evite receber visitas. Elas, em breve, vão poder te ver normalmente. Vale esse esforço
+                                para proteger nossos entes queridos;</li>
+                            <li>Evite contato com animais domésticos. Nossos pets são vulneráveis ao contágio da doença.
+                                Todo cuidado é de grande valor para a saúde deles;</li>
+                            <li>Não tenha relações sexuais. O contato sexual tem se mostrado um grande risco para a
+                                transmissão da doença;</li>
+                            <li>Não barbeie ou depile áreas com ferimentos. Independentemente da confirmação ou não da
+                                mpox, quanto menos mexer nas lesões, melhor. Um eventual ferimento no local da lesão
+                                pode dificultar o processo de cicatrização;</li>
+                            <li>Evite usar lentes de contato. Tem-se observado um número importante de lesões oculares
+                                por mpox, portanto não as utilize nesse momento! As lentes podem agravar uma eventual
+                                lesão ocular pelo MPXV;</li>
+                            <li>Não utilize adornos como pulseiras, relógios, anéis, alianças etc. Quanto menos objetos
+                                com potencial de transmitir o vírus utilizarmos, melhor;</li>
+                            <li>Não compartilhe roupas, talheres, roupas de cama, toalhas e demais utensílios de uso
+                                individual.</li>
+                        </ul>
+                    </small>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 d-flex align-items-center">
+                <img src="./image/TRECHO 5.2 prancheta.png" alt="Prancheta"
+                    class="d-block mx-auto w-75 padding-container">
+            </div>
+        </div>
+    </div>
+    <div class="onda onda-primary bg-secondary"></div>
+    <div id="contencao" class="container-fluid px-0 pt-2 bg-primary">
+        <p class="titulo font-oswald medium text-center padding-x-container">CONTENÇÃO DA DOENÇA EM SERVIÇOS DE SAÚDE E
+            ORIENTAÇÕES E CUIDADO PARA A SAÚDE DO TRABALHADOR DA SAÚDE</p>
+        <div class="line bg-dark"></div>
+        <div class="row mx-0 padding-container text-justify">
+            <div class="col-12 col-lg-6 padding-x-container">
+                <p class="pb-2">Os serviços de saúde, incluindo os de assistência direta à população e os laboratórios,
+                    são locais de especial interesse para a contenção da disseminação da mpox, por reunirem pacientes
+                    potencialmente com a doença e/ou amostras clínicas infectantes e população suscetível, sejam
+                    trabalhadores da saúde, sejam outros pacientes e acompanhantes presentes simultaneamente no mesmo
+                    local. As medidas de contenção adotadas pelos serviços de saúde objetivam tanto proteger a saúde dos
+                    trabalhadores quanto evitar a contaminação de outras pessoas e a disseminação da doença por novos
+                    infectados (TITANJI, et al., 2022).</p>
+                <p class="py-2">São considerados trabalhadores da saúde todos aqueles que atuam em espaços e
+                    estabelecimentos de saúde, incluindo tanto os profissionais da saúde (por exemplo, enfermeiros,
+                    médicos, maqueiros, biólogos, técnicos de enfermagem e de laboratório, nutricionistas,
+                    farmacêuticos, bioquímicos e fisioterapeutas) quanto aqueles que trabalham em estabelecimentos de
+                    saúde e que não prestam serviços diretos de assistência à saúde das pessoas (por exemplo, os que
+                    atuam na administração, recepção, segurança e serviços gerais) (BRASIL, 2020).</p>
+            </div>
+            <div class="col-12 col-lg-6 padding-x-container">
+                <p class="pb-4">As condições em que o atendimento é realizado podem constituir fatores determinantes
+                    para a ocorrência de mpox nos trabalhadores que estão em contato direto com casos suspeitos ou
+                    confirmados, considerando que a doença é transmitida por contato com pacientes infectados, que podem
+                    estar presentes nos serviços de saúde.</p>
+                <img src="./image/TRECHO 5.3.png" alt="Trabalhadores" class="d-block mx-auto w-100">
+            </div>
+        </div>
+        <div class="container padding-x-container text-justify">
+            <p>A Constituição Federal do Brasil, em seu capítulo II, artigo 7o, determina que todos os serviços de
+                saúde, devem assegurar, aos trabalhadores que atuam nos serviços, tanto empregados, como terceirizados e
+                pertencentes a outra modalidade de vínculo, a adoção de medidas e mecanismos de proteção e promoção à
+                saúde (BRASIL, 1988).</p>
+            <p class="titulo-capa text-center padding-container">Medidas de Controle, Prevenção e Proteção à Saúde dos
+                Trabalhadores da Saúde</p>
+        </div>
+        <div class="row mx-0">
+            <div class="col-12 col-lg-6 padding-container text-justify">
+                <div class="padding-x-container">
+                    <p class="pb-2">
+                        As medidas de controle, prevenção e proteção aos trabalhadores que atuam na área da Saúde
+                        incluem a disponibilidade e o uso adequado dos EPIs e a adoção de medidas de engenharia e
+                        administrativas nos ambientes e processos de trabalho.
+                    </p>
+                    <p class="py-2">Essas medidas devem orientar a identificação e a intervenção nos fatores e situações
+                        de risco aos quais os trabalhadores podem estar expostos durante a execução de suas atividades,
+                        visando eliminá-las ou controlá-las. Na maioria das situações, será necessária uma combinação
+                        dessas medidas para proteger os trabalhadores da exposição ao mpox.</p>
+                    <b class="d-block py-3">Equipamentos de Proteção Individual (EPIs)</b>
+                    <p class="py-2">Os EPIs adequados e usados corretamente são importantes para assegurar a saúde dos
+                        trabalhadores que atuam na área da saúde e para minimizar os riscos de adoecimento por mpox.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="box-saiba-mais bg-primary-dark-hover padding-container">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <img src="./image/interrogacao.png" alt="Saiba mais"
+                                class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                        </div>
+                        <div class="col-12 col-md-8 padding-x-container text-justify">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-secondary"></span>
+                                <small class="medium text-light">Entendendo melhor</small>
+                            </div>
+                            <p class="titulo bold primary">Curiosidade</p>
+                            <p class="text-light">
+                                Você sabia que o acesso dos trabalhadores aos EPIs em quantidade e qualidade adequadas é
+                                responsabilidade do empregador, seja público, seja privado, em regime da CLT ou
+                                estatutário, assim como o treinamento adequado dos trabalhadores, a supervisão do uso
+                                adequado e a manutenção e reposição necessárias desses equipamentos segundo o fabricante
+                                (BRASIL, 2022a).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container padding-x-container text-justify">
+            <p class="pb-2">Os tipos de equipamento necessários para a prevenção de mpox nos serviços de saúde estão
+                relacionados às tarefas executadas, mas, de maneira geral, todos os EPIs devem ser: selecionados com
+                base no risco biológico a que os trabalhadores estão expostos; regularizados pelos órgãos certificadores
+                e pela Anvisa; usados adequadamente; higienizados e/ou descartados periodicamente, conforme
+                recomendações técnicas; e inspecionados, reparados ou substituídos de acordo com instruções do
+                fabricante (BRASIL, 2022b).</p>
+            <div class="box-saiba-mais bg-primary-dark-hover">
+                <div class="row mx-0 padding-container">
+                    <div class="col-12 col-lg-6 text-light">
+                        <p class="pb-2">No geral, os EPIs a serem utilizados são:</p>
+                        <ul>
+                            <li>Gorro descartável;</li>
+                            <li>Óculos de proteção ou protetor facial;</li>
+                            <li>Máscara cirúrgica ou N95 (dependendo do procedimento a ser realizado);</li>
+                            <li>Avental impermeável/descartável de mangas compridas;</li>
+                            <li>Luvas de procedimento;</li>
+                            <li>Calçado fechado.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <img src="./image/TRECHO 5.3.2.1.png" alt="EPI" class="d-block mx-auto w-75">
+                    </div>
+                </div>
+            </div>
+            <p class="titulo-capa padding-container text-center">
+                Medidas de Controle de Engenharia
+            </p>
+            <p class="padding-x-container">
+                A aplicação das medidas de controle de engenharia deve ser priorizada, pois essas medidas são essenciais
+                para prevenir a propagação e reduzir a concentração de agentes infecciosos no ambiente de trabalho,
+                minimizar o número de áreas contaminadas pelo MPXV e diminuir o número de trabalhadores expostos.
+                Destacamos a seguir algumas dessas medidas (BRASIL, 2020):
+            </p>
+        </div>
+        <div id="carousel_engenharia" class="mt-5 carousel d-flex align-items-center text-justify bg-primary-light">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel_engenharia" data-bs-slide-to="0"
+                    class="active circle bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel_engenharia" data-bs-slide-to="1" class="circle bg-dark"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel_engenharia" data-bs-slide-to="2" class="circle bg-dark"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel_engenharia" data-bs-slide-to="3" class="circle bg-dark"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carousel_engenharia" data-bs-slide-to="4" class="circle bg-dark"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carousel_engenharia" data-bs-slide-to="5" class="circle bg-dark"
+                    aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carousel_engenharia" data-bs-slide-to="6" class="circle bg-dark"
+                    aria-label="Slide 7"></button>
+            </div>
+            <div class="carousel-inner container py-5 h-100">
+                <div class="carousel-item active">
+                    <p>
+                        Definição e instalação de espaços de acolhimento, triagem e isolamento que possibilitem a
+                        identificação de pacientes com suspeita de mpox em área separada dos demais pacientes, antes ou
+                        imediatamente após a chegada ao estabelecimento de saúde até haver o atendimento ou o
+                        encaminhamento ao serviço de referência (se necessário), limitando a movimentação desses
+                        pacientes à área de isolamento;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Manutenção de ambiente adequado para a higienização das mãos. Esse ambiente precisa ter:
+                        lavatório/pia com dispensador de sabonete líquido; suporte para papel toalha e papel toalha;
+                        lixeira com tampa e abertura sem contato manual para uso dos pacientes e seus acompanhantes,
+                        tanto na recepção quanto em outros pontos dentro do serviço, minimizando o possível contato com
+                        outros pacientes e evitando a sua circulação pelos serviços de saúde;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Instalação de dispensadores de álcool para a higiene das mãos (sob as formas gel ou solução a
+                        70%) nas salas de espera e em outras áreas com circulação de pacientes suspeitos ou confirmados;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Fornecimento de máscara cirúrgica, e aventais/luvas que cubram as áreas com lesões aos pacientes
+                        com suspeita de mpox logo na chegada ao serviço de saúde;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Adoção de coberturas protetoras, que devem ser utilizadas em macas, cadeiras e outros objetos,
+                        incluindo as de filme plástico ou papel absorvente, que devem ser removidas e trocadas entre
+                        cada atendimento, em conformidade com o estabelecido pela Comissão de Controle de Infecção
+                        Hospitalar (CCIH) ou equivalente;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Adoção de classificação de risco das áreas e ambientes laboratoriais em que são manipulados
+                        agentes biológicos, segundo a publicação Diretrizes Gerais para o Trabalho em Contenção com
+                        Material Biológico do Ministério da Saúde (BRASIL, 2010);
+                    </p>
+                </div>
+                <div class="carousel-item text-center">
+                    <p>
+                        Descarte adequado de resíduos.
+                    </p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_engenharia"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel_engenharia"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="container">
+            <p class="titulo-capa padding-container text-center">
+                Descarte adequado de resíduos
+            </p>
+            <p class="padding-x-container">
+                As medidas de controle administrativo referem-se às alterações nas rotinas de trabalho com o objetivo de
+                reduzir ou eliminar a exposição, duração, frequência ou intensidade de algum risco. Essas medidas devem
+                ser desenvolvidas tanto pelo empregador/contratante quanto pelos trabalhadores. Destacamos a seguir
+                algumas dessas medidas (BRASIL, 2020):
+            </p>
+        </div>
+        <div id="carousel_residuos" class="mt-5 carousel d-flex align-items-center text-justify bg-primary-light">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="0"
+                    class="active circle bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="1" class="circle bg-dark"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="2" class="circle bg-dark"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="3" class="circle bg-dark"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="4" class="circle bg-dark"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="5" class="circle bg-dark"
+                    aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="6" class="circle bg-dark"
+                    aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="7" class="circle bg-dark"
+                    aria-label="Slide 8"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="8" class="circle bg-dark"
+                    aria-label="Slide 9"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="9" class="circle bg-dark"
+                    aria-label="Slide 10"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="10" class="circle bg-dark"
+                    aria-label="Slide 11"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="11" class="circle bg-dark"
+                    aria-label="Slide 12"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="12" class="circle bg-dark"
+                    aria-label="Slide 13"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="13" class="circle bg-dark"
+                    aria-label="Slide 14"></button>
+                <button type="button" data-bs-target="#carousel_residuos" data-bs-slide-to="14" class="circle bg-dark"
+                    aria-label="Slide 15"></button>
+            </div>
+            <div class="carousel-inner container py-5 text-justify">
+                <div class="carousel-item active">
+                    <p>
+                        Orientação aos pacientes e acompanhantes sobre a necessidade de adoção de medidas de higiene;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Desenvolvimento de planos de comunicação de emergência, incluindo espaços e canais de
+                        comunicação para responder às preocupações dos trabalhadores;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Promoção de educação e saúde, e treinamento sobre os fatores de risco, cuidados e medidas de
+                        prevenção e controle da mpox que devem ser adotados pelos serviços de saúde, incluindo o manejo
+                        adequado do paciente;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Orientação aos trabalhadores da saúde sobre a utilização adequada dos EPIs no atendimento dos
+                        pacientes com suspeita de mpox ou com diagnóstico confirmado;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Orientação aos trabalhadores da saúde e acompanhantes dos pacientes para evitar tocar
+                        superfícies próximas ao paciente (por exemplo, mobiliário e equipamentos para a saúde), exceto
+                        se EPIs estiverem sendo utilizados;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Caso ocorra qualquer erro na utilização dos EPIs e perceber-se o contato com fluidos das lesões,
+                        informar a chefia imediata para o devido monitoramento;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Implementação de políticas não punitivas, para permitir que o profissional de saúde que
+                        apresente sinais e sintomas de mpox seja afastado do trabalho;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Afastamento de trabalhadores com diagnóstico confirmado da doença e sensibilização para que
+                        adotem as medidas de isolamento domiciliar. Essa medida não deve implicar prejuízos trabalhistas
+                        aos profissionais;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Estabelecimento de horários de funcionamento estendidos dos serviços de saúde, para minimizar,
+                        sempre que possível, a aglomeração de pessoas e o contato entre funcionários e pacientes;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Disponibilização de informações sobre higiene adequada das mãos em banheiros, recepções,
+                        enfermarias, quartos, salas de atendimento etc.;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Revisão dos Procedimentos Operacionais Padrão (POPs) de limpeza e desinfecção de ambientes e
+                        superfícies para garantir a frequência e as melhores práticas para redução da carga viral nos
+                        serviços de saúde;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Monitoramento da ocorrência de transmissão interna de mpox em pacientes e trabalhadores e adoção
+                        de medidas apropriadas para controle e mitigação da transmissão;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Monitoramento da efetividade das medidas de proteção e avaliação da adesão dos trabalhadores,
+                        cabendo, a qualquer momento, mudança nas estratégias de implementação das medidas para torná-las
+                        mais efetivas;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Manutenção de registro de todas as pessoas que prestaram assistência direta ou entraram nos
+                        quartos ou em outras áreas de assistência aos pacientes suspeitos ou com diagnóstico confirmado;
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p>
+                        Elaboração e disponibilização de forma escrita das normas e rotinas de procedimentos envolvidos
+                        na assistência aos casos suspeitos ou confirmados de mpox, como: fluxo dos pacientes dentro do
+                        serviço de saúde, procedimentos de colocação e retirada de EPI, procedimentos de remoção e
+                        processamento de roupas/artigos e produtos utilizados na assistência, rotinas de limpeza e
+                        desinfecção de superfícies, rotinas para classificação e remoção dos resíduos, entre outras.
+                    </p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_residuos"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel_residuos"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="container pb-3">
+            <p class="titulo-capa padding-container text-center">
+                Afastamento de trabalhadores de serviços de saúde e retorno às atividades
+            </p>
+            <p class="padding-x-container text-justify">
+                A notificação e a definição de casos, a conduta clínica e as medidas epidemiológicas são as mesmas para
+                trabalhadores de saúde e para qualquer outro paciente (BRASIL, 2022a). Entretanto, deve-se investigar a
+                relação causal entre a mpox e a exposição ocupacional do trabalhador. Se confirmada, deve-se realizar a
+                notificação de acidente de trabalho por meio da Comunicação de Acidente de Trabalho (CAT) ou documentos
+                similares a fim de que sejam garantidos os direitos trabalhistas e previdenciários (ESPÍRITO SANTO,
+                2022) .
+            </p>
+        </div>
+    </div>
+    <div class="onda onda-primary-dark bg-primary"></div>
+    <div id="profissionais" class="container-fluid px-0 pt-2 bg-primary-dark-hover text-light">
+        <p class="titulo font-oswald medium text-center padding-x-container">ORIENTAÇÕES PARA PROFISSIONAIS DO SEXO</p>
+        <div class="line bg-light"></div>
+        <div class="row mx-0 text-justify">
+            <div class="col-12 col-lg-6 padding-container">
+                <div class="padding-x-container">
+                    <p class="pb-2">
+                        Como vimos anteriormente, o risco de infectar-se com o MPXV não se restringe apenas a uma
+                        população específica, mas abrange todas as pessoas que tiverem contato próximo com indivíduo
+                        infectado e/ou doente. Aprendemos também que esse surto atual de mpox traz consequências
+                        sobretudo para os doentes, mas também para suas famílias e pessoas que os rodeiam, assim como
+                        para outras pessoas que, como os profissionais do sexo, desenvolvem atividades que envolvem
+                        contato íntimo com outras pessoas.
+                    </p>
+                    <p class="py-2">
+                        Em particular, esses profissionais, caso adoeçam ou estejam sob suspeita de estarem infectados,
+                        precisarão isolar-se para evitar a transmissão do vírus, e isso poderá acarretar dificuldades
+                        financeiras. Esse problema poderá se agravar caso as autoridades não lhes ofereçam proteção
+                        social e ajuda financeira. Da mesma maneira que algumas organizações criaram programas de
+                        assistência durante a pandemia de Covid-19, é recomendado que os profissionais do sexo se
+                        organizem e que essas organizações também comecem a criar estratégias e fundos de respostas para
+                        a assistência a esses profissionais (WHO, 2022b).
+                    </p>
+                    <p class="py-2">
+                        A maior proteção dos profissionais do sexo contra o MPXV está associada a melhoria no acesso à
+                        informação e aos serviços de saúde, para que os médicos possam fornecer cuidados de prevenção e
+                        tratamento direcionados às suas necessidades.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="padding-container">
+                    <p class="padding-x-container">A educação para profissionais do sexo é essencial e deve contemplar
+                        orientações sobre técnicas de prevenção, incluindo o reconhecimento dos sintomas da mpox, opções
+                        de tratamento e como acessar os cuidados. Recomenda-se que a educação sobre prevenção específica
+                        para profissionais do sexo ocorra tanto na comunidade (pessoalmente) quanto por meio de
+                        plataformas on-line. Dessa forma eles podem se proteger adequadamente e quebrar a cadeia de
+                        transmissão do vírus (CANTOR, et al., 2022).</p>
+                </div>
+                <div class="box-saiba-mais bg-primary padding-container text-dark">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <img src="./image/interrogacao.png" alt="Saiba mais"
+                                class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                        </div>
+                        <div class="col-12 col-md-8 padding-x-container text-justify">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-secondary"></span>
+                                <small class="medium">Conhecimento</small>
+                            </div>
+                            <p class="titulo bold primary-dark-hover">Saiba mais!</p>
+                            <p>
+                                Conheça o documento criado pela Organização Pan-Americana da Saúde (OPAS) e Organização
+                                Mundial de Saúde (OMS) com orientações de saúde pública aos profissionais do sexo para
+                                se protegerem da mpox baixando aqui!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="onda onda-aux bg-primary-dark-hover"></div>
+    <div id="eventos" class="container-fluid px-0 pt-2 bg-aux">
+        <p class="titulo font-oswald medium text-center padding-x-container">ORIENTAÇÕES PARA EVENTOS DE MASSA</p>
+        <div class="line bg-dark"></div>
+        <div class="row mx-0 padding-container">
+            <div class="col-12 col-lg-6">
+                <img src="./image/TRECHO 5.5.png" alt="" class="d-block mx-auto padding-container">
+            </div>
+            <div class="col-12 col-lg-6 padding-x-container text-justify">
+                <p class="pb-2">
+                    O que você precisa lembrar é que a principal forma de transmissão do MPXV é o contato físico com
+                    pessoas infectadas. Com isso, eventos que provoquem aglomerações são mais propícios à transmissão da
+                    doença, pois as chances de contato e de exposição são maiores.
+                </p>
+                <p class="py-2">
+                    O envolvimento das autoridades de saúde pública nos eventos de massa requer articulação entre os
+                    entes públicos e privados envolvidos direta ou indiretamente no evento, visando ao planejamento e à
+                    integração das ações.
+                </p>
+                <p class="py-2">
+                    Embora o foco principal seja a redução da transmissão do vírus, a maior parte das medidas visa
+                    garantir boas práticas de saúde pública em geral, prevenir e controlar a transmissão de várias
+                    doenças.
+                </p>
+            </div>
+            <div class="col-12 col-lg-6 padding-container text-justify">
+                <p class="titulo-capa text-center padding-x-container pb-4">
+                    E você sabe o que é um
+                    EVENTO DE MASSA?
+                </p>
+                <p class="py-2">O artigo 4º do capítulo II do anexo CII da Portaria de Consolidação n° 5, de 28 de
+                    setembro de 2017, define Evento de Massa (EM) como qualquer:</p>
+                <div class="citacao w-75 py-2">
+                    [...] atividade coletiva de natureza cultural, esportiva, comercial, religiosa, social ou política,
+                    por tempo pré-determinado, com concentração ou fluxo excepcional de pessoas, de origem nacional ou
+                    internacional, e que, segundo a avaliação das ameaças, das vulnerabilidades e dos riscos à saúde
+                    pública exijam a atuação coordenada de órgãos de saúde pública da gestão municipal, estadual e
+                    federal e requeiram o fornecimento de serviços especiais de saúde, públicos ou privados (Sinonímia:
+                    grandes eventos, eventos especiais, eventos de grande porte).
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 padding-container text-justify">
+                <p class="titulo-capa text-center padding-x-container pb-4">
+                    Planejamento e responsabilidades na Organização de EM
+                </p>
+                <p class="py-2">O planejamento das ações de saúde antes da realização de um EM deve contemplar a
+                    articulação entre as áreas de assistência e de vigilância em saúde. Na etapa de planejamento, o
+                    organizador do evento deve procurar o setor de saúde responsável (como a vigilância sanitária local)
+                    e outros setores relacionados (como segurança pública e órgãos de trânsito) para comunicá-los sobre
+                    a realização do evento. Devem ser verificados os requisitos necessários para realização do EM, bem
+                    como a documentação geral e específica pertinentes. É necessário que todos os setores/órgãos
+                    envolvidos, estabeleçam um fluxo de comunicação de EM, de forma que todas as instâncias envolvidas
+                    possam fazer parte do planejamento e ser notificadas sobre a ocorrência do evento em tempo hábil
+                    (BRASIL, 2014).
+                </p>
+            </div>
+        </div>
+        <div class="container padding-x-container text-justify">
+            <p>
+                As responsabilidades das esferas de gestão são definidas, no âmbito do Sistema Único de Saúde (SUS), no
+                Anexo CII da Portaria de Consolidação n° 5, de 28 de setembro de 2017, que trata Do Planejamento,
+                Execução e Avaliação das Ações de Vigilância e Assistência à Saúde em Eventos de Massa.</p>
+        </div>
+        <div class="row mx-0">
+            <div class="col-12 col-lg-6 padding-container text-justify">
+                <div class="padding-x-container">
+                    <p class="pb-2">As principais responsabilidades na elaboração do plano de ação em um evento de massa
+                        que devem ser consideradas pelo organizador do evento, assim como pelo setor público responsável
+                        pela anuência, compreendem:</p>
+                    <small>
+                        <ul>
+                            <li>Identificar os pontos de atenção e fluxos da rede assistencial para atendimento a casos
+                                suspeitos de mpox;</li>
+                            <li>Manter vigilância de doenças e prevenção de surtos;</li>
+                            <li>Manter vigilância relacionada à segurança ambiental e alimentar (BRASIL, 2022c);</li>
+                            <li>Realizar estratégias de informação e promoção em saúde;</li>
+                            <li>Manter a vigilância relacionada à Saúde do Trabalhador;</li>
+                            <li>Coordenar as ações de saúde por meio de comunicação adequada.</li>
+                        </ul>
+                    </small>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 pt-5">
+                <div class="box-saiba-mais bg-primary-dark-hover padding-container">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <img src="./image/interrogacao.png" alt="Saiba mais"
+                                class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                        </div>
+                        <div class="col-12 col-md-8 padding-x-container text-justify text-light">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-secondary"></span>
+                                <small class="medium">Conhecimento</small>
+                            </div>
+                            <p class="titulo bold secondary">Saiba mais!</p>
+                            <p>
+                                Para maiores informações sobre as responsabilidades no planejamento, execução e
+                                avaliação das ações de vigilância e assistência à saúde em eventos de massa, clique
+                                aqui.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container padding-container text-justify">
+            <p>Os organizadores dos EMs são as fontes de informação mais diretas sobre os eventos e, por isso,
+                desempenham uma função relevante para os serviços de saúde . Elaborar orientações sobre medidas de
+                prevenção deve ser compromisso da gestão e tarefa de todos os envolvidos nesses eventos. Um canal de
+                comunicação oportuno, organizado de forma clara e direcionada, é um ponto-chave para o controle dos
+                riscos (ECDC, 2022).</p>
+        </div>
+        <div class="padding-x-container">
+            <p>Recomenda-se que os seguintes tópicos sejam considerados:</p>
+            <small class="d-block pb-3">Clique nas cartas para interagir.</small>
+        </div>
+
+        <div class="row mx-0 justify-content-around padding-x-container">
+            <div class="col-12 col-md-6 col-lg-4">
+                <button class="card bg-aux w-100 mx-auto not-flipped" onclick="virar_card(this)">
+                    <div
+                        class="card-front d-flex align-items-center justify-content-between padding-x-container bg-primary-dark-hover h-100 text-light">
+                        <img src="./image/interrogacao.png" alt="interrogação" class="d-block mx-auto w-50">
+                    </div>
+                    <div class="card-back d-flex padding-x-container bg-primary-dark-hover text-light">
+                        <div class="my-auto text-justify">
+                            <p>Utilização de mídias sociais e internet para fornecer informações e orientações sobre as
+                                medidas de prevenção contra a mpox:</p>
+                            <ul>
+                                <li>Orientar as pessoas com sinais e sintomas compatíveis com mpox a não participar de
+                                    eventos de massa;</li>
+                                <li>Orientar os trabalhadores de saúde quanto às medidas de prevenção e à utilização de
+                                    EPIs;</li>
+                                <li>Orientar a população em geral quanto às medidas de prevenção.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <button class="card bg-aux w-100 mx-auto not-flipped" onclick="virar_card(this)">
+                    <div
+                        class="card-front d-flex align-items-center justify-content-between padding-x-container bg-primary-dark-hover h-100 text-light">
+                        <img src="./image/interrogacao.png" alt="interrogação" class="d-block mx-auto w-50">
+                    </div>
+                    <div class="card-back d-flex padding-x-container bg-primary-dark-hover text-light">
+                        <div class="my-auto text-justify">
+                            <p>Durante a preparação do evento, a implementação da comunicação de riscos e de medidas de
+                                prevenção pode ser estendida a eventos paralelos e reuniões espontâneas relacionadas ao
+                                evento principal.</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <button class="card bg-aux w-100 mx-auto not-flipped" onclick="virar_card(this)">
+                    <div
+                        class="card-front d-flex align-items-center justify-content-between padding-x-container bg-primary-dark-hover h-100 text-light">
+                        <img src="./image/interrogacao.png" alt="interrogação" class="d-block mx-auto w-50">
+                    </div>
+                    <div class="card-back d-flex padding-x-container bg-primary-dark-hover text-light">
+                        <div class="my-auto text-justify">
+                            <p>É importante informar aos participantes que a transmissão de mpox se dá por contato com
+                                lesões em qualquer parte do corpo, portanto o uso de preservativos não oferece proteção
+                                contra essa transmissão.</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="container padding-container">
+            <div class="row mx-0">
+                <div class="col-12 col-md-4 d-flex align-items-center">
+                    <img src="./image/interrogacao.png" alt="Saiba mais" class="d-block mx-auto py-3 w-50 w-lg-75"
+                        data-animation="shake">
+                </div>
+                <div class="col-12 col-md-8 padding-x-container text-justify">
+                    <div class="d-flex">
+                        <span data-animation="circle-saiba-mais" class="bg-secondary-dark"></span>
+                        <small class="medium">Conhecimento</small>
+                    </div>
+                    <p class="titulo bold secondary-dark">Saiba mais!</p>
+                    <p class="pb-2">
+                        Recomenda-se aos organizadores de eventos e proprietários de empresas, considerar o fornecimento
+                        de informações e orientações atualizadas com linguagem simples e direta, descrevendo os sinais e
+                        sintomas e medidas de prevenção de mpox em seus sítios eletrônicos, contas de mídia social e
+                        aplicativos.
+                    </p>
+                    <p class="py-2">
+                        Recomenda-se aos organizadores de eventos e proprietários de empresas, considerar o fornecimento
+                        de informações e orientações atualizadas com linguagem simples e direta, descrevendo os sinais e
+                        sintomas e medidas de prevenção de mpox em seus sítios eletrônicos, contas de mídia social e
+                        aplicativos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="onda onda-secondary-dark bg-aux"></div>
+    <div id="transporte" class="container-fluid px-0 pt-2 bg-secondary-dark text-light">
+        <p class="titulo font-oswald medium text-center padding-x-container">ORIENTAÇÕES PARA TRANSPORTE PÚBLICO</p>
+        <div class="line bg-light"></div>
+        <div class="row mx-0 text-justify">
+            <div class="col-12 col-lg-6 padding-x-container">
+                <div class="padding-container">
+                    <p class="pb-2">
+                        Assim como você deve ter cuidado com os riscos de uma possível infecção pelo MPXV participando
+                        de EM ou de festas, os transportes coletivos são, em teoria, um ambiente propício para a
+                        transmissão do vírus, levando-se em consideração a maior probabilidade de contato com um grande
+                        número de pessoas.
+                    </p>
+                    <p class="py-2">
+                        Vale reforçar que, atualmente, as evidências relacionadas a fontes de infecção e padrões de
+                        transmissão indicam que a principal forma de transmissão é o contato direto e prolongado com
+                        indivíduos que apresentem lesões em pele e mucosa. O contato pode ser pele-pele, mucosa-mucosa
+                        ou mucosa-pele, uma vez que o vírus pode entrar em lesões de pele e mucosas (oral, faringe,
+                        ocular e genital) (WHO, 2022a).
+                    </p>
+                    <p class="py-2">
+                        É recomendado aos usuários proteger com vestuário regiões do corpo que estejam mais suscetíveis
+                        ao contato prolongado com outras pessoas (por exemplo, tronco, abdome e membros). Sugere-se
+                        também que o usuário de transporte público evite o contato físico com os demais usuários e que
+                        higienize as mãos antes e depois de tocar superfícies compartilhadas, como corrimões, bancos,
+                        janelas, portas de transporte público, etc. É imprescindível utilizar álcool 70% ou água e
+                        sabonete de forma correta para higienização das mãos.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 padding-x-container">
+                <div class="padding-container">
+                    <p class="pb-2">
+                        Caso haja suspeição da doença devido a sinais e sintomas e a pessoa necessite utilizar
+                        transporte público para ir a uma unidade básica de saúde, recomenda-se cobrir as possíveis
+                        lesões com calças e blusas de manga comprida, utilizar máscara e higienizar as mãos com álcool
+                        70% , sempre que possível. Contudo, de acordo com as recomendações do Plano de Contingência
+                        Nacional para mpox (BRASIL, 2022d) , caso haja a suspeição ou confirmação de infecção pelo MPXV,
+                        a pessoa deve permanecer em isolamento.
+                    </p>
+                    <img src="./image/TRECHO 5.6.png" alt="ônibus" class="d-block mx-auto w-75 py-3">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 pt-5">
+                <div class="box-saiba-mais bg-secondary padding-container">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <img src="./image/interrogacao.png" alt="Saiba mais"
+                                class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                        </div>
+                        <div class="col-12 col-md-8 padding-x-container text-justify">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-primary-dark-hover"></span>
+                                <small class="medium text-light">Conhecimento</small>
+                            </div>
+                            <p class="titulo bold primary-dark-hover">Saiba mais!</p>
+                            <p class="text-light pb-2">
+                                Saiba mais acessando o sítio eletrônico:
+                            </p>
+                            <a href="https://www.gov.br/saude/pt-br/composicao/svs/resposta-a-emergencias/coes/monkeypox/plano-de-contingencia"
+                                target="_blank">https://www.gov.br/saude/pt-br/composicao/svs/resposta-a-emergencias/coes/monkeypox/plano-de-contingencia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 padding-container">
+                <p class="padding-x-container">Em embarcações e aeronaves, o atendimento de bordo a viajantes
+                    considerados casos suspeitos deve ser realizado com uso de óculos de proteção ou protetor facial,
+                    avental, máscara cirúrgica e luvas de procedimento. Esses EPIs devem ser retirados, descartados
+                    adequadamente e trocados, caso necessário, antes de um novo atendimento. Em embarcações, o caso
+                    suspeito deve ficar isolado em cabine individual. Os resíduos sólidos dos meios de transporte com
+                    casos suspeitos devem ser tratados como resíduos do Grupo A, ou seja, resíduos potencialmente
+                    infectantes (ANVISA, 2022).</p>
+            </div>
+            <div class="col-12 col-lg-6 padding-container">
+                <p class="padding-x-container">Considerando que, no momento, não há restrições de viagens devido a essa
+                    doença, orienta-se que os viajantes atentem para sinais e sintomas da doença, evitem realizar
+                    viagens não essenciais caso apresente-os e procure orientação de profissional de saúde o quanto
+                    antes e o mais perto possível.</p>
+            </div>
+            <div class="col-12 col-lg-6 pt-5">
+                <div class="box-saiba-mais bg-secondary padding-container">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <img src="./image/interrogacao.png" alt="Saiba mais"
+                                class="d-block mx-auto py-3 w-50 w-lg-75" data-animation="shake">
+                        </div>
+                        <div class="col-12 col-md-8 padding-x-container text-justify">
+                            <div class="d-flex">
+                                <span data-animation="circle-saiba-mais" class="bg-primary-dark-hover"></span>
+                                <small class="medium text-light">Conhecimento</small>
+                            </div>
+                            <p class="titulo bold primary-dark-hover">Saiba mais!</p>
+                            <p class="text-light pb-2">
+                                Para maiores informações acesse as orientações gerais frente à Emergência de Saúde
+                                Pública Internacional causada pelo MPXV para atuação em portos, aeroportos e fronteiras
+                                que estão publicadas na Nota Técnica n° 81/2022/SEI/COVIG/GGPAF/DIRE5/ANVISA, clique
+                                aqui.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container padding-container text-justify">
+            <p class="pb-2">
+                Agora que você tem uma visão completa sobre a apresentação clínica da mpox, mecanismos de transmissão e
+                estratégias de controle e vigilância, você está preparado para atuar no enfrentamento do surto de mpox a
+                fim de mitigar o impacto da doença no Brasil.
+            </p>
+            <p class="py-2">Não se esqueça de se manter sempre atualizado acessando os canais de informações do
+                Ministério da Saúde, Fundação Oswaldo Cruz e Organização Mundial da Saúde.</p>
+        </div>
+    </div>
+
+    <div class="onda onda-primary bg-secondary-dark"></div>
+    <div id="referencias" class="container-fluid px-0 pt-2 bg-primary">
+        <p class="titulo font-oswald medium text-center padding-x-container">REFERÊNCIAS</p>
+        <div class="line bg-dark"></div>
+        <div class="container-fluid pt-5">
+            <div class="row mx-0 text-justify">
+                <div class="col-12 col-lg-6 padding-x-container">
+                    <p class="py-2">
+                        ADLER, H. et al. Clinical features and management of human monkeypox. Lancet Infectious
+                        Diseases, v. 22, n. 8, p. 1153-1162, 2022.
+                        ALI, S. N. et al. Monkeypox Skin Lesion Detection Using Deep Learning Models: A Feasibility
+                        Study. arXiv, 2207.03342v1, 6 jul. 2022. Disponível em:
+                        https://arxiv.org/pdf/2207.03342.pdf.
+                        Acesso em: 30 dez. 2022. <br><br>
+
+                        AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA. MINISTÉRIO DA SAÚDE. Nota Técnica no 81/2022.
+                        Atualização das orientações frente à Emergência de Saúde Pública Internacional causada pelo
+                        vírus Monkeypox para atuação em portos, aeroportos e fronteiras. 29 Ago. 2022. Disponível
+                        em:
+                        https://www.gov.br/anvisa/pt-br/centraisdeconteudo/publicacoes/portos-aeroportos-e-fronteiras/notas-tecnicas/nota-tecnica-81-2022-covig-ggpaf-dire5-anvisa-29ago2022.pdf/view.
+                        Acesso em: 29 jan. 2023.<br><br>
+
+                        BRASIL. Ministério da Saúde. Nota Técnica Nº 21/2022-CGSAT/DSAST/SVS/MS. Orientações Gerais
+                        à
+                        Renast e demais interessados sobre as ações de Vigilância em Saúde do Trabalhador nos casos
+                        de
+                        MPX. Diário Oficial da União, Brasília, DF, 2022a. Disponível em:
+                        https://saude.rs.gov.br/upload/arquivos/202208/05150811-nota-tecnica-n-21-2022-cgsat-dsast-svs-ms-monkeypox.pdf.
+                        Acesso em: 5 nov. 2022.<br><br>
+
+                        BRASIL. Ministério da Saúde. Protocolo Laboratorial de Orientações de coleta, armazenamento,
+                        conservação e transporte para o diagnóstico de Monkeypox. 2022. 2022b. Disponível em:
+                        https://www.gov.br/saude/pt-br/assuntos/variola-dos-macacos/publicacoes/protocolos-1/rotocolo-laboratorial-de-orientacoes-de-coleta-armazenamento-conservacao-e-transporte-de-amostras-para-o-diagnostico-de-monkeypox
+                        . Acesso em: 14 nov. 2022.<br><br>
+
+                        BRASIL. Agência Nacional de Vigilância Sanitária (Anvisa). Resolução RDC nº 656, de 24 de
+                        março
+                        de 2022. Dispõe sobre as responsabilidades para a prestação de serviços de alimentação em
+                        eventos de massa. Diário Oficial da União, Brasília, DF, 30 mar. 2022c. Disponível em:
+                        http://antigo.anvisa.gov.br/documents/10181/6414416/RDC_656_2022_.pdf/68a92fcb-a275-4c7d-8536-6dcbb2dfe7be.
+                        Acesso em: 17 out. 2022.<br><br>
+
+                        BRASIL. Ministério da Saúde. Plano de Contingência Nacional para Monkeypox. Centro de
+                        Operações
+                        de Emergência em Saúde Pública: COE Monkeypox. Versão 2, 2022.2022d.
+                        BRASIL. Ministério da Saúde. Recomendações de proteção aos trabalhadores dos serviços de
+                        saúde
+                        no atendimento de COVID-19 e outras síndromes gripais. Brasília: 2020. Disponível em:
+                        https://www.saude.go.gov.br/files/banner_coronavirus/GuiaMS-Recomendacoesdeprotecaotrabalhadores-COVID-19.pdf.
+                        Acesso em: 3 nov. 2022.<br><br>
+                    </p>
+                </div>
+                <div class="col-12 col-lg-6 padding-x-container">
+                    <p class="py-2">
+                        BRASIL. Ministério da Saúde. Portaria de Consolidação GM/MS nº 5, de 28 de setembro de 2017.
+                        Consolidação das normas sobre as ações e os serviços de saúde do Sistema Único de Saúde.
+                        Diário
+                        Oficial da União, Brasília, DF, 3 out. 2017. Disponível em:
+                        https://bvsms.saude.gov.br/bvs/saudelegis/gm/2017/prc0005_03_10_2017.html. Acesso em: 17
+                        out.
+                        2022.
+                        BRASIL. Agência Nacional de Vigilância Sanitária (Anvisa). Resolução RDC nº 13, de 28 de
+                        março
+                        de 2014. Regulamenta a prestação de serviços de saúde em eventos de massa de interesse
+                        nacional
+                        e dá outras providências. Diário Oficial da União, Brasília, DF, 31 mar. 2014. Disponível
+                        em:
+                        http://antigo.anvisa.gov.br/documents/10181/3578403/RDC_13_2014_.pdf/b23f5325-47a9-4d18-bd8e-3ac1e76f3a4d.
+                        Acesso em: 17 out. 2022.<br><br>
+
+                        BRASIL. Ministério da Saúde. Diretrizes Gerais para o Trabalho em Contenção com Agentes
+                        Biológicos. 3. ed. Brasília, 2010. 64 p. Disponível em:
+                        https://livroaberto.ibict.br/bitstream/1/510/1/Diretrizes%20gerais%20trabalho%20conten%c3%a7%c3%a3o%20agentes%20biol%c3%b3gicos_3ed.pdf.
+                        Acesso em: 5 nov. 2022.<br><br>
+                        BRASIL. [Constituição (1988)]. Constituição da República Federativa do Brasil. Brasília:
+                        Senado
+                        Federal, 1988. Disponível em:
+                        http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm. Acesso em: 3 nov.
+                        2022.<br><br>
+
+                        CENTERS FOR DISEASE CONTROL AND PREVENTION. Prevention. 2022. Disponível em:
+                        https://www.cdc.gov/poxvirus/monkeypox/prevention/index.html. Acesso em: 17 out.
+                        2022.<br><br>
+
+                        ESPÍRITO SANTO. SECRETARIA DE SAÚDE DO ESTADO DE ESPÍRITO SANTO. NOTA TÉCNICA Nº 002/2022
+                        SESA/SSVS/GEVS. 2022. Disponível em:
+                        https://saude.es.gov.br/Media/sesa/Nota%20Tecnica/NT%20002_2022%20Monkeypox%2009.06.22.pdf.
+                        Acesso em: 20 dez. 2022.<br><br>
+                        EUROPEAN CENTRE FOR DISEASE PREVENTION AND CONTROL. Monkeypox. 2022. Disponível em:
+                        https://www.ecdc.europa.eu/en/monkeypox. Acesso em: 17 out. 2022.<br><br>
+
+                        WORLD HEALTH ORGANIZATION. Monkeypox. 2022. 2022a Disponível em:
+                        https://www.who.int/health-topics/monkeypox#tab=tab_1. Acesso em: 17 out. 2022.<br><br>
+
+                        WORLD HEALTH ORGANIZATION. Consejos de salud pública sobre la viruela sísmica para las
+                        personas
+                        que ejercen el trabajo sexual. 30 set. 2022 2022b. Disponível em:
+                        https://www.who.int/es/publications/m/item/public-health-advice-for-sex-workers-on-monkeypox.
+                        Acesso em: 20 dez. 2022.<br><br>
+                        SINGER, R. B. et al. Monkeypox Prevention and Protecting Sex Workers: A Call to Action.
+                        Archives
+                        of Sexual Behavior, v. 51, n. 8, p. 3659-3662, 1 nov. 2022. Disponível em:
+                        https://doi.org/10.1007/s10508-022-02428-y. Acesso em: 15 dez. 2022.<br><br>
+
+                        TARÍN-VICENTE, E. J. et al. Clinical presentation and virological assessment of confirmed
+                        human
+                        monkeypox virus cases in Spain: a prospective observational cohort study. Lancet, v. 400, n.
+                        10353, p. 661-669, 2022.
+                        TITANJI, B. K. et al. Monkeypox: A Contemporary Review for Healthcare Professionals. Open
+                        Forum
+                        Infect. Dis., v. 9, n. 7, 4 jul. 2022.<br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.min.js"></script>
+    <script src="./js/animacao.min.js"></script>
+    <script src="./se_unasus_pack.js"></script>
+    <!-- <script>
+        let lib = unasus.pack;
+        lib.initialize();
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+// Adiciona o tooltips do bootstrap
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+// Animacao para virar o card
+function virar_card(card) {
+  console.log(card);
+  card.classList.toggle("is-flipped");
+  card.classList.toggle("not-flipped");
+}
+
+// Mostrar resposta ao clicar no botao
+function alterar_resposta(btn, id) {
+  resposta = document.getElementById(id);
+  if(resposta.classList.contains('d-none')) {
+    resposta.classList.remove('d-none');
+    btn.innerText = 'X'
+  } else {
+    resposta.classList.add('d-none');
+    btn.innerText = 'Ver resposta'
+  }
+}
+// Fechar o modulo ao clicar no botao de sair
+function sair(){
+  if(confirm('Deseja mesmo sair?')) {
+    window.close();
+  }
+}
+ // Mostra a legenda na estrutura MPOX
+function mostrar_legenda(id){
+  legenda = document.getElementById(id);
+  legenda.classList.toggle('d-none');
+  legenda.classList.toggle('d-block');
+}
+
+const elements = document.querySelectorAll('[data-animation]');
+
+function handleScroll() {
+  const screenPosition = window.innerHeight / 1.5;
+
+  elements.forEach(element => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const elementBottom = element.getBoundingClientRect().bottom;
+
+    if (elementPosition < screenPosition && elementBottom > 0) {
+      element.classList.add('active');
+    } else {
+      element.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScroll);
+
+
+const dados = {
+  1: {
+    img_mapa: "./image/mapa_vermelho.png",
+    titulo_mapa: "Fiocruz-AM",
+    texto_mapa: "Instituto Leônidas de Maria Deane/Fiocruz/AM - Cobertura: AM e RO."
+  },
+  2: {
+    img_mapa: "./image/mapa_vermelho_claro.png",
+    titulo_mapa: "Lacen-DF",
+    texto_mapa: "Laboratório Central de Saúde Pública do Distrito Federal (Lacen/DF) - Cobertura: AC, DF, GO, MT, RR,TO."
+  },
+  3: {
+    img_mapa: "./image/mapa_bege.png",
+    titulo_mapa: "EC/SCTIE-PA",
+    texto_mapa: "Laboratório de Referência Regional em Enteroviroses/Polio-PFA - Seção de Virologia/Instituto Evandro Chagas/SCTIE/MS-PA. Cobertura: PA, AP"
+  },
+  4: {
+    img_mapa: "./image/mapa_azul_mais_claro.png",
+    titulo_mapa: "LacervIAL-SP",
+    texto_mapa: "Laboratório Central de Saúde Pública de São Paulo/Instituto Adolfo Lutz (LacervIAL-SP). Cobertura: SP, BA, PI, MA."
+  },
+  5: {
+    img_mapa: "./image/mapa_azul_claro.png",
+    titulo_mapa: "LacervFuned-MG",
+    texto_mapa: "Laboratório Central de Saúde Pública de Minas Gerais - Fundação Ezequiel Dias (LacervFuned/MG). Cobertura: MG,CE."
+  },
+  6: {
+    img_mapa: "./image/mapa_azul.png",
+    titulo_mapa: "Lab. Enterovírus/Fiocruz-RJM",
+    texto_mapa: "Laboratório de Enterovírus da Fiocruz/RJ - Cobertura: RN, PB, PE, MS"
+  },
+  7: {
+    img_mapa: "./image/mapa_azul_medio.png",
+    titulo_mapa: "UFRJ",
+    texto_mapa: "Laboratório de Biologia Molecular de Vírus do Instituto de Biofísica Carlos Chagas Filho e Laboratório de Virologia Molecular do Instituto de Biologia da Universidade Federal do Rio de Janeiro (LBMWVIBCCF/UFRJ e LVMIB/UFRJ). Cobertura: ES, RJ, AL, SE"
+  },
+
+  8: {
+    img_mapa: "./image/mapa_azul_escuro.png",
+    titulo_mapa: "Lacen-RS",
+    texto_mapa: "Laboratório Central de Saúde Pública do Rio Grande do Sul (Lacen/RS) - Cobertura: RS, SC, PR."
+  }
+}
+
+const elementosMapa = {
+  img_mapa: document.querySelector('#img_mapa'),
+  titulo_mapa: document.querySelector('#titulo_mapa'),
+  texto_mapa: document.querySelector('#texto_mapa')
+};
+
+function alterar_dados(botao, parametro) {
+  elementosMapa.img_mapa.src = dados[parametro].img_mapa;
+  elementosMapa.titulo_mapa.innerText = dados[parametro].titulo_mapa;
+  elementosMapa.texto_mapa.innerText = dados[parametro].texto_mapa;
+  
+  btn = document.querySelector('.legenda-circle.active'),
+  btn.classList.remove('active');
+  botao.classList.add('active');
+};
