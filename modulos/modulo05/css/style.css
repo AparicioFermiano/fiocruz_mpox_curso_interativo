@@ -615,6 +615,11 @@ a.button {
         padding-right: 3% !important;
     }
 
+    .padding-x-mobile-5 {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
     .capitulo-capa {
         display: none;
     }
