@@ -35,8 +35,8 @@ const dados = {
     com predomínio de casos na Europa até início de junho, mas depois desse período esse cenário \
     mudou para as Américas. A partir de agosto de 2022, observa-se uma queda na “média móvel dos últimos \
     7 dias” no mundo, como demonstra a Figura 2.",
-    saiba_mais_texto: "Você pode acessar os dados e mapas atualizados na página do Centro de Controle e Prevenção de Doenças (do inglês: Centers for Disease Control and Prevention - CDC) no sítio eletrônico",
-    saiba_mais_link: "https://www.cdc.gov/poxvirus/monkeypox/response/2022/world-map.html"
+    saiba_mais_texto: "Para saber mais sobre os números atualizados da Mpox no mundo, consulte também:",
+    saiba_mais_link: "https://www.who.int/emergencies/disease-outbreak-news/item/2022-DON393"
   },
   3: {
     titulo_imagem: "Figura 3 - Casos confirmados de Mpox no Brasil e no Mundo segundo média móvel, \

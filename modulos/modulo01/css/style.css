@@ -221,6 +221,13 @@ p {
     color: gray !important;
 }
 
+.ajuste-video {
+    width: 90%;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 /* BACKGROUND */
 
 .bg-secondary {
