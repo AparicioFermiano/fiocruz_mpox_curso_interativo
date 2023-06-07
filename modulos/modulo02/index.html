@@ -180,7 +180,7 @@
     <div id="sobre" class="container-fluid pt-5 bg-primary-dark-hover">
         <p class="titulo text-center secondary">SOBRE O MATERIAL</p>
         <div class="line bg-secondary w-25"></div>
-        <div id="carouselExampleIndicators" class="carousel slide carousel-person" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-person" data-bs-ride="false">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active circle" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="circle" aria-label="Slide 2"></button>
@@ -227,7 +227,7 @@
                             <div class="col-12 col-md-6 py-5 text-light">
                                 <div class="d-flex justify-content-center">
                                     <img src="./image/carga_horaria.svg" alt="Carga horaria" class="mx-2" width="50">
-                                    <span class="titulo-capa font-oswald my-auto mx-2">Carga horária de Estudo</span>
+                                    <span class="titulo-capa font-oswald my-auto mx-2">Carga horária de estudo</span>
                                 </div>
                                 <p class="py-5 text-center">10 horas</p>
                             </div>
@@ -719,7 +719,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="container">
-                        <button type="button" class="btn border-0 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#modal_impetigo">
+                        <button type="button" class="btn border-0 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#modal_sifilis">
                             <p class="py-3 titulo-capa text-center text-light">SÍFILIS</p>
                             <img id="url_imagem" src="./image/sifilis.png" alt="SÍFILIS" class="img-fluid pb-2">
                             <div class="d-block text-start text-light">
@@ -730,7 +730,7 @@
                                 </div>
                             </div>
                         </button>
-                        <div class="modal fade" id="modal_impetigo" tabindex="-1" aria-labelledby="Modal Imagem" aria-hidden="true">
+                        <div class="modal fade" id="modal_sifilis" tabindex="-1" aria-labelledby="Modal Imagem" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -931,11 +931,11 @@
                 <div class="accordion" id="accordion_remedios">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion_remedios_1" aria-expanded="true" aria-controls="accordion_remedios">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion_remedios_1" aria-expanded="false" aria-controls="accordion_remedios">
                                 Tecovirimat ou TPOXX - Parte 01
                             </button>
                         </h2>
-                        <div id="accordion_remedios_1" class="accordion-collapse collapse show" data-bs-parent="#accordion_remedios">
+                        <div id="accordion_remedios_1" class="accordion-collapse collapse" data-bs-parent="#accordion_remedios">
                             <div class="accordion-body padding-x-container">
                                 <p class="pb-2">
                                     É um inibidor potente da proteína do vírus necessária para a formação de uma partícula viral infecciosa, sendo recomendado para casos em que há risco elevado de doença grave. Deve-se avaliar cada paciente quanto à elegibilidade para receber o antiviral.
@@ -1106,11 +1106,11 @@
                     <div class="accordion pt-4 text-justify" id="accordion_vacinas">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion_vacinas_1" aria-expanded="true" aria-controls="accordion_vacinas">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion_vacinas_1" aria-expanded="false" aria-controls="accordion_vacinas">
                                     MVA-BN
                                 </button>
                             </h2>
-                            <div id="accordion_vacinas_1" class="accordion-collapse collapse show" data-bs-parent="#accordion_vacinas">
+                            <div id="accordion_vacinas_1" class="accordion-collapse collapse" data-bs-parent="#accordion_vacinas">
                                 <div class="accordion-body padding-x-container">
                                     <p>
                                         É uma vacina baseada em um Orthopoxvirus não replicante de terceira geração atenuado e vivo, o <i>Vaccinia Ankara Modificado</i> (MVA). <i>A Food and Drug
